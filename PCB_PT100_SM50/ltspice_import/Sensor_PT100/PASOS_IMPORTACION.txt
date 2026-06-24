@@ -1,0 +1,25 @@
+﻿PASOS PARA IMPORTAR A KICAD
+
+1. En KiCad Schematic Editor:
+   File -> Import -> Non-KiCad Schematic
+
+2. Seleccionar este archivo:
+   C:\Users\kenne\Documents\ProyectoPCB_LTspice_PT100_SM50\01_SENSOR_PT100\Sensor_PT100.asc
+
+3. Guardar el esquematico importado como archivo temporal.
+   NO guardar encima del esquematico principal todavia.
+
+4. Luego copiar los bloques utiles al proyecto principal:
+   C:\Users\kenne\Documents\KiCad\PCB_PT100_SM50\PCB_PT100_SM50\PCB_PT100_SM50.kicad_sch
+
+5. Despues asignar footprints:
+   Tools -> Assign Footprints
+
+Footprints locales disponibles:
+ProyectoPCB:R_0805_2012Metric
+ProyectoPCB:C_0805_2012Metric
+ProyectoPCB:SOIC-8_3.9x4.9mm_P1.27mm
+ProyectoPCB:SOT-23
+ProyectoPCB:SOT-23-6
+ProyectoPCB:Fuse_1812_4532Metric
+ProyectoPCB:Potentiometer_Bourns_3296W_Vertical

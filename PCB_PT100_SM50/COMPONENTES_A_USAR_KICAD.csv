@@ -1,0 +1,30 @@
+﻿Ciudad,Referencia sugerida,Cantidad,Símbolo KiCad a colocar,Valor en KiCad,Footprint a asignar,Componente real / MPN,Nota
+POWER / B-Box,J_BBOX_PWR o J_BBOX,1-2,Connector:RJ45_Shielded,RJ45 8P8C,ProyectoPCB:2250066-1,2250066-1,Usar footprint importado si lo tienes
+POWER / Protección,F1 F2 F3 F4,4,Device:Polyfuse,500mA,Fuse:Fuse_1812_4532Metric,1812L050/30PR,PPTC 1812
+POWER / Protección,D_TVS_PWR1 D_TVS_PWR2,2,Device:D_TVS,12V,ProyectoPCB:SMF12CT1G o footprint importado,SMF12CT1G,SC88 / verificar footprint importado
+POWER / Regulador +10V,U_LDO,1,TPS7A4901DGNT o símbolo importado,TPS7A4901DGNT,ProyectoPCB:TPS7A4901DGNT o Package_SO:MSOP-8-1EP_3x3mm_P0.65mm,TPS7A4901DGNT,Revisar pad térmico
+POWER / Regulador +10V,R_ADJ1,1,Device:R,73.2k,Resistor_SMD:R_0805_2012Metric,RT0805BRD0773K2L,Ajuste LDO si aplica
+POWER / Regulador +10V,R_ADJ2,1,Device:R,10k o 1k,Resistor_SMD:R_0805_2012Metric,RT0805BRD0710KL / RT0805BRD071KL,Ajuste LDO si aplica
+REFERENCIA PT100,U_REF,1,REF3012AIDBZR o símbolo importado,REF3012AIDBZR,Package_TO_SOT_SMD:SOT-23,REF3012AIDBZR,Referencia 1.25V
+REFERENCIA PT100,C_REF_IN,1,Device:C,100nF,Capacitor_SMD:C_0805_2012Metric,08055C104K4T2A,Cerca del REF3012
+REFERENCIA PT100,C_REF_OUT,1,Device:C,1uF,Capacitor_SMD:C_0805_2012Metric,C2012X7R1H105K085AC,Cerca del REF3012
+PT100,J_PT100,1,Connector_Generic:Conn_01x03,PT100 3 hilos,ProyectoPCB:AST0250304,AST0250304,Bornera 3P importada
+PT100,U_OPA_PT100,1-2,OPA2188AIDR o símbolo importado,OPA2188AIDR,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,OPA2188AIDR,"Dual op-amp, fuente de corriente/buffer"
+PT100,U_INA_PT100x,1 por canal,INA826AIDR o símbolo importado,INA826AIDR,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA826AIDR,INA para PT100
+PT100,RSET_PT100x,3,Device:R,2.49k 0.1%,Resistor_SMD:R_0805_2012Metric,RT0805BRD072K49L,Iexc ≈ 0.5mA con 1.25V
+PT100,R_IN_PT100x,varias,Device:R,49.9R,Resistor_SMD:R_0805_2012Metric,RT0805BRD0749R9L,Serie/filtro entrada
+PT100,RG_PT100x,1 por INA,Device:R,200R,Resistor_SMD:R_0805_2012Metric,RT0805BRD07200RL / CPF0805B200RE1,"Ganancia INA, ajustar según cálculo"
+PT100,C_IN_PT100x,varias,Device:C,10nF,Capacitor_SMD:C_0805_2012Metric,08055C103K4T2A,Filtro entrada
+PT100,R_OUT_PT100x,1 por salida,Device:R,10k,Resistor_SMD:R_0805_2012Metric,RT0805BRD0710KL,Filtro salida
+PT100,C_OUT_PT100x,1 por salida,Device:C,33nF,Capacitor_SMD:C_0805_2012Metric,KGM21NR71H333KT,Filtro salida
+SM-50,J_SM50,1,Connector_Generic:Conn_01x04,SM-50 4 hilos,ProyectoPCB:AST0250404,AST0250404,Bornera 4P importada
+SM-50,U_INA_SM50,1,INA826AIDR o símbolo importado,INA826AIDR,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA826AIDR,INA torque
+SM-50,R_SIG_P/R_SIG_N,2,Device:R,49.9R,Resistor_SMD:R_0805_2012Metric,RT0805BRD0749R9L,Serie entrada diferencial
+SM-50,C_DIFF_SM50,1,Device:C,10nF,Capacitor_SMD:C_0805_2012Metric,08055C103K4T2A,Filtro diferencial SIG+/SIG-
+SM-50,RG_SM50,1,Device:R o Device:R_Potentiometer_Trim,160R/180R/200R o 1k trim,Resistor_SMD:R_0805_2012Metric o Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical,CPF0805B160RE1 / CPF0805B180RE1 / CPF0805B200RE1 / 3296W-1-102LF,Elegir una opción de ganancia
+SM-50,R_OUT_SM50,1,Device:R,10k,Resistor_SMD:R_0805_2012Metric,RT0805BRD0710KL,Filtro salida
+SM-50,C_OUT_SM50,1,Device:C,33nF,Capacitor_SMD:C_0805_2012Metric,KGM21NR71H333KT,Filtro salida
+ESD / Salidas,D_ESD1 D_ESD2 D_ESD3,3,Device:D_TVS_x4 o símbolo importado,TPD4E1U06DBVR,Package_TO_SOT_SMD:SOT-23-6,TPD4E1U06DBVR,Protección ESD señales
+Desacoplos,C_DEC_x,varios,Device:C,100nF,Capacitor_SMD:C_0805_2012Metric,08055C104K4T2A,Uno cerca de cada IC
+Bulk local,C_BULK_x,varios,Device:C,10uF,Capacitor_SMD:C_0805_2012Metric,GRM21BR61E106KA73K,Entrada/salida regulador
+Bulk local,C_1U_x,varios,Device:C,1uF,Capacitor_SMD:C_0805_2012Metric,C2012X7R1H105K085AC,Refs/regulador/local

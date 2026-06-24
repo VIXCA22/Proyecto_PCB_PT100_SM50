@@ -1,0 +1,13 @@
+* ============================================================
+* Modelo limpio PT100 para LTspice
+* R(T) = 100*(1 + A*T + B*T^2)
+* Valido para temperaturas positivas.
+* Suficiente para el rango 40 C a 130 C del proyecto.
+*
+* Uso:
+* XRTD nodoA nodoB PT100 sensT={TempC}
+* ============================================================
+
+.SUBCKT PT100 A B PARAMS: sensT=0
+RRTD A B {100*(1+3.9083e-3*sensT-5.775e-7*sensT*sensT)}
+.ENDS PT100

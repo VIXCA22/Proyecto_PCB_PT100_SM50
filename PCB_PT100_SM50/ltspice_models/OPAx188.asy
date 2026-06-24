@@ -1,0 +1,24 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -63 79 -64 -80
+LINE Normal 64 -1 -63 79
+LINE Normal -64 -80 64 -1
+TEXT -48 -8 Left 2 OPAx188
+SYMATTR Value OPAx188
+SYMATTR Prefix X
+SYMATTR Description TI OPAx188 / OPA2188 single amplifier section
+PIN -96 -32 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -96 32 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN 0 -112 TOP 8
+PINATTR PinName VCC
+PINATTR SpiceOrder 3
+PIN 0 112 BOTTOM 8
+PINATTR PinName VEE
+PINATTR SpiceOrder 4
+PIN 128 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 5

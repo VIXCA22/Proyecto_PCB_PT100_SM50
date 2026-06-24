@@ -1,0 +1,78 @@
+* ============================================================
+* PT100_1CH_robusto_BBOX_8P8C.cir
+* Proyecto PCB - Canal PT100 robusto idealizado
+*
+* J1_8P8C_BBOX:
+* Pin 1 -> +15V_BBOX
+* Pin 2 -> +15V_BBOX
+* Pin 3 -> AGND
+* Pin 4 -> OUT_PT100 hacia B-Box IN+
+* Pin 5 -> AGND hacia B-Box IN-
+* Pin 6 -> AGND
+* Pin 7 -> -15V_BBOX
+* Pin 8 -> -15V_BBOX
+*
+* J2_PT100_PUSH_3P:
+* Pin 1 -> RTD+
+* Pin 2 -> RTD_SENSE
+* Pin 3 -> RTD-
+* ============================================================
+
+.param TempC=70
+.param Iexc=1m
+.param RPT={100*(1+0.00385*TempC)}
+.param RREF40=115.4
+.param RG_PT=196
+.param G_PT={1+50000/RG_PT}
+.param Voff=-4.5
+
+* Alimentacion desde B-Box
+VPLUS15  Vp15 0 DC 15
+VMINUS15 Vm15 0 DC -15
+
+* REF3012 ideal de 1.25 V
+VREF3012 Vref125 0 DC 1.25
+
+* Fuente de corriente ideal equivalente a REF3012 + OPA2188 + RSET
+* I = 1.25V / 1.25k = 1mA
+IEXC_PT100 0 VPT DC {Iexc}
+
+* PT100 modelado como resistencia variable con temperatura
+RPT100 VPT 0 {RPT}
+
+* Referencia equivalente a 40 grados C
+IREF40 0 VREF40 DC {Iexc}
+RREF40 VREF40 0 {RREF40}
+
+* Filtro/proteccion de entrada hacia INA828
+RINP VPT PT_INP 49.9
+RINM VREF40 PT_INM 49.9
+CDIFF_IN PT_INP PT_INM 10n
+
+* INA828 ideal:
+* Vout = G*(VPT100 - VREF40) + Voff
+BINA_PT100 PT_RAW 0 V={limit(G_PT*(V(PT_INP)-V(PT_INM))+Voff,-5,5)}
+
+* Filtro de salida hacia B-Box
+ROUT_FILT PT_RAW OUT_PT100 10k
+COUT_FILT OUT_PT100 0 100n
+RSER_BBOX OUT_PT100 OUT_PT100_BBOX 49.9
+
+* Carga de entrada B-Box ideal alta impedancia
+RBBOX OUT_PT100_BBOX 0 10Meg
+
+* Desacoplos ideales representativos
+CDEC_P15 Vp15 0 100n
+CDEC_M15 Vm15 0 100n
+CBULK_P15 Vp15 0 10u
+CBULK_M15 Vm15 0 10u
+
+.step param TempC 40 130 10
+.op
+
+.meas op Rpt_value PARAM {RPT}
+.meas op Vpt100_value FIND V(VPT)
+.meas op Vref40_value FIND V(VREF40)
+.meas op Vout_pt100 FIND V(OUT_PT100_BBOX)
+
+.end

@@ -1,0 +1,16 @@
+Ruta corregida para LTspice
+
+En el esquemático PT100_1CH_robusto.asc se cambió:
+
+.include ".\proyecto_pcb_sensor_pt100.inc"
+
+por:
+
+.include "proyecto_pcb_sensor_pt100.inc"
+
+Por eso, para simular, mantenga estos archivos juntos en la misma carpeta:
+- PT100_1CH_robusto.asc
+- proyecto_pcb_sensor_pt100.inc
+- carpeta lib\sub\ con los modelos .LIB/.lib
+
+Así el proyecto no depende de una ruta absoluta de Windows.

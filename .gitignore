@@ -1,0 +1,44 @@
+# Local workspace and cleanup archive
+.agents/
+zz_archivo_depuro_*/
+
+# KiCad generated/local files
+**/fp-info-cache
+**/*-backups/
+**/~*.lck
+**/*.kicad_prl
+**/_autosave-*
+**/*.bak
+**/*.bak_*
+**/*.backup_*
+**/*backup*
+**/*BACKUP*
+**/*NO_ABRE*
+**/*no_abre*
+**/*ESTADO_BUENO*
+**/*before_codex*
+**/_tmp*/
+**/tmp_*/
+**/_backup*/
+
+# LTspice generated results
+**/*.raw
+**/*.op.raw
+**/*.log
+**/*.db
+**/*.net
+**/*.plt
+**/*.fft
+
+# PSpice/TINA extracted run artifacts
+**/*.mrk
+**/*.prb
+**/*.out
+**/*.out.*
+**/*.1OP
+**/*.mif
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+desktop.ini

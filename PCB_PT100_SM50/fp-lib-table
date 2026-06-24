@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "ProyectoPCB")(type "KiCad")(uri "${KIPRJMOD}/footprints/ProyectoPCB.pretty")(options "")(descr "Footprints ProyectoPCB"))
+  (lib (name "ProyectoPCB_Footprints")(type "KiCad")(uri "${KIPRJMOD}/footprints/ProyectoPCB_Footprints.pretty")(options "")(descr "Footprints ProyectoPCB"))
+  (lib (name "TI_TPS7A49")(type "KiCad")(uri "${KIPRJMOD}/TI_TPS7A49.pretty")(options "")(descr "TPS7A49 footprints"))
+)

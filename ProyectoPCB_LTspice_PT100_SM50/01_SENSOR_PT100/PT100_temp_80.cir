@@ -1,0 +1,48 @@
+* Proyecto PCB - Canal PT100 ideal para LTspice
+* Rango actualizado: 40 C a 130 C
+* Modelo: PT100 + Iexc=1mA + resta V_RTD(40C) + INA828 ideal
+*
+* Ejecutar: Simulate > Run. Ver V(nPT), V(nREF), V(out), V(out_filt)
+* Ver resultados numericos: View > SPICE Error Log
+
+.param TempC=80
+.param Iexc=1m
+.param R0=100
+.param alpha=0.00385
+.param RPT={R0*(1+alpha*TempC)}
+
+* Referencia de 40 C: V_RTD40 = 1mA * 115.4 ohm = 115.4 mV
+.param VRTD40={Iexc*R0*(1+alpha*40)}
+
+* INA828 ideal: G = 1 + 50k/RG
+.param RG=196
+.param G={1+50000/RG}
+.param VREFINA=-4.5
+
+* Fuente de corriente ideal de 1 mA hacia el RTD
+IEXC 0 nPT DC {Iexc}
+
+* PT100
+RPT100 nPT 0 {RPT}
+
+* Referencia equivalente al PT100 a 40 C
+VREFRTD nREF 0 {VRTD40}
+
+* Amplificador instrumental ideal:
+* Vout = G*(VPT100 - VRTD40) + VREFINA, limitado al rango B-Box +/-5 V
+BINA out 0 V={limit(G*(V(nPT)-V(nREF))+VREFINA,-5,5)}
+
+* Filtro de salida propuesto para temperatura: fc ~= 159 Hz
+RFILT out out_filt 10k
+CFILT out_filt 0 100n
+
+* step eliminado para corrida individual
+.op
+
+.meas OP Rpt_value PARAM {RPT}
+.meas OP Vpt100 FIND V(nPT)
+.meas OP Vref40 FIND V(nREF)
+.meas OP Vout_raw FIND V(out)
+.meas OP Vout_filt FIND V(out_filt)
+
+.end

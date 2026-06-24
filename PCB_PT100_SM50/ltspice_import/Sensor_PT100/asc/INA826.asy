@@ -1,0 +1,41 @@
+Version 4
+SymbolType CELL
+LINE Normal -64 -80 64 -80
+LINE Normal 64 -80 64 80
+LINE Normal 64 80 -64 80
+LINE Normal -64 80 -64 -80
+TEXT -32 -104 Left 2 INA826
+TEXT -18 -80 Left 1 RG
+TEXT -58 -48 Left 1 IN-
+TEXT -58 -16 Left 1 IN+
+TEXT -58 48 Left 1 V-
+TEXT 26 48 Left 1 REF
+TEXT 34 -16 Left 1 OUT
+TEXT 30 -48 Left 1 V+
+TEXT -20 64 Left 1 RG
+PIN -96 -64 LEFT 8
+PINATTR PinName RG
+PINATTR SpiceOrder 1
+PIN -96 -32 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN -96 0 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 3
+PIN -96 48 LEFT 8
+PINATTR PinName V-
+PINATTR SpiceOrder 4
+PIN 96 48 RIGHT 8
+PINATTR PinName REF
+PINATTR SpiceOrder 5
+PIN 96 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 6
+PIN 96 -32 RIGHT 8
+PINATTR PinName V+
+PINATTR SpiceOrder 7
+PIN 0 112 BOTTOM 8
+PINATTR PinName RG
+PINATTR SpiceOrder 8
+SYMATTR Prefix X
+SYMATTR Description INA826 instrumentation amplifier generic import symbol

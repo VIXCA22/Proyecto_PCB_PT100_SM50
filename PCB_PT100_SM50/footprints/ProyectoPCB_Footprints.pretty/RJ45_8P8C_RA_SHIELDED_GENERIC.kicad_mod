@@ -1,0 +1,46 @@
+(footprint "RJ45_8P8C_RA_SHIELDED_GENERIC"
+  (version 20240108)
+  (generator "ProyectoPCB")
+  (layer "F.Cu")
+  (descr "Generic RJ45 8P8C right angle shielded connector footprint")
+  (tags "RJ45 8P8C right angle shielded")
+  (attr through_hole)
+
+  (fp_text reference "J**" (at 0 -8.5 0) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "RJ45_8P8C_SHIELDED" (at 0 8.5 0) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  (fp_rect (start -8.0 -7.0) (end 8.0 7.0)
+    (stroke (width 0.12) (type solid)) (fill none) (layer "F.SilkS")
+  )
+
+  (fp_rect (start -8.5 -7.5) (end 8.5 7.5)
+    (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd")
+  )
+
+  (fp_text user "CABLE SIDE" (at 0 6.2 0) (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+
+  (fp_text user "PCB SIDE" (at 0 -6.2 0) (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+
+  (pad "1" thru_hole circle (at -3.57 -2.54) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "2" thru_hole circle (at -2.55 -1.27) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "3" thru_hole circle (at -1.53 -2.54) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "4" thru_hole circle (at -0.51 -1.27) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "5" thru_hole circle (at 0.51 -2.54) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "6" thru_hole circle (at 1.53 -1.27) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "7" thru_hole circle (at 2.55 -2.54) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+  (pad "8" thru_hole circle (at 3.57 -1.27) (size 1.45 1.45) (drill 0.80) (layers "*.Cu" "*.Mask"))
+
+  (pad "SH1" thru_hole oval (at -7.0 0.5) (size 2.2 3.2) (drill oval 1.2 2.2) (layers "*.Cu" "*.Mask"))
+  (pad "SH2" thru_hole oval (at 7.0 0.5) (size 2.2 3.2) (drill oval 1.2 2.2) (layers "*.Cu" "*.Mask"))
+
+  (pad "" np_thru_hole circle (at -5.72 3.8) (size 1.7 1.7) (drill 1.7) (layers "*.Cu" "*.Mask"))
+  (pad "" np_thru_hole circle (at 5.72 3.8) (size 1.7 1.7) (drill 1.7) (layers "*.Cu" "*.Mask"))
+)

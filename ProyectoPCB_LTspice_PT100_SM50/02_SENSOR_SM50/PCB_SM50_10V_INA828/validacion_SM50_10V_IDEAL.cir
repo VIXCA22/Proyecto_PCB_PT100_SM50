@@ -1,0 +1,52 @@
+* ============================================================
+* SM-50 +10 V - Validacion ideal
+* Sin proyecto_pcb_models_TI_limpio.inc
+* ============================================================
+
+.include "sensor_SM50_10V.inc"
+
+* Alimentacion B-Box
+VPLUS   +15V_BBOX 0 DC 15
+VMINUS  -15V_BBOX 0 DC -15
+
+* Excitacion del puente
+.param VEXC=10
+VEXC_IDEAL VEXC_SM50 0 {VEXC}
+
+* Sensor SM-50
+.param SENS=3m
+.param TQFS=2.2
+.param TQ=0
+.param RBRIDGE=350
+
+XSM50 SIGP SIGN VEXC_SM50 0 SM50_IDEAL PARAMS: SENS={SENS} TQ={TQ} TQFS={TQFS} RBRIDGE={RBRIDGE}
+
+* Filtro de entrada
+RINP SIGP INA_INP 49.9
+RINN SIGN INA_INN 49.9
+CDIFF INA_INP INA_INN 10n
+
+* INA828 idealizado
+.param RG_SM=332
+.param G_SM={1+50k/RG_SM}
+.param VREFINA=0
+BINA OUT_INA 0 V={limit(G_SM*V(INA_INP,INA_INN)+VREFINA,-14,14)}
+
+* Filtro de salida a B-Box
+ROUT OUT_INA VOUT_FILT 10k
+COUTF VOUT_FILT 0 33n
+RBBOX VOUT_FILT OUT_SM50_BBOX 50
+RBBOX_IN OUT_SM50_BBOX 0 10Meg
+
+* Barrido de torque
+.step param TQ -2.2 2.2 0.55
+.op
+
+* Medidas
+.meas OP VDIFF_BRIDGE PARAM V(SIGP,SIGN)
+.meas OP VOUT_FINAL PARAM V(OUT_SM50_BBOX)
+.meas OP GAIN_INA PARAM {G_SM}
+.meas OP IBRIDGE_PARAM PARAM {VEXC/RBRIDGE}
+.meas OP PBRIDGE_PARAM PARAM {VEXC*VEXC/RBRIDGE}
+
+.end

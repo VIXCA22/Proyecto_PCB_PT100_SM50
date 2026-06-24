@@ -1,0 +1,53 @@
+* Proyecto PCB - Canal SM-50 ideal para LTspice
+* Modelo: puente completo de 350 ohm, excitacion diferencial +/-5 V
+* Sensor nominal: 3 mV/V. Con 10 V de excitacion => 30 mV a fondo de escala.
+*
+* Ejecutar: Simulate > Run. Ver V(sp), V(sn), V(sp,sn), V(out), V(out_filt)
+* RG se barre en dos versiones:
+*   RG=499 ohm => G ~= 101.2, version segura
+*   RG=332 ohm => G ~= 151.6, version mayor resolucion
+
+.param Rarm=350
+.param VEXC=10
+.param Sens=3m
+.param LoadFrac=1
+.param delta={Sens*LoadFrac}
+
+* Alimentacion simetrica del puente: +5 V y -5 V.
+* Esto deja el modo comun de SIG+ y SIG- alrededor de 0 V.
+VPLUS vp 0 {VEXC/2}
+VMINUS vn 0 {-VEXC/2}
+
+* Puente Wheatstone completo.
+* Con delta=0 el puente queda balanceado.
+* Con |LoadFrac|=1, V(sp,sn) ~= 30 mV.
+R1 vp sp {Rarm*(1-delta)}
+R2 sp vn {Rarm*(1+delta)}
+R3 vp sn {Rarm*(1+delta)}
+R4 sn vn {Rarm*(1-delta)}
+
+* INA828 ideal: G=1+50k/RG
+.param RG=332
+.param G={1+50000/RG}
+.param VREFINA=0
+
+BINA out 0 V={limit(G*(V(sp)-V(sn))+VREFINA,-5,5)}
+
+* Filtro propuesto para torque: fc ~= 482 Hz
+RFILT out out_filt 10k
+CFILT out_filt 0 33n
+
+* step RG eliminado
+* step LoadFrac eliminado
+.op
+
+.meas OP Vbridge FIND V(sp,sn)
+.meas OP Vsigp FIND V(sp)
+.meas OP Vsign FIND V(sn)
+.meas OP Gain PARAM {G}
+.meas OP Vout_raw FIND V(out)
+.meas OP Vout_filt FIND V(out_filt)
+.meas OP Ibridge PARAM {VEXC/Rarm}
+.meas OP Pbridge PARAM {VEXC*VEXC/Rarm}
+
+.end

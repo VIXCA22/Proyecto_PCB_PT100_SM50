@@ -1,0 +1,20 @@
+* Ruta original TI removida para portabilidad del proyecto LTspice
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../tps7a4701_trans.lib" 
+* Ruta original TI removida para portabilidad del proyecto LTspice
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 150m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\TPS7A4701_STARTUP.net" 
+
+
+.END

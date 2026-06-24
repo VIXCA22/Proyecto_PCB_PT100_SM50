@@ -1,0 +1,28 @@
+PT100 - RUTAS RELATIVAS PARA LTspice
+
+Abra este archivo:
+
+  PT100_1CH_robusto.asc
+
+No abra PT100_1CH_robusto.net. En esta carpeta NO se incluye .net, .raw, .log ni .db para evitar que LTspice use rutas viejas.
+
+La directiva correcta dentro del esquema es:
+
+  .include ".\proyecto_pcb_sensor_pt100.inc"
+
+Y dentro del include los modelos se cargan localmente así:
+
+  .include ".\lib\sub\INA828.LIB"
+  .include ".\lib\sub\OPAx188.LIB"
+  .include ".\lib\sub\TPS7A3301.lib"
+  .include ".\lib\sub\tps7a4701_trans.lib"
+  .include ".\lib\sub\PT100_clean.lib"
+
+Si LTspice todavía muestra C:\Users\kenne\Documents\ProyectoPCB_LTspice, cierre LTspice y borre en esta carpeta cualquier archivo generado:
+
+  PT100_1CH_robusto.net
+  PT100_1CH_robusto.log
+  PT100_1CH_robusto.raw
+  PT100_1CH_robusto.db
+
+Luego vuelva a abrir el .asc y corra Run.

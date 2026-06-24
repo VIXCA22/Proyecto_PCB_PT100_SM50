@@ -1,0 +1,27 @@
+﻿IMPORTACION LTSPICE -> KICAD
+
+Archivo LTspice original:
+C:\Users\kenne\Documents\ProyectoPCB_LTspice_PT100_SM50\01_SENSOR_PT100\Sensor_PT100.asc
+
+Archivo preparado:
+C:\Users\kenne\Documents\KiCad\PCB_PT100_SM50\PCB_PT100_SM50\ltspice_import\Sensor_PT100\asc\Sensor_PT100.asc
+
+Carpeta de simbolos .asy copiados:
+C:\Users\kenne\Documents\KiCad\PCB_PT100_SM50\PCB_PT100_SM50\ltspice_import\Sensor_PT100\asy_symbols
+
+Carpeta de modelos copiados:
+C:\Users\kenne\Documents\KiCad\PCB_PT100_SM50\PCB_PT100_SM50\ltspice_import\Sensor_PT100\models
+
+PASOS EN KICAD:
+1. Abre KiCad.
+2. Abre Schematic Editor en modo standalone o desde un proyecto temporal.
+3. File -> Import -> Non-KiCad Schematic.
+4. Selecciona este archivo:
+   C:\Users\kenne\Documents\KiCad\PCB_PT100_SM50\PCB_PT100_SM50\ltspice_import\Sensor_PT100\asc\Sensor_PT100.asc
+5. Guarda el resultado como:
+   C:\Users\kenne\Documents\KiCad\PCB_PT100_SM50\PCB_PT100_SM50\ltspice_import\Sensor_PT100\Sensor_PT100_importado.kicad_sch
+
+IMPORTANTE:
+- No importes encima del esquematico oficial.
+- Usa este importado como plantilla visual.
+- Luego copia/redibuja en el esquematico oficial usando tus componentes con footprints ProyectoPCB.

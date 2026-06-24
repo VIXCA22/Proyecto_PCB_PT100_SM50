@@ -1,0 +1,19 @@
+* ============================================================
+* TPS7A4701_10V.lib
+* Wrapper para TPS7A4701_TRANS configurado a salida +10 V
+*
+* Pines del s?mbolo:
+* IN   EN   GND   NR   OUT
+*
+* Configuraci?n ANY-OUT:
+* VOUT = 1.4 V + 6.4 V + 1.6 V + 0.4 V + 0.2 V = 10.0 V
+* ============================================================
+
+.SUBCKT TPS7A4701_10V IN EN GND NR OUT
+
+* Pin order del modelo original:
+* 0P1V 0P2V 0P4V 0P8V 1P6V 3P2V 6P4V1 6P4V2 EN GND NR SENSE IN_0 IN_1 OUT_0 OUT_1
+
+XU1 N0P1 GND GND N0P8 GND N3P2 GND N6P4B EN GND NR OUT IN IN OUT OUT TPS7A4701_TRANS
+
+.ENDS TPS7A4701_10V

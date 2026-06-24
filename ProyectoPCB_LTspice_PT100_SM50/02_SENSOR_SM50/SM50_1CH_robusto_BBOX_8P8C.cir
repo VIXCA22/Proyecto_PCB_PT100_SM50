@@ -1,0 +1,82 @@
+* ============================================================
+* SM50_1CH_robusto_BBOX_8P8C.cir
+* Proyecto PCB - Canal SM-50 robusto idealizado
+*
+* J1_8P8C_BBOX:
+* Pin 1 -> +15V_BBOX
+* Pin 2 -> +15V_BBOX
+* Pin 3 -> AGND
+* Pin 4 -> OUT_SM50 hacia B-Box IN+
+* Pin 5 -> AGND hacia B-Box IN-
+* Pin 6 -> AGND
+* Pin 7 -> -15V_BBOX
+* Pin 8 -> -15V_BBOX
+*
+* J2_SM50_PUSH_5P:
+* Pin 1 -> +EXC, cable rojo
+* Pin 2 -> -EXC, cable negro
+* Pin 3 -> +SIG, cable verde
+* Pin 4 -> -SIG, cable blanco
+* Pin 5 -> SHIELD
+* ============================================================
+
+.param Rarm=350
+.param Sens=3m
+.param LoadFrac=1
+.param delta={Sens*LoadFrac}
+.param RG_SM=332
+.param G_SM={1+50000/RG_SM}
+
+* Alimentacion desde B-Box
+VPLUS15  Vp15 0 DC 15
+VMINUS15 Vm15 0 DC -15
+
+* Reguladores ideales equivalentes:
+* +15V -> TPS7A4701 -> +5V
+* -15V -> TPS7A3301 -> -5V
+VREGP5 Vp5 0 DC 5
+VREGM5 Vm5 0 DC -5
+
+* Puente Wheatstone ideal del SM-50
+* Excitacion: +5V y -5V, por tanto Vexc = 10V
+R1 Vp5 SIGP {Rarm*(1-delta)}
+R2 SIGP Vm5 {Rarm*(1+delta)}
+R3 Vp5 SIGN {Rarm*(1+delta)}
+R4 SIGN Vm5 {Rarm*(1-delta)}
+
+* Filtro/proteccion de entrada hacia INA828
+RINP SIGP SM_INP 49.9
+RINM SIGN SM_INM 49.9
+CDIFF_IN SM_INP SM_INM 10n
+
+* INA828 ideal:
+* REF = AGND
+BINA_SM50 SM_RAW 0 V={limit(G_SM*(V(SM_INP)-V(SM_INM)),-5,5)}
+
+* Filtro de salida hacia B-Box
+ROUT_FILT SM_RAW OUT_SM50 10k
+COUT_FILT OUT_SM50 0 33n
+RSER_BBOX OUT_SM50 OUT_SM50_BBOX 49.9
+
+* Carga de entrada B-Box ideal alta impedancia
+RBBOX OUT_SM50_BBOX 0 10Meg
+
+* Desacoplos ideales representativos
+CDEC_P15 Vp15 0 100n
+CDEC_M15 Vm15 0 100n
+CDEC_P5 Vp5 0 100n
+CDEC_M5 Vm5 0 100n
+CBULK_P5 Vp5 0 10u
+CBULK_M5 Vm5 0 10u
+
+.step param RG_SM list 332 499
+.step param LoadFrac list -1 -0.5 0 0.5 1
+.op
+
+.meas op Vbridge_SM50 PARAM V(SIGP,SIGN)
+.meas op Vout_SM50 FIND V(OUT_SM50_BBOX)
+.meas op Ibridge PARAM abs(I(VREGP5))
+.meas op Pbridge PARAM abs(V(Vp5,Vm5)*I(VREGP5))
+.meas op G_SM_value PARAM {G_SM}
+
+.end

@@ -1,0 +1,56 @@
+(kicad_symbol_lib
+  (version 20231120)
+  (generator "ProyectoPCB")
+
+  (symbol "TRIM_3296W_1K"
+    (pin_names (offset 1.016))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+
+    (property "Reference" "RV" (at 0 6.35 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "1k" (at 0 4.45 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "ProyectoPCB_Footprints:Bourns_3296W_1_102LF" (at 0 -6.35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Description" "Bourns 3296W-1-102LF 1k multiturn trimmer potentiometer" (at 0 -8.89 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+
+    (symbol "TRIM_3296W_1K_0_1"
+      (rectangle (start -4.5 3.0) (end 4.5 -3.0)
+        (stroke (width 0.254) (type default))
+        (fill (type background))
+      )
+
+      (text "TRIM" (at 0 1.1 0)
+        (effects (font (size 1.0 1.0) (bold yes)))
+      )
+
+      (text "3296W 1k" (at 0 -1.1 0)
+        (effects (font (size 0.9 0.9)))
+      )
+    )
+
+    (symbol "TRIM_3296W_1K_1_1"
+      (pin passive line (at -7.62 -1.9 0) (length 3.12)
+        (name "END1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+
+      (pin passive line (at 0 -5.54 90) (length 2.54)
+        (name "WIPER" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+
+      (pin passive line (at -7.62 1.9 0) (length 3.12)
+        (name "END3" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)
