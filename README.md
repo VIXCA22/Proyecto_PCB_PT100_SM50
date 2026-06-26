@@ -32,9 +32,13 @@ Disenar e implementar una tarjeta de circuito impreso que permita acondicionar y
 
 ### Canal PT100
 
+![Resistencia PT100](docs/figuras/pt100_resistencia.png)
+
 ![Respuesta PT100](docs/figuras/respuesta_pt100.png)
 
 ### Canal SM-50
+
+![Puente SM-50](docs/figuras/sm50_puente.png)
 
 ![Respuesta SM-50](docs/figuras/respuesta_sm50.png)
 

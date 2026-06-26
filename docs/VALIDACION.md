@@ -36,10 +36,10 @@ Se mantuvieron las referencias visibles. Las advertencias finales estaban relaci
 
 ## Simulaciones documentadas
 
-Los datos finales usados para las graficas estan en `docs/simulacion/`:
+Los datos finales usados para las graficas corregidas estan en `docs/simulacion/`:
 
 - `pt100_sweep_ng_20260625.csv`
 - `sm50_sweep_positive_ng_20260625.csv`
 - `resumen_numerico_ng_20260625.json`
 
-Las graficas generadas estan en `docs/figuras/`.
+Las graficas generadas estan en `docs/figuras/` y coinciden con el resumen del PDF final de simulacion.

@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import csv
 import html
-from collections import defaultdict
+import shutil
+import subprocess
 from pathlib import Path
 
 
@@ -45,18 +46,22 @@ def svg_line_chart(
     plot_w = width - left - right
     plot_h = height - top - bottom
 
-    xs = [x for _, pts, _ in series for x, _ in pts]
-    ys = [y for _, pts, _ in series for _, y in pts]
+    xs = [x for item in series for x, _ in item[1]]
+    ys = [y for item in series for _, y in item[1]]
     x_min = min(xs) if x_min is None else x_min
     x_max = max(xs) if x_max is None else x_max
-    y_min = min(ys) if y_min is None else y_min
-    y_max = max(ys) if y_max is None else y_max
+    auto_y_min = y_min is None
+    auto_y_max = y_max is None
+    y_min = min(ys) if auto_y_min else y_min
+    y_max = max(ys) if auto_y_max else y_max
     if y_min == y_max:
         y_min -= 1
         y_max += 1
     y_pad = (y_max - y_min) * 0.08
-    y_min -= y_pad
-    y_max += y_pad
+    if auto_y_min:
+        y_min -= y_pad
+    if auto_y_max:
+        y_max += y_pad
 
     def sx(x: float) -> float:
         return left + (x - x_min) / (x_max - x_min) * plot_w
@@ -84,64 +89,148 @@ def svg_line_chart(
         lines.append(f'<line x1="{left}" y1="{py:.1f}" x2="{left + plot_w}" y2="{py:.1f}" stroke="#d9e2ec" stroke-width="1"/>')
         lines.append(f'<text x="{left - 14}" y="{py + 5:.1f}" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">{nice_num(y)}</text>')
 
-    for label, pts, color in series:
+    for item in series:
+        label, pts, color = item[:3]
+        dash = item[3] if len(item) > 3 else ""
         points = " ".join(f"{sx(x):.1f},{sy(y):.1f}" for x, y in pts)
-        lines.append(f'<polyline fill="none" stroke="{color}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="{points}"/>')
+        dash_attr = f' stroke-dasharray="{dash}"' if dash else ""
+        lines.append(f'<polyline fill="none" stroke="{color}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"{dash_attr} points="{points}"/>')
         for x, y in pts:
             lines.append(f'<circle cx="{sx(x):.1f}" cy="{sy(y):.1f}" r="4.5" fill="{color}" stroke="#ffffff" stroke-width="2"/>')
 
     legend_x = width - right + 35
     legend_y = top + 12
-    for idx, (label, _, color) in enumerate(series):
+    for idx, item in enumerate(series):
+        label, _, color = item[:3]
+        dash = item[3] if len(item) > 3 else ""
         y = legend_y + idx * 34
-        lines.append(f'<line x1="{legend_x}" y1="{y}" x2="{legend_x + 34}" y2="{y}" stroke="{color}" stroke-width="4" stroke-linecap="round"/>')
+        dash_attr = f' stroke-dasharray="{dash}"' if dash else ""
+        lines.append(f'<line x1="{legend_x}" y1="{y}" x2="{legend_x + 34}" y2="{y}" stroke="{color}" stroke-width="4" stroke-linecap="round"{dash_attr}/>')
         lines.append(f'<text x="{legend_x + 46}" y="{y + 6}" font-family="Arial, sans-serif" font-size="17" fill="#243b53">{html.escape(label)}</text>')
 
     lines.append("</svg>")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def build_response_charts() -> None:
+def build_response_charts() -> list[Path]:
     pt100 = read_csv(SIM_DIR / "pt100_sweep_ng_20260625.csv")
     sm50 = read_csv(SIM_DIR / "sm50_sweep_positive_ng_20260625.csv")
+    generated: list[Path] = []
 
-    pt100_series = [
+    pt100_res_path = FIG_DIR / "pt100_resistencia.svg"
+    pt100_res_series = [
+        (
+            "Valor nominal",
+            [(float(row["TempC"]), float(row["R_PT100_NOM_OHM"])) for row in pt100],
+            "#2563eb",
+        ),
+        (
+            "Temperatura baja",
+            [(float(row["TempC"]), float(row["R_PT100_LOW_OHM"])) for row in pt100],
+            "#dc2626",
+            "9 8",
+        ),
+        (
+            "Temperatura alta",
+            [(float(row["TempC"]), float(row["R_PT100_HIGH_OHM"])) for row in pt100],
+            "#92400e",
+            "9 8",
+        ),
+    ]
+    svg_line_chart(
+        pt100_res_path,
+        "Variacion de resistencia del sensor PT100",
+        "Temperatura nominal, T (C)",
+        "Resistencia del PT100 (ohm)",
+        pt100_res_series,
+        x_min=0,
+        x_max=100,
+        y_min=95,
+        y_max=142,
+    )
+    generated.append(pt100_res_path)
+
+    pt100_out_path = FIG_DIR / "respuesta_pt100.svg"
+    pt100_out_series = [
         (
             "Salida PT100 a B-Box",
             [(float(row["TempC"]), float(row["VOUT_PT100_BBOX_V"])) for row in pt100],
             "#2563eb",
         ),
         (
-            "Entrada diferencial INA",
-            [(float(row["TempC"]), float(row["VDIFF_INA_V"])) for row in pt100],
-            "#16a34a",
+            "Salida filtrada",
+            [(float(row["TempC"]), float(row["VOUT_PT100_FILT_V"])) for row in pt100],
+            "#dc2626",
+            "9 8",
         ),
     ]
     svg_line_chart(
-        FIG_DIR / "respuesta_pt100.svg",
-        "Respuesta simulada del canal PT100",
-        "Temperatura del PT100 (C)",
-        "Voltaje (V)",
-        pt100_series,
-    )
-
-    grouped: dict[str, list[tuple[float, float]]] = defaultdict(list)
-    for row in sm50:
-        rg = row["RG_ohm"]
-        grouped[f"RG {rg} ohm"].append((float(row["LoadFrac"]) * 100.0, float(row["VOUT_SM50_BBOX_V"])))
-
-    colors = ["#dc2626", "#7c3aed", "#0891b2", "#ea580c", "#15803d"]
-    sm50_series = [(label, sorted(points), colors[i % len(colors)]) for i, (label, points) in enumerate(sorted(grouped.items()))]
-    svg_line_chart(
-        FIG_DIR / "respuesta_sm50.svg",
-        "Respuesta simulada del canal SM-50",
-        "Carga / torque relativo (%)",
-        "Salida a B-Box (V)",
-        sm50_series,
+        pt100_out_path,
+        "Tension acondicionada del canal PT100",
+        "Temperatura nominal, T (C)",
+        "Tension electrica de salida (V)",
+        pt100_out_series,
         x_min=0,
         x_max=100,
-        y_min=0,
+        y_min=2.2,
+        y_max=3.4,
     )
+    generated.append(pt100_out_path)
+
+    sm50_bridge_path = FIG_DIR / "sm50_puente.svg"
+    sm50_bridge_series = [
+        (
+            "VSEN+ - VSEN-",
+            [(float(row["Load_lb"]), float(row["VBRIDGE_SM50_mV"])) for row in sm50],
+            "#2563eb",
+        )
+    ]
+    svg_line_chart(
+        sm50_bridge_path,
+        "Senal diferencial del puente SM-50",
+        "Carga aplicada (lb)",
+        "Tension diferencial del puente (mV)",
+        sm50_bridge_series,
+        x_min=0,
+        x_max=50,
+        y_min=0,
+        y_max=32,
+    )
+    generated.append(sm50_bridge_path)
+
+    sm50_out_path = FIG_DIR / "respuesta_sm50.svg"
+    sm50_series = [
+        (
+            "Salida real hacia B-Box",
+            [(float(row["Load_lb"]), float(row["VOUT_SM50_BBOX_V"])) for row in sm50],
+            "#2563eb",
+        ),
+        (
+            "Salida ideal",
+            [(float(row["Load_lb"]), float(row["VOUT_SM50_IDEAL_V"])) for row in sm50],
+            "#dc2626",
+            "9 8",
+        ),
+        (
+            "Limite de 5 V",
+            [(float(row["Load_lb"]), float(row["V_LIMIT_V"])) for row in sm50],
+            "#92400e",
+            "3 7",
+        ),
+    ]
+    svg_line_chart(
+        sm50_out_path,
+        "Respuesta acondicionada del canal SM-50",
+        "Carga aplicada (lb)",
+        "Tension electrica de salida (V)",
+        sm50_series,
+        x_min=0,
+        x_max=50,
+        y_min=0,
+        y_max=10,
+    )
+    generated.append(sm50_out_path)
+    return generated
 
 
 def parse_asc(path: Path) -> tuple[list[tuple[int, int, int, int]], list[tuple[int, int, str]], list[dict[str, str]]]:
@@ -171,10 +260,13 @@ def parse_asc(path: Path) -> tuple[list[tuple[int, int, int, int]], list[tuple[i
     return wires, flags, symbols
 
 
-def render_asc_svg(src: Path, out: Path, title: str) -> None:
+def render_asc_svg(src: Path, out: Path, title: str) -> bool:
     wires, flags, symbols = parse_asc(src)
     xs = [x for wire in wires for x in (wire[0], wire[2])] + [x for x, _, _ in flags] + [int(s["x"]) for s in symbols]
     ys = [y for wire in wires for y in (wire[1], wire[3])] + [y for _, y, _ in flags] + [int(s["y"]) for s in symbols]
+    if not xs or not ys:
+        print(f"Saltando {src}: no contiene elementos renderizables.")
+        return False
     min_x, max_x = min(xs) - 180, max(xs) + 260
     min_y, max_y = min(ys) - 220, max(ys) + 180
     width, height = max_x - min_x, max_y - min_y
@@ -220,25 +312,53 @@ def render_asc_svg(src: Path, out: Path, title: str) -> None:
 
     lines.append("</svg>")
     out.write_text("\n".join(lines), encoding="utf-8")
+    return True
 
 
-def build_ltspice_previews() -> None:
-    render_asc_svg(
+def build_ltspice_previews() -> list[Path]:
+    generated: list[Path] = []
+    pt100_out = FIG_DIR / "ltspice_pt100_esquematico.svg"
+    if render_asc_svg(
         ROOT / "ProyectoPCB_LTspice_PT100_SM50" / "01_SENSOR_PT100" / "Sensor_PT100.asc",
-        FIG_DIR / "ltspice_pt100_esquematico.svg",
+        pt100_out,
         "LTspice - canal PT100",
-    )
-    render_asc_svg(
+    ):
+        generated.append(pt100_out)
+    sm50_out = FIG_DIR / "ltspice_sm50_esquematico.svg"
+    if render_asc_svg(
         ROOT / "ProyectoPCB_LTspice_PT100_SM50" / "02_SENSOR_SM50" / "sensor_SM50.asc",
-        FIG_DIR / "ltspice_sm50_esquematico.svg",
+        sm50_out,
         "LTspice - canal SM-50",
-    )
+    ):
+        generated.append(sm50_out)
+    return generated
+
+
+def export_pngs(svg_paths: list[Path]) -> None:
+    inkscape = shutil.which("inkscape") or shutil.which("inkscape.com")
+    if inkscape is None:
+        print("Inkscape no esta disponible; se conservaron solo los SVG.")
+        return
+
+    for svg_path in svg_paths:
+        png_path = svg_path.with_suffix(".png")
+        subprocess.run(
+            [
+                inkscape,
+                str(svg_path),
+                "--export-type=png",
+                f"--export-filename={png_path}",
+            ],
+            check=True,
+        )
 
 
 def main() -> None:
     ensure_dirs()
-    build_response_charts()
-    build_ltspice_previews()
+    generated = []
+    generated.extend(build_response_charts())
+    generated.extend(build_ltspice_previews())
+    export_pngs(generated)
 
 
 if __name__ == "__main__":
