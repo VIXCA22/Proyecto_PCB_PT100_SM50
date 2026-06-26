@@ -1,0 +1,7 @@
+RG_ohm,LoadFrac,VBRIDGE_V,VDIFF_INA_V,VRAW_SM50_V,VOUT_SM50_LOCAL_V,VOUT_SM50_BBOX_V,log
+332,0,0.0,0.0,0.0,0.0,0.0,C:\Users\kenne\Documents\Proyecto_PCB_PT100_SM50\PCB_PT100_SM50\outputs\sim_kicad_ngspice_sm50_RG332_L0_ng_20260625.log
+332,0.5,0.015,0.015,2.274036,2.271764,2.271753,C:\Users\kenne\Documents\Proyecto_PCB_PT100_SM50\PCB_PT100_SM50\outputs\sim_kicad_ngspice_sm50_RG332_L0p5_ng_20260625.log
+332,1,0.03,0.03,4.548072,4.543529,4.543506,C:\Users\kenne\Documents\Proyecto_PCB_PT100_SM50\PCB_PT100_SM50\outputs\sim_kicad_ngspice_sm50_RG332_L1_ng_20260625.log
+499,0,0.0,0.0,0.0,0.0,0.0,C:\Users\kenne\Documents\Proyecto_PCB_PT100_SM50\PCB_PT100_SM50\outputs\sim_kicad_ngspice_sm50_RG499_L0_ng_20260625.log
+499,0.5,0.015,0.015,1.518006,1.51649,1.516482,C:\Users\kenne\Documents\Proyecto_PCB_PT100_SM50\PCB_PT100_SM50\outputs\sim_kicad_ngspice_sm50_RG499_L0p5_ng_20260625.log
+499,1,0.03,0.03,3.036012,3.032979,3.032964,C:\Users\kenne\Documents\Proyecto_PCB_PT100_SM50\PCB_PT100_SM50\outputs\sim_kicad_ngspice_sm50_RG499_L1_ng_20260625.log

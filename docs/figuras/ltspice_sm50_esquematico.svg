@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="-2852 -604 3128 1984">
+<rect x="-2852" y="-604" width="3128" height="1984" fill="#ffffff"/>
+<text x="-2828" y="-534" font-family="Arial, sans-serif" font-size="64" font-weight="700" fill="#1f2933">LTspice - canal SM-50</text>
+<text x="-2828" y="-484" font-family="Arial, sans-serif" font-size="34" fill="#52606d">ProyectoPCB_LTspice_PT100_SM50\02_SENSOR_SM50\sensor_SM50.asc</text>
+<line x1="-2576" y1="-384" x2="-2672" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2480" y1="-384" x2="-2576" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2416" y1="-384" x2="-2480" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2112" y1="-384" x2="-2256" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1632" y1="-368" x2="-1712" y2="-368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1360" y1="-368" x2="-1552" y2="-368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1184" y1="-368" x2="-1360" y2="-368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2480" y1="-336" x2="-2480" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2416" y1="-336" x2="-2480" y2="-336" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2576" y1="-272" x2="-2576" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2368" y1="-272" x2="-2368" y2="-304" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2112" y1="-272" x2="-2112" y2="-384" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1360" y1="-240" x2="-1360" y2="-368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2576" y1="-128" x2="-2576" y2="-208" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2368" y1="-128" x2="-2368" y2="-208" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2304" y1="-128" x2="-2304" y2="-304" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2112" y1="-128" x2="-2112" y2="-208" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-640" y1="-128" x2="-720" y2="-128" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-448" y1="-128" x2="-560" y2="-128" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-256" y1="-128" x2="-448" y2="-128" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="16" y1="-128" x2="-176" y2="-128" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1632" y1="-48" x2="-1712" y2="-48" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1360" y1="-48" x2="-1360" y2="-176" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1360" y1="-48" x2="-1552" y2="-48" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1184" y1="-48" x2="-1360" y2="-48" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-448" y1="48" x2="-448" y2="-128" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="16" y1="64" x2="16" y2="-128" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2368" y1="240" x2="-2368" y2="176" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2368" y1="240" x2="-2656" y2="240" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2080" y1="240" x2="-2368" y2="240" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2656" y1="320" x2="-2656" y2="240" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2080" y1="320" x2="-2080" y2="240" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1328" y1="336" x2="-1328" y2="272" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1152" y1="336" x2="-1296" y2="336" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1152" y1="368" x2="-1152" y2="336" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1424" y1="400" x2="-1648" y2="400" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2656" y1="464" x2="-2656" y2="400" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2656" y1="464" x2="-2672" y2="464" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2080" y1="464" x2="-2080" y2="400" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2064" y1="464" x2="-2080" y2="464" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1424" y1="480" x2="-1648" y2="480" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1152" y1="480" x2="-1152" y2="448" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1152" y1="480" x2="-1248" y2="480" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2656" y1="512" x2="-2656" y2="464" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2080" y1="512" x2="-2080" y2="464" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-448" y1="512" x2="-448" y2="112" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="16" y1="512" x2="16" y2="144" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1424" y1="528" x2="-1536" y2="528" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1056" y1="528" x2="-1232" y2="528" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1328" y1="640" x2="-1328" y2="592" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2656" y1="656" x2="-2656" y2="592" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2352" y1="656" x2="-2656" y2="656" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2080" y1="656" x2="-2080" y2="592" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2080" y1="656" x2="-2352" y2="656" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1536" y1="672" x2="-1536" y2="528" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2352" y1="704" x2="-2352" y2="656" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-2352" y1="720" x2="-2352" y2="704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1552" y1="1088" x2="-1552" y2="976" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1152" y1="1088" x2="-1152" y2="976" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1552" y1="1200" x2="-1552" y2="1168" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="-1152" y1="1200" x2="-1152" y2="1168" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<circle cx="-1517" cy="1107" r="42" fill="#fef3c7" stroke="#111827" stroke-width="7"/>
+<text x="-1517" y="1119" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#111827">V</text>
+<text x="-1552" y="1050" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">V1  15</text>
+<circle cx="-1117" cy="1219" r="42" fill="#fef3c7" stroke="#111827" stroke-width="7"/>
+<text x="-1117" y="1231" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#111827">V</text>
+<text x="-1152" y="1162" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">V2  15</text>
+<line x1="-2592" y1="-272" x2="-2497" y2="-272" stroke="#111827" stroke-width="8"/>
+<line x1="-2557" y1="-317" x2="-2557" y2="-227" stroke="#111827" stroke-width="8"/>
+<line x1="-2532" y1="-317" x2="-2532" y2="-227" stroke="#111827" stroke-width="8"/>
+<text x="-2592" y="-294" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C1  10�F</text>
+<line x1="-2128" y1="-272" x2="-2033" y2="-272" stroke="#111827" stroke-width="8"/>
+<line x1="-2093" y1="-317" x2="-2093" y2="-227" stroke="#111827" stroke-width="8"/>
+<line x1="-2068" y1="-317" x2="-2068" y2="-227" stroke="#111827" stroke-width="8"/>
+<text x="-2128" y="-294" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C2  10�F</text>
+<rect x="-2344" y="-376" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="-2269" y="-341" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U1</text>
+<text x="-2269" y="-310" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">TPS7A4701_10V</text>
+<text x="-2336" y="-390" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U1</text>
+<line x1="-2384" y1="-272" x2="-2289" y2="-272" stroke="#111827" stroke-width="8"/>
+<line x1="-2349" y1="-317" x2="-2349" y2="-227" stroke="#111827" stroke-width="8"/>
+<line x1="-2324" y1="-317" x2="-2324" y2="-227" stroke="#111827" stroke-width="8"/>
+<text x="-2384" y="-294" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C3  10nF</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-2672,334 -2652,309 -2627,359 -2602,309 -2577,359 -2557,334"/>
+<text x="-2672" y="282" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R1  350</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-2096,334 -2076,309 -2051,359 -2026,309 -2001,359 -1981,334"/>
+<text x="-2096" y="282" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R2  350</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-2096,526 -2076,501 -2051,551 -2026,501 -2001,551 -1981,526"/>
+<text x="-2096" y="474" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R3  {R3_SM50}</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-2672,526 -2652,501 -2627,551 -2602,501 -2577,551 -2557,526"/>
+<text x="-2672" y="474" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R4  350</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-1536,-354 -1516,-379 -1491,-329 -1466,-379 -1441,-329 -1421,-354"/>
+<text x="-1536" y="-406" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R5  50</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-1536,-34 -1516,-59 -1491,-9 -1466,-59 -1441,-9 -1421,-34"/>
+<text x="-1536" y="-86" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R6  50</text>
+<line x1="-1376" y1="-240" x2="-1281" y2="-240" stroke="#111827" stroke-width="8"/>
+<line x1="-1341" y1="-285" x2="-1341" y2="-195" stroke="#111827" stroke-width="8"/>
+<line x1="-1316" y1="-285" x2="-1316" y2="-195" stroke="#111827" stroke-width="8"/>
+<text x="-1376" y="-262" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C4  10nF</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-1168,382 -1148,357 -1123,407 -1098,357 -1073,407 -1053,382"/>
+<text x="-1168" y="330" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R7  340</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-544,-114 -524,-139 -499,-89 -474,-139 -449,-89 -429,-114"/>
+<text x="-544" y="-166" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">ROUT1  50</text>
+<line x1="-464" y1="48" x2="-369" y2="48" stroke="#111827" stroke-width="8"/>
+<line x1="-429" y1="3" x2="-429" y2="93" stroke="#111827" stroke-width="8"/>
+<line x1="-404" y1="3" x2="-404" y2="93" stroke="#111827" stroke-width="8"/>
+<text x="-464" y="26" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C5  33nF</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="-160,-114 -140,-139 -115,-89 -90,-139 -65,-89 -45,-114"/>
+<text x="-160" y="-166" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R_BBOX1  50</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="0,78 20,53 45,103 70,53 95,103 115,78"/>
+<text x="0" y="26" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R8  3k</text>
+<rect x="-1336" y="456" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="-1261" y="491" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U2</text>
+<text x="-1261" y="522" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">INA826</text>
+<text x="-1328" y="442" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U2</text>
+<circle cx="-1152" cy="1200" r="14" fill="#475569"/>
+<text x="-1128" y="1210" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-1552" cy="1200" r="14" fill="#475569"/>
+<text x="-1528" y="1210" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-1552" cy="976" r="14" fill="#166534"/>
+<text x="-1528" y="986" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="-1152" cy="976" r="14" fill="#166534"/>
+<text x="-1128" y="986" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
+<circle cx="-2672" cy="-384" r="14" fill="#166534"/>
+<text x="-2648" y="-374" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="-2576" cy="-128" r="14" fill="#475569"/>
+<text x="-2552" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-2112" cy="-128" r="14" fill="#475569"/>
+<text x="-2088" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-2304" cy="-128" r="14" fill="#475569"/>
+<text x="-2280" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-2368" cy="-128" r="14" fill="#475569"/>
+<text x="-2344" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-2112" cy="-384" r="14" fill="#166534"/>
+<text x="-2088" y="-374" font-family="Arial, sans-serif" font-size="30" fill="#166534">+EXC_SM50</text>
+<circle cx="-2368" cy="176" r="14" fill="#166534"/>
+<text x="-2344" y="186" font-family="Arial, sans-serif" font-size="30" fill="#166534">+EXC_SM50</text>
+<circle cx="-2352" cy="720" r="14" fill="#475569"/>
+<text x="-2328" y="730" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-2672" cy="464" r="14" fill="#166534"/>
+<text x="-2648" y="474" font-family="Arial, sans-serif" font-size="30" fill="#166534">SENP_SM50</text>
+<circle cx="-2064" cy="464" r="14" fill="#166534"/>
+<text x="-2040" y="474" font-family="Arial, sans-serif" font-size="30" fill="#166534">SENN_SM50</text>
+<circle cx="-2352" cy="704" r="14" fill="#166534"/>
+<text x="-2328" y="714" font-family="Arial, sans-serif" font-size="30" fill="#166534">-EXC_SM50</text>
+<circle cx="-1712" cy="-48" r="14" fill="#166534"/>
+<text x="-1688" y="-38" font-family="Arial, sans-serif" font-size="30" fill="#166534">SENN_SM50</text>
+<circle cx="-1712" cy="-368" r="14" fill="#166534"/>
+<text x="-1688" y="-358" font-family="Arial, sans-serif" font-size="30" fill="#166534">SENP_SM50</text>
+<circle cx="-1184" cy="-368" r="14" fill="#166534"/>
+<text x="-1160" y="-358" font-family="Arial, sans-serif" font-size="30" fill="#166534">INA_INP_SM50</text>
+<circle cx="-1184" cy="-48" r="14" fill="#166534"/>
+<text x="-1160" y="-38" font-family="Arial, sans-serif" font-size="30" fill="#166534">INA_INN_SM50</text>
+<circle cx="-1328" cy="640" r="14" fill="#166534"/>
+<text x="-1304" y="650" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
+<circle cx="-1328" cy="272" r="14" fill="#166534"/>
+<text x="-1304" y="282" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="-1056" cy="528" r="14" fill="#166534"/>
+<text x="-1032" y="538" font-family="Arial, sans-serif" font-size="30" fill="#166534">INA_INA_SM50</text>
+<circle cx="-1536" cy="672" r="14" fill="#475569"/>
+<text x="-1512" y="682" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-1648" cy="480" r="14" fill="#166534"/>
+<text x="-1624" y="490" font-family="Arial, sans-serif" font-size="30" fill="#166534">INA_INN_SM50</text>
+<circle cx="-1648" cy="400" r="14" fill="#166534"/>
+<text x="-1624" y="410" font-family="Arial, sans-serif" font-size="30" fill="#166534">INA_INP_SM50</text>
+<circle cx="-448" cy="-128" r="14" fill="#166534"/>
+<text x="-424" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#166534">VOUT_FILT_SM50</text>
+<circle cx="-448" cy="512" r="14" fill="#475569"/>
+<text x="-424" y="522" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="16" cy="-128" r="14" fill="#166534"/>
+<text x="40" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#166534">OUT_SM50_BBOX</text>
+<circle cx="16" cy="512" r="14" fill="#475569"/>
+<text x="40" y="522" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="-720" cy="-128" r="14" fill="#166534"/>
+<text x="-696" y="-118" font-family="Arial, sans-serif" font-size="30" fill="#166534">INA_INA_SM50</text>
+</svg>

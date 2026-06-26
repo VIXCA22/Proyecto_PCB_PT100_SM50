@@ -1,0 +1,699 @@
+{
+  "pt100": [
+    {
+      "TempC": 40,
+      "VPT100_V": 0.1154,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.0,
+      "VOUT_PT100_BBOX_V": -4.49548,
+      "VOUT_PT100_LOCAL_V": -4.4955,
+      "VRAW_PT100_V": -4.5,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T40_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 50,
+      "VPT100_V": 0.11925,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.00385,
+      "VOUT_PT100_BBOX_V": -3.51048,
+      "VOUT_PT100_LOCAL_V": -3.5105,
+      "VRAW_PT100_V": -3.51401,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T50_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 60,
+      "VPT100_V": 0.1231,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.0077,
+      "VOUT_PT100_BBOX_V": -2.52548,
+      "VOUT_PT100_LOCAL_V": -2.52549,
+      "VRAW_PT100_V": -2.52801,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T60_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 70,
+      "VPT100_V": 0.12695,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.01155,
+      "VOUT_PT100_BBOX_V": -1.54047,
+      "VOUT_PT100_LOCAL_V": -1.54048,
+      "VRAW_PT100_V": -1.54202,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T70_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 80,
+      "VPT100_V": 0.1308,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.0154,
+      "VOUT_PT100_BBOX_V": -0.55547,
+      "VOUT_PT100_LOCAL_V": -0.555473,
+      "VRAW_PT100_V": -0.556029,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T80_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 90,
+      "VPT100_V": 0.13465,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.01925,
+      "VOUT_PT100_BBOX_V": 0.4295326,
+      "VOUT_PT100_LOCAL_V": 0.4295348,
+      "VRAW_PT100_V": 0.4299643,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T90_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 100,
+      "VPT100_V": 0.1385,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.0231,
+      "VOUT_PT100_BBOX_V": 1.414536,
+      "VOUT_PT100_LOCAL_V": 1.414543,
+      "VRAW_PT100_V": 1.415957,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T100_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 110,
+      "VPT100_V": 0.14235,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.02695,
+      "VOUT_PT100_BBOX_V": 2.399538,
+      "VOUT_PT100_LOCAL_V": 2.39955,
+      "VRAW_PT100_V": 2.40195,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T110_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 120,
+      "VPT100_V": 0.1462,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.0308,
+      "VOUT_PT100_BBOX_V": 3.384541,
+      "VOUT_PT100_LOCAL_V": 3.384558,
+      "VRAW_PT100_V": 3.387943,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T120_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "TempC": 130,
+      "VPT100_V": 0.15005,
+      "VREF40_V": 0.1154,
+      "VDIFF_INA_V": 0.03465,
+      "VOUT_PT100_BBOX_V": 4.369544,
+      "VOUT_PT100_LOCAL_V": 4.369566,
+      "VRAW_PT100_V": 4.373936,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_pt100_T130_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(vpt)",
+            0
+          ],
+          [
+            "v(vref40)",
+            0
+          ],
+          [
+            "v(pt_inp,pt_inm)",
+            0
+          ],
+          [
+            "v(out_pt100_bbox)",
+            0
+          ],
+          [
+            "v(out_pt100)",
+            0
+          ],
+          [
+            "v(pt_raw)",
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "sm50_positive": [
+    {
+      "RG_ohm": 332,
+      "LoadFrac": 0,
+      "VBRIDGE_V": 0.0,
+      "VDIFF_INA_V": 0.0,
+      "VOUT_SM50_BBOX_V": 0.0,
+      "VOUT_SM50_LOCAL_V": 0.0,
+      "VRAW_SM50_V": 0.0,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_sm50_RG332_L0_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(sigp,sign)",
+            0
+          ],
+          [
+            "v(sm_inp,sm_inm)",
+            0
+          ],
+          [
+            "v(out_sm50_bbox)",
+            0
+          ],
+          [
+            "v(out_sm50)",
+            0
+          ],
+          [
+            "v(sm_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "RG_ohm": 332,
+      "LoadFrac": 0.5,
+      "VBRIDGE_V": 0.015,
+      "VDIFF_INA_V": 0.015,
+      "VOUT_SM50_BBOX_V": 2.271753,
+      "VOUT_SM50_LOCAL_V": 2.271764,
+      "VRAW_SM50_V": 2.274036,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_sm50_RG332_L0p5_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(sigp,sign)",
+            0
+          ],
+          [
+            "v(sm_inp,sm_inm)",
+            0
+          ],
+          [
+            "v(out_sm50_bbox)",
+            0
+          ],
+          [
+            "v(out_sm50)",
+            0
+          ],
+          [
+            "v(sm_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "RG_ohm": 332,
+      "LoadFrac": 1,
+      "VBRIDGE_V": 0.03,
+      "VDIFF_INA_V": 0.03,
+      "VOUT_SM50_BBOX_V": 4.543506,
+      "VOUT_SM50_LOCAL_V": 4.543529,
+      "VRAW_SM50_V": 4.548072,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_sm50_RG332_L1_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(sigp,sign)",
+            0
+          ],
+          [
+            "v(sm_inp,sm_inm)",
+            0
+          ],
+          [
+            "v(out_sm50_bbox)",
+            0
+          ],
+          [
+            "v(out_sm50)",
+            0
+          ],
+          [
+            "v(sm_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "RG_ohm": 499,
+      "LoadFrac": 0,
+      "VBRIDGE_V": 0.0,
+      "VDIFF_INA_V": 0.0,
+      "VOUT_SM50_BBOX_V": 0.0,
+      "VOUT_SM50_LOCAL_V": 0.0,
+      "VRAW_SM50_V": 0.0,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_sm50_RG499_L0_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(sigp,sign)",
+            0
+          ],
+          [
+            "v(sm_inp,sm_inm)",
+            0
+          ],
+          [
+            "v(out_sm50_bbox)",
+            0
+          ],
+          [
+            "v(out_sm50)",
+            0
+          ],
+          [
+            "v(sm_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "RG_ohm": 499,
+      "LoadFrac": 0.5,
+      "VBRIDGE_V": 0.015,
+      "VDIFF_INA_V": 0.015,
+      "VOUT_SM50_BBOX_V": 1.516482,
+      "VOUT_SM50_LOCAL_V": 1.51649,
+      "VRAW_SM50_V": 1.518006,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_sm50_RG499_L0p5_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(sigp,sign)",
+            0
+          ],
+          [
+            "v(sm_inp,sm_inm)",
+            0
+          ],
+          [
+            "v(out_sm50_bbox)",
+            0
+          ],
+          [
+            "v(out_sm50)",
+            0
+          ],
+          [
+            "v(sm_raw)",
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "RG_ohm": 499,
+      "LoadFrac": 1,
+      "VBRIDGE_V": 0.03,
+      "VDIFF_INA_V": 0.03,
+      "VOUT_SM50_BBOX_V": 3.032964,
+      "VOUT_SM50_LOCAL_V": 3.032979,
+      "VRAW_SM50_V": 3.036012,
+      "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_sm50_RG499_L1_ng_20260625.log",
+      "rc": {
+        "init": 0,
+        "circ": 0,
+        "op": 0,
+        "prints": [
+          [
+            "v(sigp,sign)",
+            0
+          ],
+          [
+            "v(sm_inp,sm_inm)",
+            0
+          ],
+          [
+            "v(out_sm50_bbox)",
+            0
+          ],
+          [
+            "v(out_sm50)",
+            0
+          ],
+          [
+            "v(sm_raw)",
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "conjunto_positive_endpoint": {
+    "PT_TempC": 130,
+    "SM_LoadFrac": 1,
+    "SM_RG_ohm": 332,
+    "VOUT_PT100_BBOX_V": 4.369544,
+    "VOUT_SM50_BBOX_V": 4.543506,
+    "VRAW_PT100_V": 4.373936,
+    "VRAW_SM50_V": 4.548072,
+    "VPT100_V": 0.15005,
+    "VREF40_V": 0.1154,
+    "VDIFF_PT100_INA_V": 0.03465,
+    "VBRIDGE_SM50_V": 0.03,
+    "VDIFF_SM50_INA_V": 0.03,
+    "rc": {
+      "init": 0,
+      "circ": 0,
+      "op": 0,
+      "prints": [
+        [
+          "v(out_pt100_bbox)",
+          0
+        ],
+        [
+          "v(out_sm50_bbox)",
+          0
+        ],
+        [
+          "v(pt_vpt)",
+          0
+        ],
+        [
+          "v(pt_vref40)",
+          0
+        ],
+        [
+          "v(pt_inp,pt_inm)",
+          0
+        ],
+        [
+          "v(sm_sigp,sm_sign)",
+          0
+        ],
+        [
+          "v(sm_inp,sm_inm)",
+          0
+        ],
+        [
+          "v(pt_raw)",
+          0
+        ],
+        [
+          "v(sm_raw)",
+          0
+        ]
+      ]
+    },
+    "log": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_conjunto_ideal_pos_ng_20260625.log",
+    "deck": "C:\\Users\\kenne\\Documents\\Proyecto_PCB_PT100_SM50\\PCB_PT100_SM50\\outputs\\sim_kicad_ngspice_conjunto_ideal_pos_ng_20260625.cir"
+  },
+  "engine": "C:\\Program Files\\KiCad\\9.0\\bin\\ngspice.dll",
+  "note": "Decks converted from LTspice behavioral syntax to ngspice syntax for KiCad ngspice.dll (.step/.meas OP removed; sweeps executed externally)."
+}

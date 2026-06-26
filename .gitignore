@@ -2,6 +2,13 @@
 .agents/
 zz_archivo_depuro_*/
 
+# Generated delivery/build packages
+*.zip
+!docs/fabricacion/PCB_PT100_SM50_GERBERS_CON_DRILL.zip
+ENTREGA_PCB_PT100_SM50_*/
+verificacion_footprints_descargados_*/
+_tmp_*
+
 # KiCad generated/local files
 **/fp-info-cache
 **/*-backups/
@@ -10,6 +17,7 @@ zz_archivo_depuro_*/
 **/_autosave-*
 **/*.bak
 **/*.bak_*
+**/*.bak_color*
 **/*.backup_*
 **/*backup*
 **/*BACKUP*
@@ -20,6 +28,9 @@ zz_archivo_depuro_*/
 **/_tmp*/
 **/tmp_*/
 **/_backup*/
+PCB_PT100_SM50/fabricacion/
+PCB_PT100_SM50/outputs/
+docs/fabricacion/gerbers/
 
 # LTspice generated results
 **/*.raw
@@ -39,6 +50,8 @@ zz_archivo_depuro_*/
 **/*.mif
 
 # OS/editor noise
+__pycache__/
+*.py[cod]
 Thumbs.db
 .DS_Store
 desktop.ini
