@@ -1,0 +1,1498 @@
+\documentclass[12pt]{article}
+
+% ------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\usepackage[hypertexnames=false]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\setlength{\headheight}{14.5pt}
+
+\begin{document}
+
+% ------------------------------------------------
+\begin{center}
+\textbf{\Large Universidad de Costa Rica}\\
+\vspace{0.3cm}
+\textbf{Escuela de Ingeniería Eléctrica}
+
+\vspace{2cm}
+
+\textbf{\LARGE Bitácora de laboratorio}
+
+\vspace{1.5cm}
+
+\textbf{Diseño de PCB para Sensores de Torque y Temperatura}
+
+\vspace{1.5cm}
+
+Kenneth Daniel Vizcaíno Jiménez -- C09331
+
+\vspace{1cm}
+
+Marzo--Junio 2026
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+% =================================================
+\section{Descripción del proyecto}
+
+\textbf{Título del proyecto:}
+Diseño e implementación de una tarjeta de acondicionamiento de señales para sensores de torque y temperatura en un motor de inducción.
+
+\textbf{Objetivo general:}
+Diseñar e implementar una PCB que permita acondicionar las señales de sensores para su correcta adquisición.
+
+\textbf{Objetivos específicos:}
+\begin{enumerate}
+\item Comprender el diseño de PCB.
+\item Verificar sensores.
+\item Diseñar circuito.
+\item Implementar prototipo.
+\end{enumerate}
+
+\textbf{Entregables:}
+\begin{itemize}
+\item Esquemático
+\item PCB
+\item Prototipo
+\item Pruebas
+\end{itemize}
+
+% =================================================
+\section{Bitácora de trabajo}
+
+% =========================
+\section{Primera semana}
+
+\subsection{Inicio del proyecto}
+\textbf{Fecha:} 11/03/2026 \quad \textbf{Hora:} 13:00--14:00
+
+\textbf{Objetivo:}
+Definir el enfoque del proyecto.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se realizó una revisión general del alcance del proyecto, identificando los requerimientos principales del sistema y los objetivos a cumplir en el diseño de la PCB.
+\item Se planteó una primera idea conceptual del circuito, considerando la integración simultánea de sensores de temperatura y torque dentro de una misma tarjeta.
+\item Se analizaron posibles configuraciones de conexión eléctrica, evaluando cómo se distribuirían las señales dentro del sistema.
+\end{itemize}
+
+\textbf{Resultados:}
+Definición inicial del sistema.
+
+\textbf{Dificultades:}
+Incertidumbre sobre componentes.
+
+% -------------------------
+\subsection{Introducción a KiCad}
+\textbf{Fecha:} 12/03/2026 \quad \textbf{Hora:} 13:00--17:00
+
+\textbf{Objetivo:}
+Aprender el entorno de KiCad.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se estudiaron tutoriales enfocados en el uso básico del software, permitiendo comprender la lógica de trabajo del entorno.
+\item Se exploraron los conceptos de símbolos electrónicos y footprints, entendiendo su relación dentro del diseño.
+\item Se revisaron distintas librerías de componentes disponibles para su implementación en el proyecto.
+\end{itemize}
+
+\textbf{Resultados:}
+Comprensión funcional del software.
+
+\textbf{Dificultades:}
+Asociación símbolo-huella.
+
+% -------------------------
+\subsection{Práctica de PCB}
+\textbf{Fecha:} 13/03/2026 \quad \textbf{Hora:} 11:00--16:00
+
+\textbf{Objetivo:}
+Practicar diseño.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se desarrolló un prototipo de PCB con fines de aprendizaje, sin ser aún el diseño final del proyecto.
+\item Se trabajó en la colocación de componentes y su distribución dentro del área de la tarjeta.
+\item Se asignaron footprints correspondientes a cada componente, fortaleciendo el flujo de trabajo.
+\end{itemize}
+
+\textbf{Resultados:}
+Mayor dominio práctico.
+
+\textbf{Dificultades:}
+Orden del diseño.
+
+% =========================
+\section{Segunda semana}
+
+\subsection{Profundización en diseño}
+\textbf{Fecha:} 18/03/2026 \quad \textbf{Hora:} 15:00--23:00
+
+\textbf{Objetivo:}
+Mejorar diseño.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se trabajó en el diseño del plano de tierra, comprendiendo su importancia en la reducción de ruido.
+\item Se ajustó el contorno físico de la PCB, definiendo su forma final.
+\item Se importaron nuevas librerías para ampliar las opciones de diseño.
+\item Se revisaron reglas eléctricas y de manufactura para evitar errores futuros.
+\end{itemize}
+
+\textbf{Resultados:}
+Mayor comprensión global.
+
+\textbf{Dificultades:}
+Implementación de tierra.
+
+% =========================
+\section{Tercera semana}
+
+\subsection{Ruido en sistemas}
+\textbf{Fecha:} 25/03/2026 \quad \textbf{Hora:} 13:30--18:30
+
+\textbf{Objetivo:}
+Comprender ruido.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se analizaron diferentes fuentes de ruido presentes en sistemas electrónicos.
+\item Se estudiaron efectos térmicos e interferencias externas.
+\item Se evaluaron técnicas como filtrado, blindaje y cableado trenzado para mitigación.
+\end{itemize}
+
+\textbf{Resultados:}
+Identificación de soluciones prácticas.
+
+\textbf{Dificultades:}
+Conceptos abstractos.
+
+% -------------------------
+\subsection{Sensores}
+\textbf{Fecha:} 25/03/2026 \quad \textbf{Hora:} 13:30--17:30
+
+\textbf{Objetivo:}
+Analizar sensores.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se investigó el funcionamiento de sensores de torque y temperatura.
+\item Se analizaron sus señales de salida y características eléctricas.
+\item Se evaluaron requisitos de acondicionamiento para integración futura.
+\end{itemize}
+
+\textbf{Resultados:}
+Comprensión del sistema.
+
+\textbf{Dificultades:}
+Rangos de señal.
+
+% =========================
+\section{Cuarta semana}
+
+\subsection{Revisión técnica}
+\textbf{Fecha:} 30/03/2026 \quad \textbf{Hora:} 13:30--19:30
+
+\textbf{Objetivo:}
+Refuerzo teórico.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se analizaron documentos técnicos relacionados con diseño de PCB.
+\item Se estudiaron buenas prácticas de ingeniería.
+\item Se relacionó la teoría con el proyecto en desarrollo.
+\end{itemize}
+
+\textbf{Resultados:}
+Mejor criterio técnico.
+
+\textbf{Dificultades:}
+Interpretación normativa.
+
+% =========================
+\section{Quinta semana}
+
+% -------------------------
+\subsection{Desarrollo de arquitectura del sistema}
+\textbf{Fecha:} 08/04/2026 \quad \textbf{Hora:} 13:00--20:00
+
+\textbf{Objetivo:}
+Definir formalmente la arquitectura completa del sistema de adquisición de señales para los sensores de torque y temperatura.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se elaboró un documento técnico completo donde se definió la arquitectura del sistema, estableciendo la cadena funcional desde los sensores hasta el controlador BoomBox.
+\item Se planteó un diagrama de bloques estructurado considerando las etapas: sensor, transporte por cable RJ45/UTP, entrada a PCB, acondicionamiento analógico, interfaz ModuLink y digitalización en el sistema imperix.
+\item Se analizó en detalle el comportamiento del sensor de torque basado en puente de Wheatstone, identificando que su salida es diferencial y de muy baja amplitud (del orden de milivoltios), lo que hace indispensable el uso de amplificación instrumental.
+\item Se establecieron valores iniciales de diseño para el sensor de torque, considerando sensibilidades típicas (2 mV/V a 3 mV/V) y estimando salidas de aproximadamente 10 mV a fondo de escala con excitación de 5 V.
+\item Se definió la necesidad de implementar una etapa de acondicionamiento analógico que incluya amplificación, filtrado, offset y escalado antes de la digitalización.
+\item Se analizó el sensor de temperatura real del motor, identificando que corresponde a un sistema PTC en serie utilizado para protección térmica, cuya salida es resistiva y no adecuada para medición continua.
+\item Se propuso como mejora futura la incorporación de un sensor tipo Pt100, permitiendo una medición de temperatura más precisa mediante excitación de corriente y lectura diferencial.
+\item Se evaluó el uso de cable RJ45/UTP como medio físico de interconexión, destacando el uso de pares trenzados para señales diferenciales y su impacto positivo en la inmunidad al ruido.
+\item Se definieron criterios de diseño para la entrada de la PCB, incluyendo protección contra ESD, filtrado EMI y referencia de tierra adecuada.
+\item Se dimensionó preliminarmente la ganancia del sistema de torque, estableciendo rangos de 500 a 1000 V/V para adaptar señales de milivoltios a niveles compatibles con el controlador.
+\item Se identificaron integrados recomendables para el acondicionamiento, como amplificadores de instrumentación tipo INA333, INA826 y AD8426.
+\item Se analizó la etapa de adquisición del sistema imperix BoomBox, comprendiendo su funcionamiento con ADC diferencial de 16 bits y rango de entrada de hasta ±10 V.
+\item Se estableció la importancia de diseñar la PCB de forma que la señal final quede dentro del rango del ADC, evitando saturación o activación de protecciones.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una arquitectura completa y fundamentada del sistema, sirviendo como base sólida para el diseño de la PCB y la integración con el controlador.
+
+\textbf{Dificultades:}
+Integrar correctamente todos los bloques del sistema y validar supuestos de diseño sin contar aún con todos los datasheets definitivos.
+
+% =========================
+\subsection{Validación experimental de sensores de temperatura}
+\textbf{Fecha:} 15/04/2026 \quad \textbf{Hora:} 14:00--18:30
+
+\textbf{Objetivo:}
+Verificar experimentalmente el tipo de sensor de temperatura presente en el motor mediante una visita al laboratorio LabCES.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se realizó una visita al laboratorio \textbf{LabCES} con el fin de inspeccionar directamente el motor y verificar la naturaleza de los sensores de temperatura instalados.
+\item Se efectuó una inspección física del cableado del motor, identificando la presencia de tres grupos de conductores similares, cada uno compuesto por tres hilos.
+\item Se planteó la hipótesis de que cada grupo correspondía a un sensor independiente asociado a cada fase del motor trifásico.
+\item Se procedió a realizar mediciones de resistencia utilizando un multímetro en cada uno de los grupos.
+\item Se obtuvieron valores en el rango de \SIrange{111}{112}{\ohm} de manera consistente en los tres conjuntos de conductores.
+\item A partir de estos resultados, se descartó la hipótesis inicial de sensores tipo PTC y se identificó que los sensores corresponden a \textbf{RTD tipo Pt100 de 3 hilos}.
+\item Se relacionaron los valores medidos con el comportamiento teórico del Pt100, el cual presenta una resistencia nominal de \SI{100}{\ohm} a \SI{0}{\celsius} y aumenta con la temperatura.
+\end{itemize}
+
+\textbf{Resultados:}
+Se confirmó experimentalmente, durante la visita a LabCES, que el sistema de temperatura del motor está compuesto por \textbf{tres sensores Pt100 de 3 hilos}, uno por fase.
+
+\textbf{Dificultades:}
+Interpretación inicial del cableado y diferenciación entre sensores PTC y RTD.
+
+% -------------------------
+
+\subsection{Rediseño del sistema y ajuste de parámetros de adquisición}
+\textbf{Fecha:} 17/04/2026 \quad \textbf{Hora:} 19:00--23:30
+
+\textbf{Objetivo:}
+Actualizar la arquitectura del sistema y definir parámetros de ganancia y margen de seguridad.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se actualizó el documento técnico del proyecto, incorporando la validación experimental de los sensores Pt100 y eliminando la referencia previa a sensores PTC.
+\item Se redefinió la arquitectura del sistema, estableciendo tres canales independientes de temperatura y un canal de torque.
+\item Se analizó el rango de salida del sistema de referencia imperix, identificando que el módulo ModuLink presenta una salida máxima aproximada de \(\pm 4.95\ \mathrm{V}\).
+\item Se tomó la decisión de no operar al límite del sistema, sino de implementar un margen de seguridad del orden del \(5\%\), definiendo una tensión eléctrica máxima de diseño cercana a \SI{4.7}{V}.
+\item Para el sensor de torque, se adoptó un valor de diseño intermedio de \SI{50}{mV}, dentro del rango típico de sensores tipo puente, y se calculó una ganancia aproximada de \(95\) a \(100\ \mathrm{V/V}\).
+\item Para los sensores Pt100, considerando una señal aproximada de \SI{112}{mV} obtenida mediante excitación por corriente, se estimó una ganancia de \(40\) a \(42\ \mathrm{V/V}\).
+\item Se reforzó la necesidad de amplificación mediante amplificadores de instrumentación para el canal de torque, debido a su baja amplitud y naturaleza diferencial.
+\item Se estableció que el canal de temperatura requiere una etapa previa de conversión de resistencia a tensión eléctrica antes del acondicionamiento.
+\item Se ajustaron las ecuaciones del sistema, los diagramas de bloques y la tabla de señales, logrando coherencia entre el diseño teórico y los resultados experimentales.
+\end{itemize}
+
+% ---- AQUÍ VA EL DIAGRAMA ----
+
+\begin{figure}[H]
+\centering
+\begin{adjustbox}{max width=0.98\textwidth}
+\begin{tikzpicture}[
+node distance=0.65cm and 0.85cm,
+block/.style={draw, rounded corners, align=center, minimum height=1.15cm, minimum width=2.8cm},
+line/.style={-{Latex[length=2.2mm]}}
+]
+
+\node[block] (torque) {Sensor de torque\\(puente de Wheatstone)};
+\node[block, below=of torque] (temp) {3 sensores Pt100\\(uno por fase)};
+
+\node[block, right=of torque] (in1) {Protección\\y filtrado};
+\node[block, right=of in1] (amp1) {Amplificación\\instrumental};
+\node[block, right=of amp1] (drv1) {Driver\\diferencial};
+
+\node[block, right=of temp] (r2v) {Excitación\\y conversión R$\rightarrow$V};
+\node[block, right=of r2v] (amp2) {Amplificación\\y filtrado};
+\node[block, right=of amp2] (drv2) {Driver\\diferencial};
+
+\node[block, right=1.3cm of drv1, minimum width=3.6cm] (stp) {Cable STP / RJ45\\blindado};
+\node[block, right=of stp, minimum width=3.7cm] (bbox) {BoomBox\\ADC diferencial};
+\node[block, below=of bbox, minimum width=3.0cm] (ctrl) {FPGA / CPU\\control y monitoreo};
+
+\draw[line] (torque) -- (in1);
+\draw[line] (in1) -- (amp1);
+\draw[line] (amp1) -- (drv1);
+\draw[line] (temp) -- (r2v);
+\draw[line] (r2v) -- (amp2);
+\draw[line] (amp2) -- (drv2);
+
+\draw[line] (drv1.east) -- ++(0.35,0) |- (stp.west);
+\draw[line] (drv2.east) -- ++(0.35,0) |- (stp.west);
+
+\draw[line] (stp) -- (bbox);
+\draw[line] (bbox) -- (ctrl);
+
+\end{tikzpicture}
+\end{adjustbox}
+\caption{Diagrama de bloques actualizado del sistema de adquisición, incorporando los tres sensores Pt100 y el acondicionamiento diferencial hacia BoomBox.}
+\label{fig:bloques_semana6}
+\end{figure}
+
+% ---- FIN DIAGRAMA ----
+
+\textbf{Resultados:}
+Se obtuvo una versión actualizada y consistente del diseño, con parámetros de ganancia y márgenes de seguridad definidos y justificados.
+
+\textbf{Dificultades:}
+Definir valores de diseño balanceando resolución, ruido y saturación sin exceder el rango del sistema.
+
+% =========================
+\section{Sexta semana}
+
+% -------------------------
+\subsection{Análisis del sistema de adquisición y arquitectura general}
+\textbf{Fecha:} 22/04/2026 \quad \textbf{Hora:} 18:00--20:30
+
+\textbf{Objetivo:}
+Comprender la arquitectura completa del sistema y definir el flujo de señal desde los sensores hasta la BoomBox.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó la arquitectura general del sistema, identificando que la señal debe mantenerse analógica hasta la BoomBox.
+\item Se corrigió la idea inicial de digitalización en la PCB, estableciendo que el ADC pertenece al sistema imperix.
+\item Se definió el uso de señal diferencial como requisito fundamental para la transmisión.
+\item Se estableció la cadena funcional sensor--PCB--BoomBox como base del diseño.
+\end{itemize}
+
+\textbf{Resultados:}
+Se definió correctamente la arquitectura del sistema de adquisición.
+
+\textbf{Dificultades:}
+Diferenciar claramente entre acondicionamiento analógico y digitalización.
+
+% -------------------------
+\subsection{Análisis de sensores y cálculo de estimación de parámetros }
+\textbf{Fecha:} 23/04/2026 \quad \textbf{Hora:} 19:00--22:00
+
+\textbf{Objetivo:}
+Analizar cómo se comportan eléctricamente los sensores y definir los valores básicos necesarios para el diseño.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se analizó el sensor de torque como un puente de Wheatstone, identificando su salida en el rango de milivolts.
+\item Se estableció un valor de diseño de \SI{50}{mV} para el cálculo de ganancia.
+\item Se analizaron los sensores Pt100, confirmando su comportamiento resistivo y la necesidad de excitación por corriente.
+\item Se definió una corriente de excitación de \SI{1}{mA} para los sensores de temperatura.
+\item Se calcularon las señales esperadas en los sensores, obteniendo valores del orden de \SIrange{100}{112}{mV}.
+\end{itemize}
+
+\textbf{Resultados:}
+Se definieron los rangos eléctricos de entrada del sistema.
+
+\textbf{Dificultades:}
+Ajustar valores sin contar aún con todos los datasheets definitivos.
+
+% -------------------------
+\subsection{Definición de etapas de amplificación y filtrado}
+\textbf{Fecha:} 23/04/2026 \quad \textbf{Hora:} 22:00--23:30
+
+\textbf{Objetivo:}
+Definir las etapas de amplificación y la estrategia de filtrado del sistema.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se estableció el uso de amplificadores de instrumentación para la lectura del sensor de torque.
+\item Se definieron ganancias aproximadas de \(G \approx 100\) para torque y \(G \approx 40\) para temperatura.
+\item Se analizó el uso de amplificadores operacionales auxiliares para etapas de filtrado y ajuste.
+\item Se propuso la implementación de un filtro pasabajo ajustable mediante trimmer.
+\item Se definió un rango preliminar de frecuencia de corte para validación experimental.
+\end{itemize}
+
+\textbf{Resultados:}
+Se establecieron las bases del acondicionamiento analógico.
+
+\textbf{Dificultades:}
+Determinar la frecuencia de corte sin mediciones reales de ruido.
+
+% -------------------------
+\subsection{Definición final del esquema de acondicionamiento y bloques de la PCB}
+\textbf{Fecha:} 24/04/2026 \quad \textbf{Hora:} 17:00--23:00
+
+\textbf{Objetivo:}
+Consolidar el diseño del esquema eléctrico preliminar de la PCB, integrando todos los bloques funcionales, valores de diseño y criterios de ingeniería definidos durante la semana.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se realizó una revisión completa del sistema de acondicionamiento, integrando la información obtenida sobre los sensores de torque y temperatura en una única arquitectura coherente.
+\item Se definió formalmente la cadena de procesamiento de señal desde los sensores hasta la BoomBox, estableciendo las etapas: protección, amplificación instrumental, filtrado, ajuste de escala y salida diferencial.
+\item Se adoptó un valor de diseño de \SI{50}{mV} para el sensor de torque y se definió una ganancia aproximada de \(G \approx 100\).
+\item Para los sensores Pt100, se estableció una corriente de excitación de \SI{1}{mA} y una ganancia aproximada de \(G \approx 40\).
+\item Se definió la inclusión de un filtro pasabajo ajustable mediante trimmer para validar experimentalmente el ruido del sistema.
+\item Se estableció el uso de señal diferencial en la salida de la PCB y cable STP con conector RJ45 como medio físico.
+\item Se definieron criterios de alimentación mediante fuente externa \(V_{dc}\), con consumo estimado entre \SIrange{30}{70}{mA}.
+\item Se incorporaron elementos de protección y desacoplo para robustecer la PCB.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una definición clara, coherente y fundamentada del esquema eléctrico de la PCB.
+
+\textbf{Dificultades:}
+Definir valores de diseño sin mediciones completas del entorno real.
+
+\section{Séptima semana}
+
+% -------------------------
+\subsection{Validación de parámetros eléctricos mediante hojas de datos}
+\textbf{Fecha:} 29/04/2026 \quad \textbf{Hora:} 18:00--22:00
+
+\textbf{Objetivo:}
+Verificar los valores eléctricos reales de los sensores y ajustar los parámetros de diseño con base en información técnica confiable.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron hojas de datos del sensor de torque tipo puente Wheatstone, confirmando una impedancia de entrada y salida cercana a \SI{350}{\ohm}.
+\item Se validó una excitación recomendada de \SI{10}{V}, con una sensibilidad aproximada de \SI{3}{mV/V}.
+\item Se determinó que la salida máxima del sensor es del orden de \SIrange{1}{30}{mV}, consistente con sensores de este tipo \cite{InterfaceSM50}.
+\item Se analizaron las características de precisión del sensor, observando bajo error de cero, baja no linealidad y baja histéresis.
+\item Se confirmó que los sensores de temperatura corresponden a tipo Pt100, basado en mediciones experimentales realizadas en laboratorio.
+\item Se verificó el comportamiento resistivo del Pt100, con valores de \SI{100}{\ohm} a \SI{0}{^\circ C} y aproximadamente \SI{138.5}{\ohm} a \SI{100}{^\circ C}.
+\item Se validó el uso de una corriente de excitación de \SI{1}{mA}, obteniendo señales en el rango de \SIrange{100}{138}{mV}.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvieron valores eléctricos reales y confiables para ambos sensores, permitiendo validar el diseño del sistema.
+
+\textbf{Dificultades:}
+Falta de identificación directa del sensor de temperatura, lo que requirió validación experimental.
+
+% -------------------------
+\subsection{Análisis del acondicionamiento mediante puente Wheatstone}
+\textbf{Fecha:} 29/04/2026 \quad \textbf{Hora:} 22:00--23:30
+
+\textbf{Objetivo:}
+Definir la estrategia de obtención de señal para sensores resistivos y su integración en el sistema.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se analizó el funcionamiento del puente Wheatstone como método de medición diferencial para sensores resistivos.
+\item Se estableció que el sensor de torque ya integra un puente completo, mientras que el Pt100 requiere configuración externa.
+\item Se definió que la señal útil es la diferencia entre las salidas del puente, la cual es proporcional a la variación de resistencia.
+\item Se identificó que las señales obtenidas son del orden de \SIrange{1}{30}{mV}, requiriendo amplificación.
+\item Se reafirmó el uso de amplificadores de instrumentación debido a su alta impedancia de entrada y rechazo de modo común .
+\end{itemize}
+
+\textbf{Resultados:}
+Se definió correctamente la forma de obtención de señal para ambos sensores.
+
+\textbf{Dificultades:}
+Comprender el impacto del modo común en la medición diferencial.
+
+% -------------------------
+\subsection{Revisión con el profesor y validación de salidas del sistema}
+\textbf{Fecha:} 30/04/2026 \quad \textbf{Hora:} 20:00--23:00
+
+\textbf{Objetivo:}
+Validar con el profesor los niveles de salida del sistema y confirmar la viabilidad del diseño.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se presentó al profesor el análisis realizado de los sensores y sus parámetros eléctricos.
+\item Se discutieron los niveles de señal obtenidos y su compatibilidad con la etapa de adquisición (BoomBox).
+\item Se validaron formalmente los niveles de salida definidos, respaldados por hojas de datos.
+\item Se recibió retroalimentación sobre la importancia del manejo diferencial de la señal.
+\item Se discutieron criterios de robustez frente a ruido en el entorno industrial del motor.
+\item El profesor proporcionó material bibliográfico sobre diseño de sistemas de acondicionamiento de señal para fortalecer la base teórica del proyecto.
+\end{itemize}
+
+\textbf{Resultados:}
+Se validaron los niveles de salida del sistema y se confirmó la coherencia del diseño propuesto.
+
+\textbf{Dificultades:}
+Ajustar el diseño considerando restricciones reales del sistema de adquisición.
+
+% -------------------------
+\subsection{Integración final de parámetros y ajustes del diseño}
+\textbf{Fecha:} 30/04/2026 \quad \textbf{Hora:} 17:00--18:30
+
+\textbf{Objetivo:}
+Integrar todos los parámetros validados en el diseño del sistema de acondicionamiento.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se ajustaron los valores de ganancia en función de los datos reales obtenidos.
+\item Se consolidó el uso de \(G \approx 100\) para torque y \(G \approx 40\) para temperatura.
+\item Se verificó la coherencia entre los niveles de entrada y salida del sistema.
+\item Se integraron los criterios de diseño en la arquitectura general de la PCB.
+\item Se dejaron definidos los parámetros base para la siguiente etapa de diseño esquemático en KiCad.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo un diseño ajustado y validado con base en datos reales y criterio técnico.
+
+\textbf{Dificultades:}
+Ajustar todos los parámetros manteniendo compatibilidad con el sistema completo.
+
+
+% =========================
+\section{Octava semana}
+
+% -------------------------
+\subsection{Revisión de avances y organización de la bitácora}
+\textbf{Fecha:} 05/05/2026 \quad \textbf{Hora:} 18:00--21:00
+
+\textbf{Objetivo:}
+Ordenar los avances acumulados del proyecto y dejar documentadas las decisiones técnicas tomadas hasta el momento.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó el avance general de la bitácora para verificar que las semanas anteriores mantuvieran una estructura uniforme.
+\item Se reorganizó la información relacionada con la arquitectura del sistema de acondicionamiento.
+\item Se reforzó la idea de mantener la señal analógica desde los sensores hasta la etapa de adquisición del sistema BoomBox.
+\item Se revisaron nuevamente los bloques principales del sistema: sensor, protección, amplificación, filtrado, ajuste de escala y salida diferencial.
+\item Se corrigió la redacción técnica del documento para usar términos más adecuados, como tensión eléctrica, volts y milivolts.
+\item Se identificaron puntos que aún requerían justificación con hojas de datos y material técnico.
+\end{itemize}
+
+\textbf{Resultados:}
+Se dejó más ordenada la documentación del proyecto y se aclararon las decisiones principales de la arquitectura de la PCB.
+
+\textbf{Dificultades:}
+Mantener la bitácora clara sin perder información técnica importante del proyecto.
+
+% -------------------------
+\subsection{Revisión de criterios para el acondicionamiento de señales}
+\textbf{Fecha:} 10/05/2026 \quad \textbf{Hora:} 19:00--22:30
+
+\textbf{Objetivo:}
+Reforzar la base teórica necesaria para el diseño de la PCB mediante la revisión de conceptos de sensores y acondicionamiento de señal.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se inició una revisión guiada del libro de sensores y acondicionadores de señal, enfocándose en los temas más relacionados con el proyecto.
+\item Se identificaron conceptos importantes como sensibilidad, rango dinámico, ganancia, offset, resolución e incertidumbre.
+\item Se relacionaron estos conceptos con las señales esperadas en el sensor de torque y en los sensores de temperatura.
+\item Se analizó la necesidad de adaptar señales pequeñas, del orden de milivolts, hacia niveles compatibles con la adquisición.
+\item Se repasó la importancia de evitar saturación en las etapas analógicas y de dejar margen suficiente en el rango de salida.
+\item Se anotaron fórmulas base para continuar con los cálculos de ganancia y escalamiento durante la siguiente semana.
+\end{itemize}
+
+\textbf{Resultados:}
+Se reforzó la teoría necesaria para justificar el diseño del acondicionamiento y se identificaron las fórmulas principales para el análisis de señales.
+
+\textbf{Dificultades:}
+Distinguir cuándo una tensión corresponde al valor mínimo, máximo, offset o fondo de escala del sistema.
+
+% =========================
+\section{Novena semana}
+
+% -------------------------
+\subsection{Estudio de rango dinámico, offset y resolución del ADC}
+\textbf{Fecha:} 13/05/2026 \quad \textbf{Hora:} 16:00--19:00
+
+\textbf{Objetivo:}
+Comprender cómo se relacionan la señal del sensor, la ganancia, el offset y la resolución del ADC dentro del sistema de adquisición.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se estudiaron problemas del libro relacionados con rango dinámico, resolución y acondicionamiento de señales.
+\item Se revisó el significado de términos como fondo de escala, valor mínimo, valor máximo, offset y número de bits.
+\item Se analizó cómo una señal pequeña del sensor puede ocupar solo una parte del rango del ADC si no se amplifica correctamente.
+\item Se revisó la expresión del efecto del offset en una cadena de medición, considerando resistencia de salida, corriente de entrada y ganancia.
+\item Se estudió cómo una tensión de offset amplificada puede reducir el número efectivo de bits disponibles para representar la señal útil.
+\item Se relacionó este análisis con el diseño del acondicionamiento para torque y temperatura.
+\end{itemize}
+
+\textbf{Resultados:}
+Se comprendió mejor la función del offset y su impacto sobre la resolución efectiva del sistema de adquisición.
+
+\textbf{Dificultades:}
+Interpretar correctamente si una tensión dada representa el valor mínimo, el offset o el valor máximo esperado del sensor.
+
+% -------------------------
+\subsection{Análisis de fórmulas para puente Wheatstone y señal diferencial}
+\textbf{Fecha:} 14/05/2026 \quad \textbf{Hora:} 18:00--21:30
+
+\textbf{Objetivo:}
+Revisar las ecuaciones necesarias para analizar un puente Wheatstone aplicado a sensores resistivos.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se repasó el funcionamiento general del puente Wheatstone como estructura de medición para sensores resistivos.
+\item Se revisó que, cuando el puente está balanceado, la salida diferencial ideal es cercana a cero.
+\item Se analizó que una variación de resistencia en los brazos del puente produce una tensión diferencial proporcional al cambio físico medido.
+\item Se relacionó el puente Wheatstone con el sensor de torque, debido a que este tipo de sensor entrega una señal diferencial de baja amplitud.
+\item Se reforzó la necesidad de usar un amplificador de instrumentación para medir la diferencia entre las salidas del puente y rechazar la tensión de modo común.
+\item Se revisó la importancia de que la etapa de entrada tenga alta impedancia para no cargar el puente ni alterar la medición.
+\end{itemize}
+
+\textbf{Resultados:}
+Se aclaró la relación entre puente Wheatstone, señal diferencial, modo común y amplificación instrumental.
+
+\textbf{Dificultades:}
+Diferenciar entre la tensión diferencial útil del puente y la tensión de modo común presente en sus nodos de salida.
+
+% -------------------------
+\subsection{Consolidación de fórmulas y criterios para el diseño de la PCB}
+\textbf{Fecha:} 15/05/2026 \quad \textbf{Hora:} 17:00--20:00
+
+\textbf{Objetivo:}
+Consolidar las fórmulas y criterios técnicos necesarios para continuar con el diseño esquemático de la PCB.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se organizaron las fórmulas principales relacionadas con sensibilidad, ganancia, offset, rango dinámico y resolución del ADC.
+\item Se revisó cómo nombrar correctamente las variables para evitar confusiones al aplicar las ecuaciones.
+\item Se relacionaron las fórmulas del libro con el caso práctico del proyecto de sensores de torque y temperatura.
+\item Se identificó que el diseño debe mantener margen de salida para evitar saturación frente a offset, ruido o variaciones reales del sensor.
+\item Se reforzó la idea de que el acondicionamiento debe incluir protección, amplificación, filtrado y salida diferencial.
+\item Se dejaron definidos los puntos teóricos que deben revisarse antes de avanzar con el esquemático final en KiCad.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una base de fórmulas más clara para continuar el diseño de la PCB con mejor criterio técnico.
+
+\textbf{Dificultades:}
+Ordenar las fórmulas de forma que sean útiles para resolver problemas y, al mismo tiempo, aplicables al diseño real del proyecto.
+
+
+
+% =========================
+\section{Décima semana}
+
+% -------------------------
+\subsection{Validación de datos reales del sensor SM-50}
+\textbf{Fecha:} 19/05/2026 \quad \textbf{Hora:} 10:00--14:00
+
+\textbf{Objetivo:}
+Corregir los datos del sensor de torque a partir de la información real de la hoja técnica del SM-50.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó nuevamente la información del sensor Interface SM-50 para evitar trabajar con valores genéricos o supuestos incorrectos.
+\item Se corrigió la capacidad utilizada en el proyecto, tomando como referencia el valor real de \SI{20}{in.lb}, equivalente aproximadamente a \SI{2.2}{N.m}.
+\item Se confirmó que la salida nominal del sensor es de \SI{3.0}{mV/V}, por lo que con una excitación de \SI{10}{V} se obtiene una señal diferencial máxima cercana a \SI{30}{mV}.
+\item Se registraron parámetros importantes para la defensa técnica: resistencia nominal del puente de \SI{350}{\ohm}, no linealidad de \SI{\pm 0.03}{\percent} FS, histéresis de \SI{\pm 0.02}{\percent} FS y balance de cero de \SI{\pm 1}{\percent} RO.
+\item Se corrigió la interpretación del cableado del sensor, dejando como referencia: rojo para +EXC, negro para -EXC, verde para +OUT, blanco para -OUT y blindaje para SHIELD.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una base de datos real para el canal de torque, eliminando el error de trabajar con rangos de torque que no correspondían al sensor seleccionado.
+
+\textbf{Dificultades:}
+Distinguir entre valores típicos de sensores de puente y los valores específicos del SM-50 que realmente se usarán en el proyecto.
+
+% -------------------------
+\subsection{Corrección e integración del documento técnico del proyecto}
+\textbf{Fecha:} 22/05/2026 \quad \textbf{Hora:} 19:00--23:30
+
+\textbf{Objetivo:}
+Unificar la información técnica del proyecto en un solo documento base y corregir errores de formato en LaTeX.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron documentos anteriores del proyecto para unir la información de sensores, acondicionamiento, alimentación, conectores y criterios de PCB.
+\item Se depuró la estructura del documento principal, separando la información por bloques funcionales para facilitar su lectura.
+\item Se corrigieron errores de compilación y de descarga del archivo, priorizando que el documento pudiera exportarse correctamente.
+\item Se organizó una guía de continuación del proyecto, indicando qué partes faltaban por cerrar antes de pasar al esquemático definitivo.
+\item Se reforzó que el diseño debe documentar no solo los cálculos, sino también las razones técnicas de cada decisión.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una versión más ordenada del documento técnico del proyecto, lista para seguir siendo completada con los valores definitivos.
+
+\textbf{Dificultades:}
+La principal dificultad fue mantener toda la información en un solo archivo sin perder coherencia ni generar errores de compilación.
+
+% -------------------------
+\subsection{Actualización de tablas de sensores y criterios de acondicionamiento}
+\textbf{Fecha:} 23/05/2026 \quad \textbf{Hora:} 10:00--15:00
+
+\textbf{Objetivo:}
+Actualizar las tablas del proyecto con datos más claros para el PT100 y el SM-50.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se actualizó la tabla de caracterización de sensores con los datos corregidos del SM-50 y del PT100.
+\item Para el PT100 se reforzó el uso de una corriente de excitación de \SI{1}{mA}, debido a que permite convertir la resistencia del sensor en una tensión medible con bajo autocalentamiento.
+\item Para el sensor de torque se mantuvo el criterio de puente resistivo con salida diferencial de baja amplitud, por lo que se requiere amplificación instrumental.
+\item Se incluyeron recomendaciones prácticas de desacoplo, como capacitores de \SI{100}{nF} cercanos a los circuitos integrados y capacitores de mayor valor por zona de alimentación.
+\item Se ajustó el lenguaje de las recomendaciones para que quedara más claro y defendible en una presentación oral.
+\end{itemize}
+
+\textbf{Resultados:}
+Las tablas quedaron más alineadas con los sensores reales y con las necesidades de acondicionamiento de la PCB.
+
+\textbf{Dificultades:}
+Evitar que la tabla mezclara datos de cálculo preliminar con valores ya corregidos o confirmados por hoja técnica.
+
+% =========================
+\section{Undécima semana}
+
+% -------------------------
+\subsection{Memoria de cálculo del canal PT100 y del canal de torque}
+\textbf{Fecha:} 27/05/2026 \quad \textbf{Hora:} 00:30--04:30
+
+\textbf{Objetivo:}
+Construir una memoria de cálculo para justificar la ganancia, sensibilidad y resolución de los dos canales de medición.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se desarrolló el modelo lineal del PT100 usando \(R_0=\SI{100}{\ohm}\) y una sensibilidad aproximada de \SI{0.385}{\ohm/\celsius}.
+\item Se calculó que, con \SI{1}{mA} de excitación, el PT100 entrega aproximadamente \SI{100}{mV} a \SI{0}{\celsius} y \SI{138.5}{mV} a \SI{100}{\celsius}.
+\item Se identificó que los \SI{100}{mV} iniciales corresponden a offset y que la información útil del rango de \SI{0}{\celsius} a \SI{100}{\celsius} está en la variación de \SI{38.5}{mV}.
+\item Se calculó una ganancia corregida cercana a \(G\approx 86\) para usar el rango útil después de restar el offset.
+\item Para torque se calculó que la sensibilidad del puente, con \SI{10}{V} de excitación y \SI{3}{mV/V}, produce una salida máxima cercana a \SI{30}{mV}.
+\item Se verificó que una ganancia cercana a \(G\approx 100\) permite llevar la señal del SM-50 a un rango cómodo de adquisición sin saturar.
+\end{itemize}
+
+\textbf{Resultados:}
+Se estableció una memoria de cálculo base para defender por qué el PT100 y el SM-50 requieren etapas de amplificación distintas.
+
+\textbf{Dificultades:}
+La dificultad principal fue separar correctamente el offset del PT100 de la señal útil de temperatura para no calcular una ganancia incorrecta.
+
+% -------------------------
+\subsection{Verificación de resolución y criterio de bits del sistema de adquisición}
+\textbf{Fecha:} 27/05/2026 \quad \textbf{Hora:} 12:00--15:00
+
+\textbf{Objetivo:}
+Aclarar el papel del número de bits del sistema de adquisición en el proyecto.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó que el número de bits no se estaba usando para seleccionar un ADC externo, ya que la digitalización final la realiza el sistema BoomBox.
+\item Se interpretó el cálculo de bits como una verificación de resolución, no como una etapa de selección de convertidor.
+\item Se reforzó que el diseño analógico debe entregar una señal limpia, escalada y compatible con el rango de entrada del sistema de adquisición.
+\item Se aclaró que el objetivo es comprobar si la resolución disponible del sistema es suficiente para leer los cambios de torque y temperatura sin perder información importante.
+\item Se relacionó esta verificación con el rango de salida del acondicionamiento, evitando usar ganancias excesivas solo por intentar llenar todo el rango de conversión.
+\end{itemize}
+
+\textbf{Resultados:}
+Se aclaró que el cálculo de bits funciona como una comprobación de coherencia del diseño y no como una selección de hardware adicional.
+
+\textbf{Dificultades:}
+Diferenciar entre diseñar un ADC propio y acondicionar señales para un sistema de adquisición que ya posee su propia etapa de digitalización.
+
+% -------------------------
+\subsection{Selección preliminar de componentes de acondicionamiento}
+\textbf{Fecha:} 27/05/2026 \quad \textbf{Hora:} 18:00--21:30
+
+\textbf{Objetivo:}
+Comparar opciones de amplificadores de instrumentación y operacionales para justificar la selección de componentes.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se compararon amplificadores de instrumentación adecuados para señales diferenciales pequeñas, dando prioridad a CMRR, offset, deriva, facilidad de ajuste de ganancia y disponibilidad.
+\item Se revisó el uso del INA828 como opción principal por su precisión y por ser adecuado para señales de bajo nivel provenientes de sensores de puente y RTD.
+\item Se analizaron alternativas de menor costo o más accesibles, como INA826 o AD620, para tener opciones defendibles si cambia la disponibilidad de componentes.
+\item Se revisó el papel de amplificadores operacionales como LF353, entendiendo que no sustituyen directamente a un amplificador de instrumentación para la primera etapa de medida diferencial.
+\item Se separó la comparación en dos familias: amplificadores de instrumentación para la extracción diferencial y operacionales para filtrado, buffer, offset o etapas auxiliares.
+\end{itemize}
+
+\textbf{Resultados:}
+Se definió que la primera etapa crítica debe ser un amplificador de instrumentación, mientras que los operacionales quedan como apoyo para filtros, referencias o adaptación de salida.
+
+\textbf{Dificultades:}
+Evitar comparar directamente componentes que cumplen funciones distintas dentro de la cadena analógica.
+
+% -------------------------
+\subsection{Revisión de documentación imperix y naturaleza de la salida hacia BoomBox}
+\textbf{Fecha:} 28/05/2026 \quad \textbf{Hora:} 13:00--15:00
+
+\textbf{Objetivo:}
+Aclarar cómo debe conectarse la PCB al ecosistema imperix BoomBox.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó documentación relacionada con módulos imperix para entender la filosofía de entrada y salida analógica por conectores tipo RJ45.
+\item Se corrigió la idea de que el enlace hacia la BoomBox fuese digital o por fibra en esta etapa; la salida de la PCB se mantiene como señal analógica acondicionada.
+\item Se adoptó como criterio que la señal hacia la BoomBox debe ser diferencial, balanceada y transportada por cable STP/RJ45.
+\item Se identificó que la BoomBox es la encargada de realizar la digitalización, por lo que la PCB debe concentrarse en protección, acondicionamiento, filtrado y adaptación de rango.
+\item Se revisó que la salida debe mantenerse dentro de un margen seguro, evitando saturación del frente analógico de entrada.
+\end{itemize}
+
+\textbf{Resultados:}
+Se corrigió la arquitectura de comunicación: sensor, PCB propia, salida analógica diferencial por STP/RJ45 y entrada analógica de la BoomBox.
+
+\textbf{Dificultades:}
+Interpretar correctamente el uso físico del RJ45, ya que no se trata de Ethernet sino de un conector multipar para señales analógicas y alimentación.
+
+% =========================
+\section{Duodécima semana}
+
+% -------------------------
+\subsection{Revisión de alimentación para pruebas y protoboard}
+\textbf{Fecha:} 31/05/2026 \quad \textbf{Hora:} 16:00--18:00
+
+\textbf{Objetivo:}
+Definir la forma más recomendable de alimentar el circuito durante pruebas y en la versión final.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó que el circuito requiere rieles de alimentación compatibles con etapas analógicas, principalmente \(\pm\SI{15}{V}\) para permitir margen de operación.
+\item Se diferenció la alimentación de pruebas en protoboard de la alimentación final de la PCB.
+\item Se reforzó que la protoboard puede servir para validar funciones básicas, pero no es una prueba definitiva de ruido debido a capacitancias parásitas, falta de plano de tierra y conexiones largas.
+\item Se revisó que la alimentación final no debe provenir de los sensores, sino del sistema de adquisición o de la interfaz definida para la tarjeta.
+\item Se consideró la necesidad de desacoplo local por circuito integrado y distribución ordenada de los rieles dentro de la PCB.
+\end{itemize}
+
+\textbf{Resultados:}
+Se estableció que las pruebas pueden hacerse con fuente de laboratorio, pero el diseño final debe considerar alimentación estable, desacoplada y correctamente distribuida.
+
+\textbf{Dificultades:}
+Separar lo que es válido para una prueba rápida en protoboard de lo que debe cumplir una PCB final cercana a un motor e inversor.
+
+% -------------------------
+\subsection{Comparación técnica de etapas diferenciales e instrumentales}
+\textbf{Fecha:} 31/05/2026 \quad \textbf{Hora:} 20:00--23:30
+
+\textbf{Objetivo:}
+Comparar técnicamente amplificadores diferenciales y de instrumentación para cerrar la arquitectura del acondicionamiento.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron fuentes técnicas sobre acondicionamiento de puentes Wheatstone y medición de señales diferenciales de baja amplitud.
+\item Se comparó el uso de un amplificador diferencial con resistencias externas frente a un amplificador de instrumentación integrado.
+\item Se identificó que el amplificador diferencial exige resistencias muy bien apareadas para mantener buen rechazo de modo común.
+\item Se concluyó que el amplificador de instrumentación es más robusto para la primera etapa porque ofrece alta impedancia de entrada y alto CMRR.
+\item Se dejó el operacional diferencial como opción para etapas posteriores, como adaptación de salida, offset, filtrado activo o conversión diferencial si se requiere.
+\end{itemize}
+
+\textbf{Resultados:}
+Se fortaleció la decisión de usar un INA como primera etapa para torque y temperatura, dejando los operacionales como bloques auxiliares.
+
+\textbf{Dificultades:}
+Defender por qué dos circuitos que parecen similares en esquema no se comportan igual frente a modo común, tolerancias y ruido.
+
+% -------------------------
+\subsection{Definición de conectores del SM-50 y salidas RJ45}
+\textbf{Fecha:} 01/06/2026 \quad \textbf{Hora:} 02:00--05:00
+
+\textbf{Objetivo:}
+Definir conectores prácticos para el sensor SM-50 y para la interfaz de la PCB con la BoomBox.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó el conector físico del sensor SM-50 y la necesidad de adaptar sus líneas hacia una entrada robusta en PCB.
+\item Se propuso usar una bornera push-in de 5 pines para recibir +EXC, -EXC, +SIG, -SIG y SHIELD.
+\item Se planteó un arnés adaptador desde el conector del sensor hacia ferrules y bornera, evitando modificar el cable original del sensor.
+\item Se definió que la salida hacia la BoomBox debe usar conectores RJ45 blindados, uno para torque y otro para temperatura.
+\item Se estableció que la pantalla del RJ45 debe tratarse como blindaje o chasis, no como una conexión directa e indiscriminada al GND analógico.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una propuesta práctica de conectores: entrada SM-50 por bornera de 5 pines y salida hacia BoomBox por RJ45 blindado.
+
+\textbf{Dificultades:}
+Elegir conectores que fueran fáciles de probar en laboratorio pero suficientemente robustos para una PCB real.
+
+% -------------------------
+\subsection{Organización de la PCB por ciudades funcionales}
+\textbf{Fecha:} 01/06/2026 \quad \textbf{Hora:} 20:00--23:30
+
+\textbf{Objetivo:}
+Organizar físicamente la PCB por bloques o ciudades para reducir ruido y facilitar el diseño.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se definió una organización por ciudades para separar físicamente las zonas sensibles, la alimentación y las salidas.
+\item La ciudad 1 corresponde a la entrada del SM-50, excitación del puente y filtro inicial.
+\item La ciudad 2 corresponde al acondicionamiento de torque mediante INA, ajuste de ganancia y filtrado.
+\item La ciudad 3 corresponde a la entrada del PT100 mediante bornera de 4 hilos, fuente de corriente y líneas de sense.
+\item La ciudad 4 corresponde al acondicionamiento de temperatura, resta de offset, ganancia y filtrado.
+\item La ciudad 5 corresponde a la alimentación desde la BoomBox, protección y desacoplo.
+\item La ciudad 6 corresponde a las salidas RJ45 hacia la BoomBox para torque y temperatura.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una distribución funcional que permite diseñar el esquemático y el layout con mejor control del ruido.
+
+\textbf{Dificultades:}
+Evitar mezclar físicamente señales de milivoltios con alimentación, conectores de salida y posibles retornos ruidosos.
+
+% -------------------------
+\subsection{Ajuste de alimentación final desde B-Box y referencia de \SI{3.3}{V}}
+\textbf{Fecha:} 02/06/2026 \quad \textbf{Hora:} 13:00--18:00
+
+\textbf{Objetivo:}
+Cerrar la estrategia de alimentación de la PCB y justificar el uso de rieles internos auxiliares.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó que la PCB no usará una fuente externa como alimentación principal, sino los rieles disponibles desde la B-Box por medio de los puertos analógicos RJ45.
+\item Se definió que los rieles principales de entrada serán \( +\SI{15}{V} \), \( -\SI{15}{V} \) y GND, distribuidos por los conectores RJ45.
+\item Se analizó que algunas etapas analógicas pueden trabajar directamente con rieles cercanos a \(\pm\SI{15}{V}\), mientras que referencias internas o bloques auxiliares pueden requerir \SI{3.3}{V}.
+\item Se revisó el concepto de LDO como regulador lineal de baja caída para obtener una referencia o alimentación auxiliar limpia de \SI{3.3}{V}.
+\item Se consideró la corriente disponible aproximada de \SI{100}{mA}, por lo que el consumo de referencias, INAs, operacionales y excitaciones debe mantenerse bajo control.
+\item Se reforzó que la salida final debe aprovechar el rango permitido por la BoomBox sin sacrificar margen frente a saturación.
+\end{itemize}
+
+\textbf{Resultados:}
+Se definió una arquitectura de alimentación más coherente: entrada \(\pm\SI{15}{V}\) desde B-Box, regulación local cuando haga falta y desacoplo por bloques.
+
+\textbf{Dificultades:}
+Distinguir entre alimentación principal, referencia de medición, excitación de sensores y niveles internos auxiliares.
+
+% -------------------------
+\subsection{Diseño conceptual de excitación para PT100 de tres hilos}
+\textbf{Fecha:} 03/06/2026 \quad \textbf{Hora:} 15:30--20:30
+
+\textbf{Objetivo:}
+Definir una forma más segura y precisa de excitar el PT100 usando \SI{1}{mA}.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó el uso de PT100 de tres hilos para compensar la resistencia de los cables cuando el sensor se encuentra separado de la PCB.
+\item Se comparó la opción de una fuente de corriente hecha con amplificador operacional y transistor frente al uso de un circuito integrado de corriente de precisión.
+\item Se identificó que una solución integrada, como REF200 o una fuente de corriente dedicada, reduce el riesgo de errores de implementación frente a una etapa discreta con LM358 y transistor.
+\item Se mantuvo el criterio de \SI{1}{mA} como corriente de excitación para obtener una señal medible y reducir el autocalentamiento.
+\item Se revisó que la tensión del PT100 debe medirse de forma diferencial y que el offset de \SI{100}{mV} a \SI{0}{\celsius} debe tratarse con cuidado antes de aplicar alta ganancia.
+\item Se reforzó que el ajuste de calibración debe realizarse con trimmer cuando sea necesario, no con un potenciómetro de panel como elemento principal del diseño.
+\end{itemize}
+
+\textbf{Resultados:}
+Se orientó el canal PT100 hacia una fuente de corriente más precisa y menos propensa a fallos, manteniendo la medición diferencial y la compensación de cableado.
+
+\textbf{Dificultades:}
+Elegir una arquitectura que sea precisa, fácil de defender y al mismo tiempo tenga baja probabilidad de fallar en la implementación física.
+
+% =========================
+\section{Decimotercera semana}
+
+% -------------------------
+\subsection{Revisión de documentación tipo handbook para esquemáticos de PCB}
+\textbf{Fecha:} 07/06/2026 \quad \textbf{Hora:} 17:30--19:00
+
+\textbf{Objetivo:}
+Buscar referencias de diseño esquemático para orientar la presentación del circuito final.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó la necesidad de usar ejemplos tipo handbook o notas de aplicación para que el esquemático no dependa únicamente de criterio propio.
+\item Se identificaron fuentes útiles de fabricantes y notas de aplicación para puentes resistivos, RTD, acondicionamiento de señal y diseño de PCB.
+\item Se relacionaron esas fuentes con los bloques del proyecto: excitación, protección, amplificación instrumental, filtrado, referencias y salida diferencial.
+\item Se priorizó usar esquemas de aplicación como guía conceptual, adaptándolos a los sensores reales y al ecosistema BoomBox.
+\end{itemize}
+
+\textbf{Resultados:}
+Se reforzó la estrategia de respaldar el diseño con circuitos de referencia y no solo con cálculos aislados.
+
+\textbf{Dificultades:}
+Encontrar ejemplos que sean parecidos al proyecto sin copiar una aplicación que no coincida con los rangos, sensores o alimentación disponibles.
+
+% -------------------------
+\subsection{Cierre de arquitectura final para PT100 y SM-50}
+\textbf{Fecha:} 07/06/2026 \quad \textbf{Hora:} 19:30--22:30
+
+\textbf{Objetivo:}
+Actualizar la arquitectura final del informe considerando las últimas decisiones del proyecto.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se consolidó la arquitectura final separando claramente el canal PT100 y el canal SM-50.
+\item Para el canal PT100 se decidió priorizar una fuente de corriente de precisión de \SI{1}{mA}, medición diferencial, resta de offset, ganancia moderada y filtrado pasabajo.
+\item Se revisó la posibilidad de eliminar una fuente de corriente discreta con LM358 y transistor cuando una fuente integrada ofrezca mayor precisión y menor riesgo de error práctico.
+\item Para el canal SM-50 se mantuvo la excitación del puente con referencia estable de \SI{10}{V}, lectura diferencial del puente, amplificación instrumental y filtrado.
+\item Se corrigió la idea de usar potenciómetro, dejando claro que el ajuste físico adecuado en la PCB debe ser mediante trimmer multivuelta si se requiere calibración fina.
+\item Se reforzó que el informe final debe distinguir entre alimentación de la PCB, excitación de sensores, referencia de offset, ganancia del INA y salida hacia la BoomBox.
+\item Se agregó como criterio final que la PCB debe ser robusta antes que excesivamente compleja: menos bloques discretos cuando un integrado confiable simplifica el diseño.
+\end{itemize}
+
+\textbf{Resultados:}
+La arquitectura final quedó más clara: PT100 con excitación precisa de \SI{1}{mA} y acondicionamiento diferencial; SM-50 con excitación estable de \SI{10}{V} y amplificación instrumental.
+
+\textbf{Dificultades:}
+Ajustar el informe para que no quedaran mezcladas decisiones preliminares con decisiones finales ya corregidas.% =========================
+\section{Decimocuarta semana}
+
+% -------------------------
+\subsection{Depuración de arquitectura y fuente de corriente del PT100}
+\textbf{Fecha:} 08/06/2026 \quad \textbf{Hora:} 16:00--20:30
+
+\textbf{Objetivo:}
+Revisar la arquitectura del canal de temperatura y reducir riesgos de implementación en la fuente de corriente del PT100.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó nuevamente la necesidad de excitar el PT100 con una corriente estable para convertir la variación de resistencia en una tensión proporcional a la temperatura.
+\item Se comparó una fuente de corriente discreta basada en operacional, transistor y resistencia de ajuste frente a una alternativa integrada o una referencia de precisión con resistencia de programación.
+\item Se identificó que una solución con menos bloques discretos facilita la explicación del diseño, reduce puntos de falla y mejora la repetibilidad en PCB.
+\item Se mantuvo la prioridad de medir el PT100 en forma diferencial para aprovechar el rechazo de modo común y reducir errores por cableado.
+\item Se reforzó que el canal de temperatura debe separar claramente tres conceptos: excitación del sensor, resta de offset y amplificación hacia el rango permitido por la adquisición.
+\end{itemize}
+
+\textbf{Resultados:}
+Se consolidó la idea de usar una fuente de corriente precisa para el PT100 y mantener la medición diferencial como base del canal de temperatura.
+
+\textbf{Dificultades:}
+Evitar que el esquemático creciera innecesariamente con bloques discretos difíciles de ajustar y defender durante la exposición.
+
+% -------------------------
+\subsection{Revisión de referencias técnicas para RTD, puente Wheatstone y acondicionamiento}
+\textbf{Fecha:} 10/06/2026 \quad \textbf{Hora:} 19:00--22:30
+
+\textbf{Objetivo:}
+Respaldar las decisiones del diseño con documentación técnica sobre sensores resistivos, RTD y puentes Wheatstone.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron notas de aplicación y material técnico sobre acondicionamiento de sensores resistivos y medición de señales diferenciales de baja amplitud.
+\item Para el SM-50 se reforzó que el sensor se comporta como un puente Wheatstone de galgas extensométricas con salida de pocos milivoltios por voltio de excitación.
+\item Se relacionó la necesidad del amplificador de instrumentación con la alta impedancia de entrada, el alto rechazo de modo común y la baja amplitud de la señal diferencial.
+\item Para el PT100 se revisó el modelo resistivo del RTD y la conveniencia de una fuente de corriente para obtener una relación directa entre resistencia y tensión.
+\item Se identificaron como temas clave para justificar el diseño: sensibilidad, offset, ganancia, filtrado, rango dinámico, protección y ruido.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una base teórica más sólida para explicar por qué ambos canales requieren acondicionamiento analógico antes de la entrada diferencial de la BoomBox.
+
+\textbf{Dificultades:}
+Integrar referencias de fabricantes y teoría de sensores sin que el informe se volviera una copia de notas de aplicación.
+
+% -------------------------
+\subsection{Ajuste de alcance del proyecto y bloques mínimos de la PCB}
+\textbf{Fecha:} 14/06/2026 \quad \textbf{Hora:} 15:00--19:30
+
+\textbf{Objetivo:}
+Ajustar el alcance práctico de la PCB para que el diseño fuera fabricable, explicable y compatible con el tiempo disponible.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó la diferencia entre un diseño ampliado con varios canales y una versión mínima funcional para validar el principio de medición.
+\item Se priorizó trabajar con un canal de PT100 y un canal de SM-50, manteniendo la posibilidad de replicar bloques si se requiere escalar el diseño.
+\item Se separaron los bloques indispensables: entrada de sensor, protección, excitación, amplificación instrumental, filtrado de salida, alimentación y conectores hacia la BoomBox.
+\item Se revisó que la PCB no debe digitalizar la señal, sino acondicionarla para que la adquisición se realice externamente.
+\item Se identificó que reducir el alcance ayuda a mejorar el ruteo, el orden físico y la revisión de errores en KiCad.
+\end{itemize}
+
+\textbf{Resultados:}
+El proyecto quedó enfocado en una PCB analógica de acondicionamiento para un PT100 y un SM-50, con bloques replicables y mejor control de complejidad.
+
+\textbf{Dificultades:}
+Recortar el alcance sin perder coherencia técnica ni dejar fuera protecciones necesarias para un entorno con motor e inversor.
+
+% =========================
+\section{Decimoquinta semana}
+
+% -------------------------
+\subsection{Simulación en LTspice y revisión de memoria de cálculo}
+\textbf{Fecha:} 17/06/2026 \quad \textbf{Hora:} 14:00--20:00
+
+\textbf{Objetivo:}
+Verificar mediante simulación y cálculo los rangos esperados de los canales PT100 y SM-50.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se trabajó con esquemáticos de simulación para el canal PT100 y el canal SM-50 con el fin de comprobar niveles de señal antes de trasladarlos a KiCad.
+\item En el canal PT100 se revisó la relación entre corriente de excitación, resistencia del sensor, tensión diferencial y ganancia necesaria.
+\item Se comparó mantener \SI{1}{mA} frente a reducir la excitación del PT100 a aproximadamente \SI{0.5}{mA}, buscando menor autocalentamiento y mejor margen de consumo.
+\item En el canal SM-50 se revisó la excitación del puente, la salida diferencial esperada y la ganancia del amplificador de instrumentación.
+\item Se ajustaron valores de resistencias de ganancia para mantener la salida dentro del rango seguro de la adquisición.
+\item Se revisó la memoria de cálculo para corregir decisiones preliminares y dejar coherencia entre cálculo, simulación y esquemático.
+\end{itemize}
+
+\textbf{Resultados:}
+Se validó que los dos canales pueden entregar señales acondicionadas dentro del margen requerido, siempre que se controle la ganancia y el filtrado de salida.
+
+\textbf{Dificultades:}
+Mantener consistentes los valores entre LTspice, memoria de cálculo, lista de materiales y esquemático de KiCad.
+
+% -------------------------
+\subsection{Selección de amplificadores y reducción de costo del diseño}
+\textbf{Fecha:} 18/06/2026 \quad \textbf{Hora:} 18:30--22:30
+
+\textbf{Objetivo:}
+Comparar opciones de amplificadores para lograr una solución precisa sin elevar innecesariamente el costo de la PCB.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se comparó el uso de INA828 frente a INA826 para los canales de acondicionamiento.
+\item Se identificó que el INA826 representa una alternativa más económica para mantener una topología de instrumentación adecuada.
+\item Se revisó el uso del OPA2188 como operacional de precisión para etapas auxiliares, principalmente donde el offset y la deriva pueden afectar la medición.
+\item Se discutió que el PT100 no exige una arquitectura excesivamente compleja si la señal se acondiciona de forma limpia y se calibra correctamente.
+\item Se revisó la necesidad de no sacrificar rechazo de modo común ni estabilidad por ahorrar componentes críticos.
+\end{itemize}
+
+\textbf{Resultados:}
+Se orientó el diseño hacia el uso de amplificadores de instrumentación INA826 y operacionales de precisión para las funciones auxiliares necesarias.
+
+\textbf{Dificultades:}
+Balancear costo, disponibilidad, precisión y facilidad de justificación técnica.
+
+% -------------------------
+\subsection{Investigación de alimentación, LDO y límite de corriente de la B-Box}
+\textbf{Fecha:} 19/06/2026 \quad \textbf{Hora:} 13:00--21:00
+
+\textbf{Objetivo:}
+Definir una alimentación realista para la PCB considerando que la B-Box entrega rieles limitados en corriente.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó que la alimentación disponible desde la B-Box es de \(\pm\SI{15}{V}\) con una corriente limitada, por lo que el consumo total de la PCB debe mantenerse bajo control.
+\item Se investigaron reguladores lineales tipo LDO en encapsulado SMD para generar una tensión limpia a partir del riel de entrada.
+\item Se compararon opciones como reguladores de la familia 78L05/78M05 y reguladores de mayor calidad, considerando disponibilidad, ruido, corriente y facilidad de montaje.
+\item Se definió que la excitación del SM-50 debe ser estable y de bajo ruido, debido a que cualquier variación de excitación afecta directamente la salida del puente.
+\item Se revisó la opción de obtener \SI{10}{V} para el SM-50 desde el riel de \SI{15}{V} mediante regulación local, manteniendo la excitación separada de la señal de salida.
+\item Se reforzó la necesidad de colocar capacitores de desacoplo cerca de los reguladores, referencias y amplificadores.
+\end{itemize}
+
+\textbf{Resultados:}
+Se estableció que la alimentación debe partir de los rieles de la B-Box, con regulación local y desacoplo suficiente para referencias, excitación del SM-50 y fuente de corriente del PT100.
+
+\textbf{Dificultades:}
+Elegir un regulador disponible y defendible sin exceder la corriente disponible ni introducir ruido en las señales de milivoltios.
+
+% -------------------------
+\subsection{Revisión de EMI, filtros y necesidad de protección en la PCB}
+\textbf{Fecha:} 20/06/2026 \quad \textbf{Hora:} 16:00--20:00
+
+\textbf{Objetivo:}
+Definir medidas básicas contra ruido e interferencias para una PCB cercana a un sistema de potencia.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó que el entorno del motor y del inversor puede introducir interferencia electromagnética por acoplamiento capacitivo, inductivo y conducido.
+\item Se discutió el uso de filtros RC en entradas y salidas para limitar ruido de alta frecuencia sin afectar la banda útil de torque y temperatura.
+\item Se reforzó el uso de señales diferenciales y cableado blindado para reducir sensibilidad al ruido externo.
+\item Se revisó que el blindaje de cables y conectores debe tratarse con cuidado para no contaminar el GND analógico sensible.
+\item Se consideró la necesidad de TVS, fusibles rearmables y desacoplos como parte del diseño robusto, no como componentes opcionales decorativos.
+\end{itemize}
+
+\textbf{Resultados:}
+Se definió que la PCB debe incorporar filtrado, protección y una organización física que separe sensores, acondicionamiento, alimentación y salidas.
+
+\textbf{Dificultades:}
+Evitar llenar el esquemático de filtros innecesarios, pero sin dejar expuestas entradas y alimentaciones sensibles.
+
+% -------------------------
+\subsection{Integración del esquemático en KiCad y corrección de errores ERC}
+\textbf{Fecha:} 21/06/2026 \quad \textbf{Hora:} 10:00--22:00
+
+\textbf{Objetivo:}
+Avanzar la integración del esquemático final en KiCad y resolver errores eléctricos antes de pasar al layout.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron símbolos, footprints y etiquetas de red para que las etapas quedaran conectadas correctamente.
+\item Se corrigieron problemas relacionados con pines de alimentación, referencias y uso de \texttt{PWR\_FLAG} en KiCad.
+\item Se definieron etiquetas claras para unir bloques de salida, resistencias limitadoras, trimmers, resistencias de aislamiento y salidas diferenciales.
+\item Se revisó la asignación de footprints para componentes SMD principales, incluyendo amplificadores, referencia, reguladores, capacitores y resistencias.
+\item Se depuraron componentes no utilizados para reducir ruido visual en el esquemático y evitar confusiones en la lista de materiales.
+\end{itemize}
+
+\textbf{Resultados:}
+El esquemático quedó más ordenado y preparado para pasar al diseño físico, con conexiones más claras entre bloques funcionales.
+
+\textbf{Dificultades:}
+Resolver errores de KiCad sin esconder problemas reales de alimentación o conexión entre bloques.
+
+% =========================
+\section{Decimosexta semana}
+
+% -------------------------
+\subsection{Selección e importación de protecciones TVS y fusibles rearmables}
+\textbf{Fecha:} 22/06/2026 \quad \textbf{Hora:} 09:00--18:00
+
+\textbf{Objetivo:}
+Agregar protecciones eléctricas al diseño y asegurar que los símbolos y huellas fueran compatibles con fabricación.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó el uso de TVS para proteger líneas expuestas frente a eventos transitorios y descargas electrostáticas.
+\item Se incorporó la protección TVS de \SI{12}{V} para la zona de entrada de sensores y se revisó su conexión respecto a la señal y tierra de referencia.
+\item Se revisaron TVS/ESD de \SI{5.5}{V} para líneas sensibles hacia la interfaz de adquisición, especialmente donde se requiere proteger entradas de bajo nivel.
+\item Se incluyeron fusibles rearmables PPTC en las entradas de alimentación para limitar fallas por sobrecorriente o errores de conexión.
+\item Se importaron y verificaron símbolos y footprints, corrigiendo pines y encapsulados cuando no coincidían con el componente real.
+\end{itemize}
+
+\textbf{Resultados:}
+El diseño incorporó protecciones más robustas mediante TVS y PPTC, manteniendo una organización por bloques para facilitar revisión y ruteo.
+
+\textbf{Dificultades:}
+Diferenciar qué protección corresponde a alimentación, a entradas de sensores y a líneas de salida hacia la BoomBox.
+
+% -------------------------
+\subsection{Conectores, RJ45 blindados y organización de ciudades de la PCB}
+\textbf{Fecha:} 22/06/2026 \quad \textbf{Hora:} 19:00--23:30
+
+\textbf{Objetivo:}
+Definir el acomodo físico de conectores y bloques funcionales antes de comenzar el ruteo principal.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se mantuvo el uso de conectores RJ45 blindados para la conexión con la BoomBox y cable FTP CAT5.
+\item Se revisó la asignación de pines de la interfaz RJ45 considerando rieles de \(\pm\SI{15}{V}\), GND y entrada diferencial.
+\item Se separó el tratamiento del blindaje respecto al GND analógico para evitar que corrientes de pantalla circulen por rutas sensibles.
+\item Se ordenó el layout por ciudades: entradas de sensores, canal SM-50, canal PT100, alimentación/protecciones, salidas RJ45 y zona de documentación.
+\item Se definió que los conectores de sensores deben ubicarse cerca de sus protecciones, mientras que los conectores hacia BoomBox deben quedar del lado de salida.
+\end{itemize}
+
+\textbf{Resultados:}
+La PCB quedó organizada con una lógica física más clara, reduciendo cruces de señales y separando zonas ruidosas de zonas sensibles.
+
+\textbf{Dificultades:}
+Ubicar conectores grandes, borneras, fusibles, TVS y circuitos integrados sin romper la separación entre señales de entrada, alimentación y salida.
+
+% -------------------------
+\subsection{Ruteo preliminar y definición de anchos de pista}
+\textbf{Fecha:} 24/06/2026 \quad \textbf{Hora:} 09:00--21:00
+
+\textbf{Objetivo:}
+Iniciar el ruteo de la PCB usando reglas prácticas para señales sensibles, alimentación y conexiones de salida.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó el ruteo por ciudades para mantener señales de milivoltios lejos de reguladores, conectores de alimentación y retornos con corriente.
+\item Se asignaron anchos de pista distintos para señales analógicas, alimentación, excitación de sensores y salidas hacia conectores.
+\item Se evaluó cuándo usar una segunda capa para evitar cruces y mantener rutas cortas, especialmente en zonas congestionadas cerca de conectores.
+\item Se revisó la necesidad de colocar capacitores de desacoplo cerca de cada circuito integrado y de mantener los filtros cerca de los pines que protegen.
+\item Se corrigieron problemas de elementos bloqueados en KiCad y se mantuvieron fijos el marco y los agujeros de montaje.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo un ruteo preliminar más ordenado, con criterios diferenciados para pistas de señal, alimentación y protección.
+
+\textbf{Dificultades:}
+El mayor problema fue la congestión cerca de conectores y componentes de protección, donde no siempre era posible usar el ancho de pista ideal.
+
+% -------------------------
+\subsection{Revisión de footprints mecánicos y dimensiones de borneras}
+\textbf{Fecha:} 25/06/2026 \quad \textbf{Hora:} 10:00--13:00
+
+\textbf{Objetivo:}
+Verificar que los componentes mecánicos principales tuvieran espacio suficiente en la PCB.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron las dimensiones físicas de las borneras utilizadas para entrada de sensores.
+\item Se buscó definir el rectángulo de ocupación de cada bornera para dejar espacio alrededor y evitar interferencia con otros componentes.
+\item Se consideró que las borneras deben quedar accesibles para cableado, ferrules y manipulación durante pruebas de laboratorio.
+\item Se verificó que los conectores grandes condicionan el borde de la PCB y el orden de las ciudades cercanas.
+\item Se mantuvo el criterio de dejar los componentes de protección cerca de los conectores de entrada.
+\end{itemize}
+
+\textbf{Resultados:}
+Se mejoró la planificación mecánica del layout, especialmente en la ubicación de borneras, conectores y protecciones de entrada.
+
+\textbf{Dificultades:}
+Ajustar componentes grandes en una placa compacta sin perder claridad de ruteo ni accesibilidad para pruebas.
+
+% -------------------------
+\subsection{Preparación del póster electrónico y síntesis de avances}
+\textbf{Fecha:} 25/06/2026 \quad \textbf{Hora:} 15:00--18:30
+
+\textbf{Objetivo:}
+Preparar la información del proyecto para la exposición tipo póster electrónico de IE0499.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó la rúbrica de exposición para priorizar avances, dificultades y aprendizaje incorporado durante el desarrollo del proyecto.
+\item Se definió que el póster debe ser horizontal, legible en pantalla y con máximo dos transparencias.
+\item Se organizaron los contenidos principales: problema, objetivo, arquitectura de la PCB, avances técnicos, dificultades y conclusiones.
+\item Se seleccionaron como avances principales la definición de los canales PT100 y SM-50, la integración en KiCad, la selección de protecciones y el inicio del ruteo.
+\item Se seleccionaron como dificultades principales el control de ruido, la limitación de corriente de la B-Box, la importación de footprints y la congestión del layout.
+\end{itemize}
+
+\textbf{Resultados:}
+Se obtuvo una estructura de póster más enfocada en explicar decisiones técnicas y dificultades reales, no solo en mostrar el circuito terminado.
+
+\textbf{Dificultades:}
+Sintetizar varias semanas de trabajo en pocas ideas claras que puedan defenderse durante preguntas de otras áreas.
+
+
+
+% =========================
+\section{Decimoséptima semana}
+
+% -------------------------
+\subsection{Actualización final de valores del canal SM-50 y PT100}
+\textbf{Fecha:} 26/06/2026 \quad \textbf{Hora:} 18:00--23:30
+
+\textbf{Objetivo:}
+Actualizar los cálculos del proyecto con los valores finales realmente usados en la PCB y separar las decisiones vigentes de las memorias antiguas.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron los cálculos finales del canal de torque SM-50, manteniendo la excitación del puente en \(\SI{10}{V}\) y usando la sensibilidad nominal de \(\SI{3}{mV/V}\), por lo que la señal diferencial máxima esperada del puente es aproximadamente \(\SI{30}{mV}\).
+\item Se actualizó la resistencia de ganancia del amplificador de instrumentación del canal SM-50 a \(R_G=\SI{160}{\ohm}\), con el fin de obtener una mayor ganancia y mejorar el aprovechamiento del rango de entrada de la BoomBox.
+\item Se eliminó del diseño la resistencia en serie de \(\SI{180}{\ohm}\) que estaba considerada en versiones anteriores, ya que reducía el rango útil y no correspondía con la versión actual del acondicionamiento.
+\item Se corrigió el canal de temperatura indicando que la excitación final del PT100 se toma como \(I_{exc}=\SI{0.5}{mA}\), no \(\SI{1}{mA}\), con el propósito de reducir autocalentamiento y mantener bajo el consumo.
+\item Se mantuvo el criterio del PT100 de tres hilos, usando medición diferencial, compensación de cableado, referencia de offset y ajuste de nivel antes de entregar la señal a la BoomBox.
+\item Se dejó como valor vigente para el canal PT100 una resistencia de ganancia del INA de \(R_G=\SI{1}{k\ohm}\), separando este dato de valores preliminares usados en cálculos anteriores.
+\item Se verificó que ambos canales requieren ajuste de nivel/salida: el canal SM-50 para desplazar y escalar la salida hacia el rango útil de la BoomBox, y el canal PT100 para tratar el offset propio de la resistencia base de \(\SI{100}{\ohm}\).
+\end{itemize}
+
+\textbf{Resultados:}
+Se actualizaron los valores finales del diseño: SM-50 con \(R_G=\SI{160}{\ohm}\), sin resistencia serie de \(\SI{180}{\ohm}\), salida aproximada de \(\SIrange{0}{10}{V}\); y PT100 con \(I_{exc}=\SI{0.5}{mA}\) y \(R_G=\SI{1}{k\ohm}\).
+
+\textbf{Dificultades:}
+La principal dificultad fue no mezclar valores de memorias antiguas con los datos finales del circuito, especialmente en la corriente de excitación del PT100 y en la ganancia del SM-50.
+
+% -------------------------
+\subsection{Validación de interfaz BoomBox, 8P8C y cable FTP Cat5}
+\textbf{Fecha:} 26/06/2026 \quad \textbf{Hora:} 23:30--02:00
+
+\textbf{Objetivo:}
+Confirmar la conexión física y eléctrica entre la PCB y la BoomBox usando conectores 8P8C/RJ45 y cable FTP Cat5.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisó el manual de la BoomBox para confirmar que la entrada analógica puede configurarse en modo de alta impedancia diferencial de \(\SI{3}{k\ohm}\).
+\item Se verificó que la BoomBox entrega alimentación para sensores externos mediante el conector analógico, con rieles de \(\pm\SI{15}{V}\) y corriente máxima de \(\SI{100}{mA}\).
+\item Se actualizó la documentación para indicar que la conexión física entre la PCB y la BoomBox se realiza mediante cable FTP Cat5 y conector modular 8P8C blindado.
+\item Se mantuvo la asignación de pines del conector: pines 1 y 2 para \(+\SI{15}{V}\), pines 3 y 6 para \(\SI{0}{V}\), pines 4 y 5 para señal analógica diferencial, y pines 7 y 8 para \(-\SI{15}{V}\).
+\item Se aclaró que el conector 8P8C no se utiliza como Ethernet, sino como interfaz física multipar para alimentación y señal analógica.
+\item Se definió que el par de señal debe mantenerse como par trenzado y que el blindaje del conector debe tratarse como pantalla, evitando mezclarlo directamente con el retorno analógico sensible.
+\end{itemize}
+
+\textbf{Resultados:}
+Se corrigió la representación de la interfaz hacia BoomBox: entrada de alta impedancia diferencial, alimentación limitada a \(\pm\SI{15}{V}\) y \(\SI{100}{mA}\), transporte por FTP Cat5/8P8C y separación clara entre señal, alimentación y blindaje.
+
+\textbf{Dificultades:}
+Interpretar correctamente el conector RJ45, ya que físicamente se parece a una red Ethernet, pero en el proyecto funciona como interfaz analógica y de alimentación.
+
+% -------------------------
+\subsection{Separación de memorias antiguas y trazabilidad del proceso}
+\textbf{Fecha:} 27/06/2026 \quad \textbf{Hora:} 00:00--03:00
+
+\textbf{Objetivo:}
+Organizar los documentos previos del proyecto para conservarlos como evidencia del proceso sin usar sus valores obsoletos como cálculos finales.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se revisaron memorias antiguas, avances preliminares y documentos de arquitectura generados durante el desarrollo del proyecto.
+\item Se clasificó como información vigente únicamente lo relacionado con el pinout 8P8C/RJ45, el uso de cable FTP/STP, la separación de puertos por canal y la justificación conceptual de los sensores resistivos.
+\item Se marcó como obsoleta la información asociada a ADC de \SI{12}{bits}, referencia de \SI{3.3}{V}, PT100 con \SI{1}{mA} como valor final, ganancias preliminares y BOM anteriores.
+\item Se conservó la información teórica útil: modelo del PT100, conexión de tres hilos, fuente de corriente para RTD, puente Wheatstone completo, sensibilidad del SM-50 y necesidad de amplificación instrumental.
+\item Se redactó una nota de trazabilidad indicando que los documentos anteriores explican la evolución del diseño, pero que la memoria final usa los valores actuales.
+\end{itemize}
+
+\textbf{Resultados:}
+Se evitó que la memoria final mezclara cálculos viejos con el diseño actual. Las memorias antiguas quedaron como respaldo histórico del proceso de aprendizaje y toma de decisiones.
+
+\textbf{Dificultades:}
+Distinguir qué partes de documentos anteriores seguían siendo útiles como referencia conceptual y cuáles debían descartarse para no generar contradicciones técnicas.
+
+% -------------------------
+\subsection{Actualización de memoria de cálculo, referencias y diagrama final}
+\textbf{Fecha:} 27/06/2026 \quad \textbf{Hora:} 03:00--06:00
+
+\textbf{Objetivo:}
+Actualizar la memoria de cálculo del proyecto con los valores actuales, referencias completas y diagramas finales.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item Se actualizó la memoria de cálculo del proyecto separando los cálculos finales de la trazabilidad de documentos previos.
+\item Se incorporaron los valores actuales del canal PT100: \(I_{exc}=\SI{0.5}{mA}\), \(R_G=\SI{1}{k\ohm}\), conexión de tres hilos, referencia de offset proveniente de la B-Box o derivada de ella, filtro y ajuste de nivel/salida.
+\item Se incorporaron los valores actuales del canal SM-50: excitación de puente de \(\SI{10}{V}\), sensibilidad nominal de \(\SI{3}{mV/V}\), salida diferencial cruda de \(\SI{30}{mV}\), \(R_G=\SI{160}{\ohm}\), salida aproximada \(\SIrange{0}{10}{V}\) y eliminación de la resistencia serie de \(\SI{180}{\ohm}\).
+\item Se actualizó el diagrama de bloques final para mostrar los dos canales con protección, amplificación instrumental, filtro pasabajo, ajuste de nivel/salida y conexión hacia BoomBox mediante FTP Cat5/8P8C.
+\item Se incorporaron referencias completas guardadas en la carpeta del proyecto, incluyendo el manual de BoomBox, hoja de datos del SM-50, notas de aplicación de puentes Wheatstone, documentación de ruido, guías de KiCad y el texto de Pallás-Areny como referencia teórica principal.
+\item Se generó una versión actualizada de la memoria en PDF y DOCX, junto con archivos auxiliares de cálculos y referencias.
+\end{itemize}
+
+\textbf{Resultados:}
+La documentación quedó actualizada al estado actual del proyecto, con valores vigentes, referencias completas, diagrama final y separación explícita entre memoria final y memorias antiguas.
+
+\textbf{Dificultades:}
+La dificultad principal fue mantener consistencia entre memoria, diagrama, cálculos, referencias y bitácora, debido a que el proyecto tuvo varios cambios de valores durante su desarrollo.
+
+% -------------------------
+\subsection{Estado del proyecto al cierre de la actualización}
+\textbf{Fecha:} 27/06/2026 \quad \textbf{Hora:} 06:00--07:00
+
+\textbf{Objetivo:}
+Registrar el estado final del proyecto al día de la actualización de la bitácora.
+
+\textbf{Desarrollo:}
+\begin{itemize}
+\item El diseño queda definido como una PCB analógica de acondicionamiento para un sensor de torque SM-50 y sensores PT100, con bloques replicables para ampliar canales si se requiere.
+\item La PCB recibe alimentación desde la BoomBox/B-Box por medio del conector 8P8C, usando \(\pm\SI{15}{V}\) con límite de \(\SI{100}{mA}\).
+\item La adquisición final se realiza en la BoomBox; la PCB no digitaliza la señal, sino que la protege, excita, amplifica, filtra y ajusta antes de enviarla como señal analógica.
+\item La interfaz física final queda definida mediante cable FTP Cat5, conectores 8P8C blindados y modo de entrada de alta impedancia diferencial.
+\item El canal SM-50 queda como el canal con mayor exigencia de ganancia por partir de una señal diferencial de milivolts.
+\item El canal PT100 queda definido con menor corriente de excitación para reducir autocalentamiento, manteniendo compensación por tres hilos y ajuste de offset.
+\item La bitácora queda actualizada hasta el 27/06/2026 con las decisiones finales, manteniendo los documentos viejos solo como parte del proceso.
+\end{itemize}
+
+\textbf{Resultados:}
+Se cuenta con una bitácora actualizada, coherente con la memoria final y con los valores actuales del diseño.
+
+\textbf{Dificultades:}
+Documentar el cierre de forma clara sin borrar el proceso previo, ya que las decisiones antiguas también fueron importantes para llegar a la versión final.
+
+\begin{thebibliography}{99}
+
+\bibitem{InterfaceSM50}
+Interface, Inc. \emph{SM S-Type Load Cell: Datasheet}. Información técnica del sensor tipo puente Wheatstone.
+
+\bibitem{InterfaceWiring}
+Interface, Inc. \emph{Electrical \& Wiring Diagram}. Información de cableado para sensores de carga y torque.
+
+\bibitem{TIBridgeSensors}
+Texas Instruments. \emph{Signal Conditioning Wheatstone Resistive Bridge Sensors}. Application Report SLOA034.
+
+\bibitem{TIStrainGauge}
+Texas Instruments. \emph{Single-Supply Strain Gauge Bridge Amplifier Circuit}. SBOA247A.
+
+\bibitem{ADBridgeCircuits}
+Analog Devices. \emph{AN-43: Bridge Circuits}. Nota de aplicación sobre puentes resistivos y acondicionamiento.
+
+\bibitem{ADBridgeADC}
+Analog Devices. \emph{AN-96: Delta Sigma ADC Bridge Measurement Techniques}. Nota de aplicación sobre medición de puentes y resolución.
+
+\bibitem{RuidoPCB}
+R. Cárdenas Dobson. \emph{Atenuación de ruidos en circuitos electrónicos}. Apuntes del curso de proyecto, Universidad de Magallanes.
+
+\bibitem{KiCadGuide}
+Guía de proyecto. \emph{Guía para importar símbolos, huellas y modelos 3D en KiCad}.
+
+\bibitem{Imperix}
+imperix. \emph{Documentación técnica de módulos analógicos y BoomBox}. Referencia para interfaz analógica diferencial y conectores tipo RJ45.
+
+
+\bibitem{PallasAreny}
+R. Pallás-Areny, O. Casas y R. Bragós. \emph{Sensores y acondicionadores de señal: Problemas resueltos}. Ediciones de la Universitat Politècnica de Catalunya / Alfaomega, Barcelona, España, 2007.
+
+\bibitem{MeasurementComputing}
+Measurement Computing Corporation. \emph{Signal Conditioning \& PC-Based Data Acquisition Handbook}. 3rd ed., Measurement Computing Corporation, 2012.
+
+\bibitem{BoomBoxManual}
+imperix ltd. \emph{BoomBox User Manual}. Manual técnico de entradas analógicas, alimentación de sensores, filtros, ADC y conectores ModuLink/RJ45.
+
+\bibitem{INA826}
+Texas Instruments. \emph{INA826 Precision Instrumentation Amplifier}. Datasheet.
+
+\bibitem{INA828}
+Texas Instruments. \emph{INA828 Precision Instrumentation Amplifier}. Datasheet.
+
+\bibitem{OPA2188}
+Texas Instruments. \emph{OPA2188 Zero-Drift Operational Amplifier}. Datasheet.
+
+\bibitem{REF3012}
+Texas Instruments. \emph{REF3012 Precision Voltage Reference}. Datasheet.
+
+\bibitem{TPS7A49}
+Texas Instruments. \emph{TPS7A4901 High-Voltage Low-Noise Linear Regulator}. Datasheet.
+
+\bibitem{MemoriasProceso}
+Documentos internos del proyecto. \emph{Memorias preliminares, avances, diagramas y cálculos históricos de la PCB}. Usados como trazabilidad del proceso y no como valores finales.
+
+\end{thebibliography}
+
+
+\end{document}

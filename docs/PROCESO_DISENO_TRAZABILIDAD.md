@@ -62,6 +62,28 @@ Durante la depuración se hicieron revisiones iterativas enfocadas en:
 - Generación de imágenes para GitHub: KiCad esquemático, PCB 2D, PCB 3D, LTspice y gráficas.
 - Regeneración del ZIP Gerber con taladros.
 
-## 6. Resultado
+## 6. Bitácora del proceso
+
+La bitácora actualizada se conserva en:
+
+- `docs/bitacora/bitacora_PCB_actualizada_27_06_2026.pdf`
+- `docs/bitacora/bitacora_PCB_actualizada_27_06_2026.tex`
+
+Este documento registra el avance desde el 11/03/2026 hasta el 27/06/2026. La secuencia de trabajo se puede resumir así:
+
+| Periodo | Actividad principal | Resultado para el proyecto |
+| --- | --- | --- |
+| 11/03/2026-18/03/2026 | Inicio, aprendizaje de KiCad, práctica de PCB y revisión de reglas básicas de diseño. | Se definió el alcance inicial y se estableció el flujo de esquemático, footprint y PCB. |
+| 25/03/2026-30/03/2026 | Estudio de ruido, sensores y revisión técnica. | Se identificó la necesidad de filtrado, blindaje, cableado adecuado y acondicionamiento diferencial. |
+| 08/04/2026-24/04/2026 | Arquitectura del sistema, validación previa de sensores y ajuste de adquisición. | Se separaron los bloques de temperatura, torque, adquisición e interfaz. |
+| 29/04/2026-15/05/2026 | Revisión de hojas de datos, puente Wheatstone, rango dinámico, offset y resolución. | Se consolidaron las fórmulas base para PT100, SM-50 y salida hacia la interfaz de adquisición. |
+| 19/05/2026-28/05/2026 | Validación de datos reales del SM-50, memoria de cálculo y revisión de interfaz BoomBox/B-Box. | Se fijaron criterios de excitación, ganancia, resolución y conexión física. |
+| 31/05/2026-07/06/2026 | Alimentación, conectores, RJ45, organización funcional y PT100 de tres hilos. | Se definieron conectores de sensor, salidas 8P8C, bloques de PCB y criterios de referencia. |
+| 08/06/2026-21/06/2026 | Depuración del PT100, referencias técnicas, LTspice, selección de amplificadores, EMI e integración KiCad. | Se cerró la arquitectura eléctrica y se pasó a implementación formal del esquemático. |
+| 22/06/2026-27/06/2026 | Protecciones, footprints, ruteo, valores finales, memoria, referencias y fabricación. | Se obtuvo una PCB con ERC/DRC limpios, figuras finales, cálculos actualizados y paquete Gerber. |
+
+La bitácora se usa como evidencia de proceso. Los cálculos finales vigentes son los conservados en `docs/simulacion/calculos_PT100_SM50_VALORES_ACTUALES_v2.csv` y en la memoria final citada en `docs/referencias/referencias_completas_proyecto_PCB.txt`.
+
+## 7. Resultado
 
 El repositorio queda preparado con fuentes, documentación, figuras y reportes finales. Los archivos de salida intermedios, respaldos y paquetes descargados de verificación se excluyen por `.gitignore` o fueron eliminados cuando eran regenerables.
