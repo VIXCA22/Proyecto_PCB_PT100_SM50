@@ -29,7 +29,7 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 ### PCB 3D
 
 <p align="center">
-  <img src="docs/figuras/kicad_pcb_3d.png" alt="PCB 3D" width="520">
+  <img src="docs/figuras/kicad_pcb_3d.png" alt="PCB 3D" width="960">
 </p>
 
 ## Diagrama de bloques
