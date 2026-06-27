@@ -30,12 +30,6 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 
 ![PCB 3D](docs/figuras/kicad_pcb_3d.png)
 
-### PCB 3D - vista frontal
-
-<p align="center">
-  <img src="docs/figuras/kicad_pcb_3d_frontal.png" alt="PCB 3D vista frontal" width="520">
-</p>
-
 ## Diagrama de bloques
 
 ![Diagrama de bloques](docs/figuras/diagrama_bloques_valores_actuales.png)
