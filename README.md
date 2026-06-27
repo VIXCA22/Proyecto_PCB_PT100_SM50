@@ -1,10 +1,10 @@
 # Tarjeta de acondicionamiento de senales PT100 y SM-50
 
-Diseno e implementacion de una tarjeta de acondicionamiento de senales para sensores de torque y temperatura en un motor de induccion del LabCES. La PCB adapta las senales de un sensor de temperatura PT100 y un sensor de torque SM-50 para facilitar su adquisicion y monitoreo dentro de un sistema de medicion.
+Diseño implementacion de una tarjeta de acondicionamiento de senales para sensores de torque y temperatura en un motor de induccion del LabCES. La PCB adapta las senales de un sensor de temperatura PT100 y un sensor de torque SM-50 para facilitar su adquisicion y monitoreo dentro de un sistema de medicion.
 
 ## Objetivo
 
-Disenar e implementar una tarjeta de circuito impreso que permita acondicionar y adaptar las senales provenientes de los sensores de torque y temperatura de un motor de induccion utilizado en el LabCES, con el proposito de facilitar su correcta adquisicion y monitoreo para analizar el desempeno del motor.
+Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar y adaptar las senales provenientes de los sensores de torque y temperatura de un motor de induccion utilizado en el LabCES, con el proposito de facilitar su correcta adquisicion y monitoreo para analizar el desempeno del motor.
 
 ## Objetivos especificos
 
