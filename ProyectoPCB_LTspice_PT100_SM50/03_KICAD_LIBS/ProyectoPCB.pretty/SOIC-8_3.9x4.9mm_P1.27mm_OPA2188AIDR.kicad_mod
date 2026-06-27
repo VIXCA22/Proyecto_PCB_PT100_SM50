@@ -1,6 +1,6 @@
 (footprint "SOIC-8_3.9x4.9mm_P1.27mm_OPA2188AIDR"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "TI OPA2188AIDR SOIC-8, D0008A package")
   (tags "SOIC SO-8 SO8 D OPA2188AIDR")

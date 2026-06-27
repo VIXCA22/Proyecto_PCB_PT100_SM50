@@ -1,6 +1,6 @@
 (footprint "TerminalBlock_1x04_P5.08mm"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Terminal block 4 pins, 5.08 mm pitch")
   (tags "terminal block 4 pin 5.08")

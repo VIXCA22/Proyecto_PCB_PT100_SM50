@@ -1,6 +1,6 @@
 (footprint "SOT-23-6_DBV0006A_TPD4E1U06DBVR"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "TI DBV0006A SOT-23-6, land pattern 6 x 1.1 mm by 0.6 mm, pitch 0.95 mm")
   (tags "SOT-23-6 DBV0006A TPD4E1U06")

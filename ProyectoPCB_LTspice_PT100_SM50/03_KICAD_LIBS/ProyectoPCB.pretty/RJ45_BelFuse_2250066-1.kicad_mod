@@ -1,6 +1,6 @@
 (footprint "RJ45_BelFuse_2250066-1"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Bel Fuse / TRP 2250066-1 MagJack, 1x1 10/100 tab-up, through-hole")
   (tags "RJ45 MagJack Bel Fuse TRP 2250066-1 10/100 through-hole shielded")

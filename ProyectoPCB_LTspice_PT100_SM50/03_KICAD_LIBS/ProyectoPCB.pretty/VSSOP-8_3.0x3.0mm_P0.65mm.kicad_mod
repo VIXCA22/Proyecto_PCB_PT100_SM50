@@ -1,6 +1,6 @@
 (footprint "VSSOP-8_3.0x3.0mm_P0.65mm"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "VSSOP-8, body 3.0 x 3.0 mm, pitch 0.65 mm")
   (tags "VSSOP MSOP DGK 8")

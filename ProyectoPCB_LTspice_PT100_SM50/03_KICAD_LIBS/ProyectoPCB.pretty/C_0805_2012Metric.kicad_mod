@@ -1,6 +1,6 @@
 (footprint "C_0805_2012Metric"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Capacitor SMD 0805, 2012 metric")
   (tags "capacitor 0805 2012")

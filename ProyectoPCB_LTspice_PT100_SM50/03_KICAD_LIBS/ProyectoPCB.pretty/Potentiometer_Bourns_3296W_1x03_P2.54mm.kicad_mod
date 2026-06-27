@@ -1,6 +1,6 @@
 (footprint "Potentiometer_Bourns_3296W_1x03_P2.54mm"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Bourns 3296W top-adjust trimmer, 3 inline pins, 2.54 mm pitch, physical pad order 1-3-2")
   (tags "potentiometer trimmer Bourns 3296W top adjust 2.54")

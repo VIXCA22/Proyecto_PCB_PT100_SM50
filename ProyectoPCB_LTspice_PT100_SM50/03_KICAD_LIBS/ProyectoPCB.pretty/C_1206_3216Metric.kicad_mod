@@ -1,6 +1,6 @@
 (footprint "C_1206_3216Metric"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Capacitor SMD 1206, 3216 metric")
   (tags "capacitor 1206 3216")

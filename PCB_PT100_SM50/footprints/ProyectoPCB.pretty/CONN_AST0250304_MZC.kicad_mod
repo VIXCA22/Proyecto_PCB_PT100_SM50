@@ -1,6 +1,6 @@
 (footprint "CONN_AST0250304_MZC"
   (version 20240108)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "METZ CONNECT AST0250304 terminal block, 3 positions, 5.00 mm pitch, side entry")
   (tags "METZ AST0250304 terminal block 3 pin 5.00mm")

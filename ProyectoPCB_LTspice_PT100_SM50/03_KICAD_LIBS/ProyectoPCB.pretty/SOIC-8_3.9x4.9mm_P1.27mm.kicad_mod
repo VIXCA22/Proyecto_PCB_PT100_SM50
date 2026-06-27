@@ -1,6 +1,6 @@
 (footprint "SOIC-8_3.9x4.9mm_P1.27mm"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "SOIC-8, body 3.9 x 4.9 mm, pitch 1.27 mm")
   (tags "SOIC SO-8 SO8 D")

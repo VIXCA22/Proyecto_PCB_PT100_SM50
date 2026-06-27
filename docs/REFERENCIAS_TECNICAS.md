@@ -1,14 +1,14 @@
-# Referencias tecnicas y componentes
+# Referencias técnicas y componentes
 
-Este documento resume las fuentes tecnicas conservadas en el proyecto y las verificaciones principales de componentes.
+Este documento resume las fuentes técnicas conservadas en el proyecto y las verificaciones principales de componentes.
 
 ## Fuentes del proyecto
 
 | Ruta | Uso |
 | --- | --- |
-| `PCB_PT100_SM50/PCB_PT100_SM50.kicad_sch` | Esquematico KiCad principal. |
+| `PCB_PT100_SM50/PCB_PT100_SM50.kicad_sch` | Esquemático KiCad principal. |
 | `PCB_PT100_SM50/PCB_PT100_SM50.kicad_pcb` | PCB final. |
-| `PCB_PT100_SM50/symbols/` | Simbolos locales usados por el esquematico. |
+| `PCB_PT100_SM50/symbols/` | Símbolos locales usados por el esquemático. |
 | `PCB_PT100_SM50/footprints/` | Footprints locales y ajustados. |
 | `PCB_PT100_SM50/3d/` | Modelos 3D usados en KiCad. |
 | `ProyectoPCB_LTspice_PT100_SM50/` | Simulaciones LTspice. |
@@ -18,27 +18,27 @@ Este documento resume las fuentes tecnicas conservadas en el proyecto y las veri
 
 | Bloque | Componentes / modelos | Resultado |
 | --- | --- | --- |
-| Entrada PT100 | Bornera METZ AST0250304, TVS/ESD, resistencias de excitacion | Footprint ajustado contra datasheet y validado por DRC. |
-| Entrada SM-50 | Bornera METZ AST0250404, proteccion y excitacion | Footprint aplicado con modelo 3D verde y DRC limpio. |
-| Amplificacion | INA826AIDR, OPA2188AIDR | Footprints SOIC-8 compatibles con BOM. |
-| Regulacion/referencia | TPS7A4901DGNT, REF3012, reguladores auxiliares | Footprint PowerPAD ajustado con pad termico correcto. |
-| Proteccion | SMF12CT1G, PPTC 1812 | Footprints y serigrafia revisados. |
+| Entrada PT100 | Bornera METZ AST0250304, TVS/ESD, resistencias de excitación | Footprint ajustado contra datasheet y validado por DRC. |
+| Entrada SM-50 | Bornera METZ AST0250404, protección y excitación | Footprint aplicado con modelo 3D verde y DRC limpio. |
+| Amplificación | INA826AIDR, OPA2188AIDR | Footprints SOIC-8 compatibles con BOM. |
+| Regulación/referencia | TPS7A4901DGNT, REF3012, reguladores auxiliares | Footprint PowerPAD ajustado con pad térmico correcto. |
+| Protección | SMF12CT1G, PPTC 1812 | Footprints y serigrafía revisados. |
 | Interfaz | RJ45 / B-Box | Modelo 3D y conectividad revisados. |
 
-## Verificacion de footprints descargados
+## Verificación de footprints descargados
 
-El resumen completo esta en:
+El resumen completo está en:
 
 `docs/referencias/RESUMEN_VERIFICACION_FOOTPRINTS_DESCARGADOS_20260625.md`
 
-Los paquetes crudos descargados de proveedores no se versionan porque ocupan espacio y contienen formatos que no se usan directamente en KiCad. En el repositorio se conservan las librerias finales necesarias para abrir y fabricar el proyecto.
+Los paquetes crudos descargados de proveedores no se versionan porque ocupan espacio y contienen formatos que no se usan directamente en KiCad. En el repositorio se conservan las librerías finales necesarias para abrir y fabricar el proyecto.
 
-## Norma practica usada para referencias
+## Norma práctica usada para referencias
 
-Para serigrafia se mantuvo la regla del proyecto KiCad:
+Para serigrafía se mantuvo la regla del proyecto KiCad:
 
-- Altura minima de texto: 0.8 mm.
-- Espesor minimo usado en referencias pequenas: 0.1 mm.
-- Las referencias se movieron fuera de pads, mascara y contornos de componentes.
+- Altura mínima de texto: 0.8 mm.
+- Espesor mínimo usado en referencias pequeñas: 0.1 mm.
+- Las referencias se movieron fuera de pads, máscara y contornos de componentes.
 
-Esto evita advertencias DRC y mantiene legibilidad razonable en fabricacion.
+Esto evita advertencias DRC y mantiene legibilidad razonable en fabricación.
