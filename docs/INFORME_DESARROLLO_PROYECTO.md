@@ -12,6 +12,16 @@ El punto de partida fue una investigacion previa de LabCES orientada al calculo 
 
 | Fuente | Uso en el proyecto |
 | --- | --- |
+| `Proyecto_PCB_TODO_con_referencias.zip/00_INDICE_DE_ARCHIVOS.txt` | Indice del paquete completo de referencias, memorias, capturas, datasheets y bibliografia. |
+| `Proyecto_PCB_TODO_con_referencias.zip/00_REFERENCIAS_IMPORTANTES.txt` | Bibliografia principal en formato LaTeX/bibitem para defender el proyecto. |
+| `Proyecto_PCB_TODO_con_referencias.zip/calculos_memorias/memoria_calculo_PCB0.docx` | Memoria preliminar de calculo para PT100 y SM-50; usada para documentar la evolucion de los parametros. |
+| `Proyecto_PCB_TODO_con_referencias.zip/referencias_bibliografia/fuentes_pcb_sensores_motor.pdf` | Marco bibliografico sobre PCB de acondicionamiento, sensores de torque/temperatura y motores de induccion. |
+| `Proyecto_PCB_TODO_con_referencias.zip/instrumentacion_puentes_adc/sloa034.pdf` | Referencia de TI para acondicionamiento de sensores resistivos en puente Wheatstone. |
+| `Proyecto_PCB_TODO_con_referencias.zip/instrumentacion_puentes_adc/sboa247a.pdf` | Referencia de TI para amplificacion de puentes de galgas extensiometricas en una sola alimentacion. |
+| `Proyecto_PCB_TODO_con_referencias.zip/instrumentacion_puentes_adc/an43f.pdf` | Nota de Analog Devices sobre circuitos de puente. |
+| `Proyecto_PCB_TODO_con_referencias.zip/instrumentacion_puentes_adc/an96fa.pdf` | Nota de Analog Devices sobre medicion de puentes con ADC delta-sigma y consideraciones de ruido/resolucion. |
+| `Proyecto_PCB_TODO_con_referencias.zip/datasheets_sensores/Electrical_Wiring_Diagram.pdf` | Cableado de celdas de carga Interface, colores de cable, excitacion y senales. |
+| `Proyecto_PCB_TODO_con_referencias.zip/pcb_kicad_ruido_fabricacion/User-Manual-BoomBox.pdf` | Especificaciones practicas de entradas analogicas BoomBox/B-Box, RJ45, Cat5e, alimentacion de sensores y limites de entrada. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Reporte_final_P.pdf` | Contexto del banco de LabCES, estandar IEEE 112, metodo C, sensores usados y problemas encontrados en pruebas previas. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf` | Datos experimentales previos de PT100, salida de instrumentacion y prueba de carga. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Interface-Book-2022-Edition.pdf` | Fundamento general de celdas de carga, galgas extensiometricas, excitacion, sensibilidad y errores de montaje. |
@@ -21,6 +31,8 @@ El punto de partida fue una investigacion previa de LabCES orientada al calculo 
 | `PCB_PT100_SM50/COMPONENTES_A_USAR_KICAD.csv` | Lista base de componentes, bloques funcionales y MPN seleccionados. |
 | `ProyectoPCB_LTspice_PT100_SM50/03_KICAD_LIBS/AUDITORIA_FOOTPRINTS.md` | Trazabilidad de simbolos, footprints, modelos 3D y fuentes primarias revisadas. |
 | `docs/VALIDACION.md` | Resultado final de ERC, DRC y paquete de fabricacion. |
+
+El paquete `Proyecto_PCB_TODO_con_referencias.zip` se uso como fuente documental, pero no se agrego completo al repositorio para evitar subir archivos pesados y duplicados. En el repositorio se conserva la sintesis tecnica, los datos numericos regenerables y los archivos finales de diseno.
 
 ## Desarrollo por objetivos especificos
 
@@ -49,11 +61,40 @@ La simulacion barre temperaturas representativas y calcula tanto la resistencia 
 
 Las graficas del repositorio se generaron desde los CSV en `docs/simulacion/`, no desde valores escritos a mano. Esto permite que las figuras sean repetibles.
 
+### Evolucion desde la memoria de calculo preliminar
+
+La memoria `memoria_calculo_PCB0.docx` fue importante para fijar el razonamiento inicial: calcular la sensibilidad del PT100, estimar autocalentamiento, separar offset de variacion util, calcular ganancia del amplificador de instrumentacion, y dimensionar el canal SM-50 desde una senal de puente de aproximadamente 30 mV a escala completa. Sin embargo, esa memoria corresponde a una etapa previa del proyecto y no todos sus valores quedaron iguales en la revision final.
+
+La diferencia principal es el destino de la senal. En la memoria preliminar se penso en aprovechar un ADC de 3.3 V directamente, mientras que el proyecto final se adapto a la BoomBox/B-Box, que permite entradas analogicas diferenciales de hasta el orden de 10 V y entrega alimentacion de sensores por el cable analogico. Por eso el canal SM-50 final usa una ganancia mayor que la memoria preliminar, para aprovechar mejor el rango de entrada de la B-Box sin exceder el limite de 10 V. En el PT100 se redujo la corriente de excitacion a 0.5 mA para disminuir autocalentamiento y mantener una respuesta de voltaje compatible con el rango documentado en simulacion.
+
+| Aspecto | Memoria preliminar | Revision final en repo |
+| --- | --- | --- |
+| PT100, corriente de excitacion | 1 mA | 0.5 mA, definida por REF3012 de 1.25 V y RSET de 2.49 kohm |
+| PT100, salida objetivo | 0 a 3.3 V hacia ADC | Aproximadamente 2.33 a 3.22 V hacia B-Box en el barrido 0-100 degC |
+| PT100, amplificador | INA828 como opcion inicial | INA826/OPA2188 segun BOM y simbolos finales |
+| SM-50, sensibilidad base | 3 mV/V con 10 V, es decir cerca de 30 mV FS | Igual: 3 mV/V, puente de 350 ohm y excitacion de 10 V |
+| SM-50, ganancia calculada | Cerca de 100 V/V para salida de 3.3 V | Cerca de 306 V/V en LTspice con RG = 162 ohm, para salida real menor a 10 V |
+| Interfaz de adquisicion | ADC generico de 3.3 V | BoomBox/B-Box con entrada analogica diferencial, RJ45 y alimentacion +/-15 V |
+
+Esta evolucion no se considera una contradiccion, sino una decision de integracion: se conservaron los fundamentos de sensibilidad, filtrado y amplificacion diferencial, pero se recalcularon rangos para la interfaz real de adquisicion.
+
 ### 3. Diseno del esquematico en KiCad
 
 Despues de validar rangos en LTspice, el circuito se traslado a KiCad. El esquematico final se organizo por bloques funcionales: alimentacion, proteccion, canal PT100, canal SM-50, filtrado y salida hacia la B-Box.
 
 En el bloque de alimentacion se considero la disponibilidad de rieles desde la B-Box y la necesidad de una excitacion regulada para el SM-50. El regulador TPS7A4901 se selecciono para generar la referencia de excitacion positiva de 10 V del puente, manteniendo un margen adecuado frente al maximo permitido por el sensor. En el bloque PT100 se incorporo una referencia REF3012 de 1.25 V para establecer la corriente de excitacion. El uso de OPA2188 se justifico por su baja deriva, mientras que el INA826 se uso como amplificador de instrumentacion para senales diferenciales pequenas.
+
+El manual de la BoomBox/B-Box reforzo la decision de usar conectores RJ45 blindados y cable Cat5e para la interfaz analogica. La entrada analogica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentacion para sensores. Para el diseno de esta PCB se tomaron como restricciones practicas los rieles +/-15 V disponibles por el cable y los limites de entrada de aproximadamente +/-10 V en modo diferencial, por lo que las salidas acondicionadas se mantuvieron por debajo de 10 V.
+
+| Pin RJ45 BoomBox analogica | Funcion reportada en manual |
+| ---: | --- |
+| 1, 2 | +15 V para sensores |
+| 3, 6 | 0 V |
+| 4 | Entrada positiva / entrada de corriente |
+| 5 | Entrada negativa / tierra |
+| 7, 8 | -15 V para sensores |
+
+El diagrama de cableado de Interface para celdas de carga tambien justifico mantener una entrada diferencial con lineas de excitacion y senal separadas. En la PCB se llevo esa idea al conector SM-50 de 4 hilos: `+EXC_SM50`, `-EXC_SM50`, `SENP_SM50` y `SENN_SM50`.
 
 | Bloque | Decision tomada | Justificacion |
 | --- | --- | --- |
@@ -64,6 +105,8 @@ En el bloque de alimentacion se considero la disponibilidad de rieles desde la B
 | SM-50 | Excitacion de 10 V | Compatible con la hoja del SM S-Type y produce cerca de 30 mV a escala completa. |
 | SM-50 | Rango de salida cercano a 0-10 V | Facilita la lectura por la B-Box sin exceder el limite esperado. |
 | Entradas/salidas | Filtros RC y proteccion | Reducen ruido y protegen ante transitorios o manipulacion del banco. |
+
+Las notas de aplicacion SLOA034 y SBOA247A respaldan la arquitectura usada para el SM-50: un puente Wheatstone genera una senal diferencial pequena, el amplificador de instrumentacion rechaza el modo comun y la ganancia se elige para escalar la senal al rango de lectura. La nota AN96 se uso como advertencia de diseno: aumentar la ganancia solo para llenar todo el ADC no siempre mejora la resolucion, porque tambien entran ruido, deriva y limitaciones del frente analogico. En este proyecto la ganancia se eligio con una restriccion practica: no saturar la entrada de la B-Box y dejar margen hasta 10 V.
 
 ### 4. Migracion a PCB, footprints y fabricacion
 
@@ -229,10 +272,19 @@ La validacion experimental final no se reporta como realizada. En su lugar, se d
 
 ## Bibliografia y referencias
 
+- `Proyecto_PCB_TODO_con_referencias.zip`, paquete completo de referencias bibliograficas, memoria de calculo, datasheets, capturas, notas de instrumentacion y documentos de PCB/fabricacion.
+- `memoria_calculo_PCB0.docx`, "Memoria de calculo PCB de Acondicionamiento de Senal Sensores PT100 y SM-50", archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
+- `fuentes_pcb_sensores_motor.pdf`, "Fuentes para el desarrollo de una PCB de acondicionamiento de sensores de torque y temperatura en motores de induccion", archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
 - Ignacio Soto Montero, `Reporte_final_P.pdf`, "Pruebas de laboratorio para el calculo de eficiencia en motores trifasicos de induccion", archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
 - `Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf`, archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
 - Interface, `Interface-Book-2022-Edition.pdf`, archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
 - Interface, `SM-S-Type.pdf`, hoja de datos del sensor SM S-Type, archivo local en `C:/Users/kenne/Downloads/`.
+- Interface, `Electrical_Wiring_Diagram.pdf`, diagrama electrico y cableado de celdas de carga, archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
+- imperix, `User-Manual-BoomBox.pdf`, manual de la plataforma BoomBox/B-Box, archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
+- Texas Instruments, "Signal Conditioning Wheatstone Resistive Bridge Sensors", SLOA034: https://www.ti.com/lit/an/sloa034/sloa034.pdf
+- Texas Instruments, "Single-Supply Strain Gauge Bridge Amplifier Circuit", SBOA247A: https://www.ti.com/lit/pdf/sboa247
+- Analog Devices, "AN-43: Bridge Circuits": https://www.analog.com/en/resources/app-notes/an-43f.html
+- Analog Devices, "AN-96: Delta Sigma ADC Bridge Measurement Techniques": https://www.analog.com/en/resources/app-notes/an-96fa.html
 - Texas Instruments, INA826 datasheet: https://www.ti.com/lit/ds/symlink/ina826.pdf
 - Texas Instruments, OPA2188 datasheet: https://www.ti.com/lit/ds/symlink/opa2188.pdf
 - Texas Instruments, TPS7A49/TPS7A4901 datasheet: https://www.ti.com/lit/ds/symlink/tps7a49.pdf
