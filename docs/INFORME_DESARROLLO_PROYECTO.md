@@ -25,6 +25,7 @@ El punto de partida fue una investigación previa de LabCES orientada al cálcul
 | `paquete_memoria_PCB0_VALORES_ACTUALES_v3_referencias.zip/memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` | Memoria vigente de cálculo; reemplaza valores preliminares y fija los valores actuales de PT100, SM-50 e interfaz B-Box. |
 | `docs/simulacion/calculos_PT100_SM50_VALORES_ACTUALES_v2.csv` | Tabla numérica regenerable con los cálculos finales de ambos sensores. |
 | `docs/referencias/referencias_completas_proyecto_PCB.txt` | Índice de referencias finales, teóricas, de PCB y de trazabilidad usado para citar la memoria actual. |
+| `docs/bitacora/bitacora_PCB_actualizada_27_06_2026.pdf` | Bitácora cronológica del trabajo realizado desde el 11/03/2026 hasta el 27/06/2026. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Reporte_final_P.pdf` | Contexto del banco de LabCES, estándar IEEE 112, método C, sensores usados y problemas encontrados en pruebas previas. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf` | Datos experimentales previos de PT100, salida de instrumentación y prueba de carga. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Interface-Book-2022-Edition.pdf` | Fundamento general de celdas de carga, galgas extensiométricas, excitación, sensibilidad y errores de montaje. |
@@ -339,6 +340,7 @@ La validación experimental final no se reporta como realizada. En su lugar, se 
 
 - `Proyecto_PCB_TODO_con_referencias.zip`, paquete completo de referencias bibliográficas, memoria de cálculo, datasheets, capturas, notas de instrumentación y documentos de PCB/fabricación.
 - `paquete_memoria_PCB0_VALORES_ACTUALES_v3_referencias.zip`, paquete final con memoria de cálculo vigente, CSV de valores actuales, diagrama de bloques y referencias completas.
+- `docs/bitacora/bitacora_PCB_actualizada_27_06_2026.pdf`, bitácora actualizada del proceso desde el 11 de marzo de 2026 hasta el 27 de junio de 2026.
 - `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf`, memoria vigente de cálculo para PT100, SM-50 e interfaz BoomBox/B-Box.
 - `docs/simulacion/calculos_PT100_SM50_VALORES_ACTUALES_v2.csv`, tabla de cálculos finales usada para las tablas de este informe.
 - `docs/referencias/referencias_completas_proyecto_PCB.txt`, listado de referencias finales, teóricas, de PCB y de trazabilidad.

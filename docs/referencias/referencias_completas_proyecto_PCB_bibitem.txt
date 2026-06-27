@@ -45,6 +45,8 @@
 
 \bibitem{S6} Solid-State Circuits Magazine IEEE - Volume 14. Referencia de apoyo electronico general conservada en carpeta. Estado: Apoyo general.
 
+\bibitem{S7} bitacora_PCB_actualizada_27_06_2026.pdf. Bitacora cronologica del proceso de diseno, simulacion, seleccion de componentes, ruteo, verificaciones y cierre documental entre el 11/03/2026 y el 27/06/2026. Estado: Trazabilidad del proyecto.
+
 \bibitem{O1} Informe_Avanzado_Instrumentacion_PCB_8P8C (2).pdf. Memoria antigua. Solo se conserva la parte de interconexion fisica 8P8C/RJ45/FTP, pinout y criterio de puertos separados. No usar sus calculos de REF200, LT3080, INA828 unico, ni BOM como finales. Estado: Vieja - solo 8P8C.
 
 \bibitem{O2} circuitos_adaptacion_senal_corregido (1) (1).pdf. Memoria antigua. Se conserva como proceso para R->V, fuente de corriente, PT100 de 3 hilos y puente Wheatstone. Reemplazar 1 mA, ADC 12 bits y ganancias viejas por valores actuales. Estado: Vieja - teoria/proceso.

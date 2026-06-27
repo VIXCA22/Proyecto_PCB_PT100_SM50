@@ -77,6 +77,9 @@ DOCUMENTOS LOCALES DE FUENTES Y PROYECTO
 [S6] Solid-State Circuits Magazine IEEE - Volume 14.
     Uso: Referencia de apoyo electronico general conservada en carpeta.
     Estado: Apoyo general
+[S7] bitacora_PCB_actualizada_27_06_2026.pdf.
+    Uso: Bitacora cronologica del proceso de diseno, simulacion, seleccion de componentes, ruteo, verificaciones y cierre documental entre el 11/03/2026 y el 27/06/2026.
+    Estado: Trazabilidad del proyecto
 
 MEMORIAS VIEJAS Y DOCUMENTOS DE TRAZABILIDAD
 [O1] Informe_Avanzado_Instrumentacion_PCB_8P8C (2).pdf.
@@ -120,4 +123,3 @@ BIBLIOGRAFIA ORIGINAL GUARDADA EN PASTED.TXT / PAQUETE DE REFERENCIAS
 [B7] Interface, SM Installation Manual.
     Uso: Manual de instalacion de la familia SM.
     Estado: Sensor/instalacion
-
