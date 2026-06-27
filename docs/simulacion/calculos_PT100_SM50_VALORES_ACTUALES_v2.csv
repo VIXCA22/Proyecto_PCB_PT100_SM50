@@ -1,0 +1,43 @@
+Bloque,Parametro,Valor,Unidad
+Sistema,ADC BoomBox rango +/-10 V,20.0,V span
+Sistema,ADC bits,16,bits
+Sistema,LSB BoomBox +/-10 V,0.00030517578125,V/LSB
+PT100,R0,100.0,ohm
+PT100,alpha,0.00385,1/degC
+PT100,R(100C),138.5,ohm
+PT100,Delta R 0-100C,38.5,ohm
+PT100,Iexc actual,0.0005,A
+PT100,V(0C),0.05,V
+PT100,V(100C),0.06925,V
+PT100,Delta V util,0.01925,V
+PT100,Sensibilidad cruda,0.00019250000000000002,V/degC
+PT100,Rg INA actual,1000.0,ohm
+PT100,Ganancia INA826,50.4,V/V
+PT100,Ganancia INA828,51.0,V/V
+PT100,Span amplificado con INA826,0.9702,V
+PT100,Sensibilidad salida INA826,0.009702,V/degC
+PT100,N mínimo requerido,10,bits
+PT100,Resolucion estimada con ADC 16 bits +/-10 V,0.03145493519377448,degC/LSB
+PT100,P sensor a 100C,3.4625e-05,W
+PT100,Autocalentamiento con disipacion 2mW/degC,0.0173125,degC
+PT100,Filtro LP,159.15494309189535,Hz
+SM-50,Vexc puente,10.0,V
+SM-50,R puente,350.0,ohm
+SM-50,I puente,0.02857142857142857,A
+SM-50,Potencia puente,0.2857142857142857,W
+SM-50,Rated output,0.003,V/V
+SM-50,Vdiff FS,0.03,V
+SM-50,Sensibilidad cruda,0.013636363636363634,V/Nm
+SM-50,Delta V para 0.01 Nm,0.00013636363636363634,V
+SM-50,Rg INA actual,160.0,ohm
+SM-50,Ganancia INA826,309.75,V/V
+SM-50,Ganancia INA828,313.5,V/V
+SM-50,Salida max con INA826,9.2925,V
+SM-50,Sensibilidad salida INA826,4.223863636363635,V/Nm
+SM-50,N mínimo requerido,8,bits
+SM-50,Resolucion estimada con ADC 16 bits +/-10 V,7.225038673661557e-05,Nm/LSB
+SM-50,Zero balance raw,0.0003,V
+SM-50,Zero balance salida,0.092925,V
+SM-50,No linealidad,0.00066,Nm
+SM-50,Histeresis,0.00044000000000000007,Nm
+SM-50,Filtro LP,482.2877063390768,Hz

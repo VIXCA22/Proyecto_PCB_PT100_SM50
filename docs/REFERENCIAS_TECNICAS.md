@@ -13,6 +13,9 @@ Este documento resume las fuentes técnicas conservadas en el proyecto y las ver
 | `PCB_PT100_SM50/3d/` | Modelos 3D usados en KiCad. |
 | `ProyectoPCB_LTspice_PT100_SM50/` | Simulaciones LTspice. |
 | `PCB_PT100_SM50/ltspice_models/` | Modelos SPICE copiados al proyecto KiCad. |
+| `docs/simulacion/calculos_PT100_SM50_VALORES_ACTUALES_v2.csv` | Cálculos finales de PT100, SM-50 e interfaz B-Box. |
+| `docs/referencias/referencias_completas_proyecto_PCB.txt` | Referencias finales, teóricas, de PCB y de trazabilidad usadas en la memoria vigente. |
+| `docs/figuras/diagrama_bloques_valores_actuales.png` | Diagrama de bloques con valores actuales de ambos canales. |
 
 ## Componentes revisados
 
