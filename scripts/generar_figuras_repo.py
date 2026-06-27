@@ -212,7 +212,7 @@ def build_response_charts() -> list[Path]:
             "9 8",
         ),
         (
-            "Limite de 5 V",
+            "Limite de 10 V",
             [(float(row["Load_lb"]), float(row["V_LIMIT_V"])) for row in sm50],
             "#92400e",
             "3 7",
@@ -353,12 +353,50 @@ def export_pngs(svg_paths: list[Path]) -> None:
         )
 
 
+def copy_ltspice_pdf_previews() -> None:
+    pdftoppm = shutil.which("pdftoppm")
+    previews = [
+        (
+            ROOT / "ProyectoPCB_LTspice_PT100_SM50" / "01_SENSOR_PT100" / "escPT100.pdf",
+            FIG_DIR / "ltspice_pt100_esquematico.pdf",
+        ),
+        (
+            ROOT / "ProyectoPCB_LTspice_PT100_SM50" / "02_SENSOR_SM50" / "escSM50.pdf",
+            FIG_DIR / "ltspice_sm50_esquematico.pdf",
+        ),
+    ]
+    for src, dst in previews:
+        if not src.exists():
+            continue
+        shutil.copy2(src, dst)
+        if pdftoppm is None:
+            print(f"pdftoppm no esta disponible; no se genero PNG desde {dst.name}.")
+            continue
+        subprocess.run(
+            [
+                pdftoppm,
+                "-f",
+                "1",
+                "-l",
+                "1",
+                "-singlefile",
+                "-png",
+                "-r",
+                "160",
+                str(dst),
+                str(dst.with_suffix("")),
+            ],
+            check=True,
+        )
+
+
 def main() -> None:
     ensure_dirs()
     generated = []
     generated.extend(build_response_charts())
     generated.extend(build_ltspice_previews())
     export_pngs(generated)
+    copy_ltspice_pdf_previews()
 
 
 if __name__ == "__main__":

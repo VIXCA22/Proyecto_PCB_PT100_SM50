@@ -1,20 +1,20 @@
 {
-  "fuente": "Resultados finales documentados en main (6).pdf",
+  "fuente": "Resultados regenerados desde LTspice 26.0.2 usando Sensor_PT100.log y sensor_SM50.log; esquematicos PDF escPT100.pdf y escSM50.pdf.",
   "pt100": {
     "temperatura_c": [0, 20, 50, 100],
-    "resistencia_nominal_ohm": [100.0, 107.79, 119.4, 138.51],
-    "resistencia_baja_ohm": [100.0, 105.85, 117.47, 136.6],
-    "resistencia_alta_ohm": [101.95, 109.73, 121.32, 138.51],
-    "salida_bbox_v": [2.33, 2.51, 2.78, 3.22],
-    "salida_filtrada_v": [2.37, 2.55, 2.83, 3.28],
-    "resumen": "La salida hacia la B-Box aumenta aproximadamente de 2.33 V a 3.22 V entre 0 C y 100 C."
+    "resistencia_nominal_ohm": [100, 107.7935, 119.397125, 138.5055],
+    "resistencia_baja_ohm": [100, 105.849456, 117.470406, 136.607656],
+    "resistencia_alta_ohm": [101.952706, 109.734656, 121.320956, 138.5055],
+    "salida_bbox_v": [2.328272, 2.50954, 2.779427, 3.223866],
+    "salida_filtrada_v": [2.367077, 2.551366, 2.825751, 3.277597],
+    "resumen": "La salida hacia la B-Box aumenta aproximadamente de 2.328272 V a 3.223866 V entre 0 C y 100 C."
   },
   "sm50": {
     "carga_lb": [0, 10, 20, 30, 40, 50],
-    "tension_puente_mv": [0.0, 6.03, 12.07, 18.1, 24.14, 30.17],
-    "salida_real_bbox_v": [0.0, 0.86, 1.71, 2.57, 3.43, 4.28],
-    "salida_ideal_v": [0.0, 1.83, 3.67, 5.5, 7.34, 9.17],
-    "limite_v": [5.0, 5.0, 5.0, 5.0, 5.0, 5.0],
-    "resumen": "La senal diferencial alcanza aproximadamente 30.17 mV y la salida real llega a 4.28 V a 50 lb, por debajo del limite de 5 V."
+    "tension_puente_mv": [0, 6.005764, 12.02631, 18.061161, 24.110794, 30.174255],
+    "salida_real_bbox_v": [0.016155, 1.815897, 3.619975, 5.428405, 7.241199, 9.058375],
+    "salida_ideal_v": [-0.000028, 1.83741, 3.679269, 5.525563, 7.376311, 9.231526],
+    "limite_v": [10, 10, 10, 10, 10, 10],
+    "resumen": "La senal diferencial alcanza aproximadamente 30.174255 mV y la salida real llega a 9.058375 V a 50 lb, por debajo del limite de 10 V."
   }
 }

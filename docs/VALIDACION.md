@@ -4,7 +4,7 @@ Fecha de cierre de validacion: 2026-06-26.
 
 ## Resumen
 
-El proyecto KiCad principal fue validado despues de ajustar referencias de serigrafia, footprints criticos, modelos 3D de borneras y el paquete Gerber con taladros.
+El proyecto KiCad principal fue validado despues de actualizar el esquematico, el PCB, las vistas documentales y el paquete Gerber con taladros.
 
 | Revision | Resultado |
 | --- | --- |
@@ -42,4 +42,4 @@ Los datos finales usados para las graficas corregidas estan en `docs/simulacion/
 - `sm50_sweep_positive_ng_20260625.csv`
 - `resumen_numerico_ng_20260625.json`
 
-Las graficas generadas estan en `docs/figuras/` y coinciden con el resumen del PDF final de simulacion.
+Las graficas generadas estan en `docs/figuras/` y coinciden con los logs nuevos de LTspice y los PDF exportados `escPT100.pdf` / `escSM50.pdf`.

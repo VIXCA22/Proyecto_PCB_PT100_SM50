@@ -28,19 +28,19 @@
 <text x="96" y="194.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">133</text>
 <line x1="110" y1="80.0" x2="920" y2="80.0" stroke="#d9e2ec" stroke-width="1"/>
 <text x="96" y="85.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">142</text>
-<polyline fill="none" stroke="#2563eb" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="110.0,567.0 272.0,476.7 515.0,342.1 920.0,120.5"/>
+<polyline fill="none" stroke="#2563eb" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="110.0,567.0 272.0,476.6 515.0,342.1 920.0,120.5"/>
 <circle cx="110.0" cy="567.0" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="272.0" cy="476.7" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="272.0" cy="476.6" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
 <circle cx="515.0" cy="342.1" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
 <circle cx="920.0" cy="120.5" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<polyline fill="none" stroke="#dc2626" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 8" points="110.0,567.0 272.0,499.2 515.0,364.4 920.0,142.6"/>
+<polyline fill="none" stroke="#dc2626" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 8" points="110.0,567.0 272.0,499.2 515.0,364.4 920.0,142.5"/>
 <circle cx="110.0" cy="567.0" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
 <circle cx="272.0" cy="499.2" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
 <circle cx="515.0" cy="364.4" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<circle cx="920.0" cy="142.6" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<polyline fill="none" stroke="#92400e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 8" points="110.0,544.4 272.0,454.2 515.0,319.8 920.0,120.5"/>
+<circle cx="920.0" cy="142.5" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+<polyline fill="none" stroke="#92400e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 8" points="110.0,544.4 272.0,454.1 515.0,319.8 920.0,120.5"/>
 <circle cx="110.0" cy="544.4" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
-<circle cx="272.0" cy="454.2" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="272.0" cy="454.1" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
 <circle cx="515.0" cy="319.8" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
 <circle cx="920.0" cy="120.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
 <line x1="955" y1="92" x2="989" y2="92" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>

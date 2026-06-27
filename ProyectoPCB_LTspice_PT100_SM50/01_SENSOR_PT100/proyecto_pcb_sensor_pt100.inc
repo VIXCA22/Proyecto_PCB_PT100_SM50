@@ -24,6 +24,13 @@ RIN IN GND 1G
 VREF OUT GND DC 1.25
 .ends REF30E1_IDEAL
 
+* Modelo ideal de LDO para la alimentacion +15V -> +5V en PT100
+* Orden de pines: IN EN OUT GND
+.SUBCKT LDO_5V_GENERIC IN EN OUT GND
+BOUT OUT GND V={if(V(EN,GND)>1, limit(V(IN,GND)-0.2,0,5), 0)}
+RLEAK OUT GND 1G
+.ENDS LDO_5V_GENERIC
+
 .include ".\lib\sub\PT100_clean.lib"
 
 * ============================================================
@@ -58,4 +65,3 @@ RINP INP 0 1G
 RINM INM 0 1G
 BOUT OUT 0 V=limit(1e6*(V(INP)-V(INM)), V(VEE)+0.1, V(VCC)-0.1)
 .ENDS UniversalOpamp2
-

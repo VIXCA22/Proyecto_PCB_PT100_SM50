@@ -28,31 +28,31 @@
 <text x="96" y="194.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">8.0</text>
 <line x1="110" y1="80.0" x2="920" y2="80.0" stroke="#d9e2ec" stroke-width="1"/>
 <text x="96" y="85.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">10</text>
-<polyline fill="none" stroke="#2563eb" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="110.0,625.0 272.0,578.1 434.0,531.8 596.0,484.9 758.0,438.1 920.0,391.7"/>
-<circle cx="110.0" cy="625.0" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="272.0" cy="578.1" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="434.0" cy="531.8" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="596.0" cy="484.9" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="758.0" cy="438.1" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="920.0" cy="391.7" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<polyline fill="none" stroke="#dc2626" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 8" points="110.0,625.0 272.0,525.3 434.0,425.0 596.0,325.2 758.0,225.0 920.0,125.2"/>
+<polyline fill="none" stroke="#2563eb" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="110.0,624.1 272.0,526.0 434.0,427.7 596.0,329.2 758.0,230.4 920.0,131.3"/>
+<circle cx="110.0" cy="624.1" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="272.0" cy="526.0" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="434.0" cy="427.7" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="596.0" cy="329.2" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="758.0" cy="230.4" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="920.0" cy="131.3" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<polyline fill="none" stroke="#dc2626" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 8" points="110.0,625.0 272.0,524.9 434.0,424.5 596.0,323.9 758.0,223.0 920.0,121.9"/>
 <circle cx="110.0" cy="625.0" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<circle cx="272.0" cy="525.3" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<circle cx="434.0" cy="425.0" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<circle cx="596.0" cy="325.2" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<circle cx="758.0" cy="225.0" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<circle cx="920.0" cy="125.2" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
-<polyline fill="none" stroke="#92400e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 7" points="110.0,352.5 272.0,352.5 434.0,352.5 596.0,352.5 758.0,352.5 920.0,352.5"/>
-<circle cx="110.0" cy="352.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
-<circle cx="272.0" cy="352.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
-<circle cx="434.0" cy="352.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
-<circle cx="596.0" cy="352.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
-<circle cx="758.0" cy="352.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
-<circle cx="920.0" cy="352.5" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="272.0" cy="524.9" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+<circle cx="434.0" cy="424.5" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+<circle cx="596.0" cy="323.9" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+<circle cx="758.0" cy="223.0" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+<circle cx="920.0" cy="121.9" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+<polyline fill="none" stroke="#92400e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 7" points="110.0,80.0 272.0,80.0 434.0,80.0 596.0,80.0 758.0,80.0 920.0,80.0"/>
+<circle cx="110.0" cy="80.0" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="272.0" cy="80.0" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="434.0" cy="80.0" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="596.0" cy="80.0" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="758.0" cy="80.0" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="920.0" cy="80.0" r="4.5" fill="#92400e" stroke="#ffffff" stroke-width="2"/>
 <line x1="955" y1="92" x2="989" y2="92" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
 <text x="1001" y="98" font-family="Arial, sans-serif" font-size="17" fill="#243b53">Salida real hacia B-Box</text>
 <line x1="955" y1="126" x2="989" y2="126" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 8"/>
 <text x="1001" y="132" font-family="Arial, sans-serif" font-size="17" fill="#243b53">Salida ideal</text>
 <line x1="955" y1="160" x2="989" y2="160" stroke="#92400e" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 7"/>
-<text x="1001" y="166" font-family="Arial, sans-serif" font-size="17" fill="#243b53">Limite de 5 V</text>
+<text x="1001" y="166" font-family="Arial, sans-serif" font-size="17" fill="#243b53">Limite de 10 V</text>
 </svg>

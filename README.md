@@ -46,7 +46,11 @@ Disenar e implementar una tarjeta de circuito impreso que permita acondicionar y
 
 ![LTspice PT100](docs/figuras/ltspice_pt100_esquematico.png)
 
+[PDF PT100](docs/figuras/ltspice_pt100_esquematico.pdf)
+
 ![LTspice SM-50](docs/figuras/ltspice_sm50_esquematico.png)
+
+[PDF SM-50](docs/figuras/ltspice_sm50_esquematico.pdf)
 
 ## Estructura del repositorio
 
@@ -54,7 +58,7 @@ Disenar e implementar una tarjeta de circuito impreso que permita acondicionar y
 | --- | --- |
 | `PCB_PT100_SM50/` | Proyecto KiCad principal: esquematico, PCB, librerias locales, footprints y modelos 3D. |
 | `ProyectoPCB_LTspice_PT100_SM50/` | Simulaciones LTspice de los canales PT100 y SM-50. |
-| `docs/figuras/` | Imagenes del esquematico, PCB, vista 3D, LTspice y graficas. |
+| `docs/figuras/` | Imagenes/PDF del esquematico, PCB, vista 3D, LTspice y graficas. |
 | `docs/simulacion/` | CSV y resumen numerico usados para generar las graficas. |
 | `docs/validacion/` | Reportes finales ERC/DRC. |
 | `docs/fabricacion/` | ZIP Gerber final con archivo de taladros. |

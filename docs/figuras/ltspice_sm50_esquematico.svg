@@ -102,7 +102,7 @@
 <line x1="-1316" y1="-285" x2="-1316" y2="-195" stroke="#111827" stroke-width="8"/>
 <text x="-1376" y="-262" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C4  10nF</text>
 <polyline fill="none" stroke="#111827" stroke-width="8" points="-1168,382 -1148,357 -1123,407 -1098,357 -1073,407 -1053,382"/>
-<text x="-1168" y="330" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R7  340</text>
+<text x="-1168" y="330" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R7  160</text>
 <polyline fill="none" stroke="#111827" stroke-width="8" points="-544,-114 -524,-139 -499,-89 -474,-139 -449,-89 -429,-114"/>
 <text x="-544" y="-166" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">ROUT1  50</text>
 <line x1="-464" y1="48" x2="-369" y2="48" stroke="#111827" stroke-width="8"/>

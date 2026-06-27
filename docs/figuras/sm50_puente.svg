@@ -28,13 +28,13 @@
 <text x="96" y="194.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">26</text>
 <line x1="110" y1="80.0" x2="920" y2="80.0" stroke="#d9e2ec" stroke-width="1"/>
 <text x="96" y="85.0" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#52606d">32</text>
-<polyline fill="none" stroke="#2563eb" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="110.0,625.0 272.0,522.3 434.0,419.4 596.0,316.7 758.0,213.9 920.0,111.2"/>
+<polyline fill="none" stroke="#2563eb" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="110.0,625.0 272.0,522.7 434.0,420.2 596.0,317.4 758.0,214.4 920.0,111.1"/>
 <circle cx="110.0" cy="625.0" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="272.0" cy="522.3" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="434.0" cy="419.4" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="596.0" cy="316.7" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="758.0" cy="213.9" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
-<circle cx="920.0" cy="111.2" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="272.0" cy="522.7" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="434.0" cy="420.2" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="596.0" cy="317.4" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="758.0" cy="214.4" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+<circle cx="920.0" cy="111.1" r="4.5" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
 <line x1="955" y1="92" x2="989" y2="92" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
 <text x="1001" y="98" font-family="Arial, sans-serif" font-size="17" fill="#243b53">VSEN+ - VSEN-</text>
 </svg>
