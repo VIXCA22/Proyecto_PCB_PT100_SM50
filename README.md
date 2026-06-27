@@ -22,7 +22,9 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 
 ### PCB en KiCad
 
-![PCB 2D](docs/figuras/kicad_pcb_editor_top.png)
+<p align="center">
+  <img src="docs/figuras/kicad_pcb_editor_top.png" alt="PCB 2D">
+</p>
 
 ### PCB 3D
 
