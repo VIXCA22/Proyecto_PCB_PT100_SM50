@@ -85,6 +85,7 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 
 ## Documentacion
 
+- [Informe de desarrollo del proyecto](docs/INFORME_DESARROLLO_PROYECTO.md)
 - [Proceso de diseno y trazabilidad](docs/PROCESO_DISENO_CHATGPT.md)
 - [Validacion final](docs/VALIDACION.md)
 - [Referencias tecnicas y footprints](docs/REFERENCIAS_TECNICAS.md)
