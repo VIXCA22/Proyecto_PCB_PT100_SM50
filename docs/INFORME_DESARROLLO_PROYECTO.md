@@ -22,6 +22,9 @@ El punto de partida fue una investigación previa de LabCES orientada al cálcul
 | `Proyecto_PCB_TODO_con_referencias.zip/instrumentacion_puentes_adc/an96fa.pdf` | Nota de Analog Devices sobre medición de puentes con ADC delta-sigma y consideraciones de ruido/resolución. |
 | `Proyecto_PCB_TODO_con_referencias.zip/datasheets_sensores/Electrical_Wiring_Diagram.pdf` | Cableado de celdas de carga Interface, colores de cable, excitación y señales. |
 | `Proyecto_PCB_TODO_con_referencias.zip/pcb_kicad_ruido_fabricacion/User-Manual-BoomBox.pdf` | Especificaciones prácticas de entradas analógicas BoomBox/B-Box, RJ45, Cat5e, alimentación de sensores y límites de entrada. |
+| `paquete_memoria_PCB0_VALORES_ACTUALES_v3_referencias.zip/memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` | Memoria vigente de cálculo; reemplaza valores preliminares y fija los valores actuales de PT100, SM-50 e interfaz B-Box. |
+| `docs/simulacion/calculos_PT100_SM50_VALORES_ACTUALES_v2.csv` | Tabla numérica regenerable con los cálculos finales de ambos sensores. |
+| `docs/referencias/referencias_completas_proyecto_PCB.txt` | Índice de referencias finales, teóricas, de PCB y de trazabilidad usado para citar la memoria actual. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Reporte_final_P.pdf` | Contexto del banco de LabCES, estándar IEEE 112, método C, sensores usados y problemas encontrados en pruebas previas. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf` | Datos experimentales previos de PT100, salida de instrumentación y prueba de carga. |
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Interface-Book-2022-Edition.pdf` | Fundamento general de celdas de carga, galgas extensiométricas, excitación, sensibilidad y errores de montaje. |
@@ -32,7 +35,7 @@ El punto de partida fue una investigación previa de LabCES orientada al cálcul
 | `ProyectoPCB_LTspice_PT100_SM50/03_KICAD_LIBS/AUDITORIA_FOOTPRINTS.md` | Trazabilidad de símbolos, footprints, modelos 3D y fuentes primarias revisadas. |
 | `docs/VALIDACION.md` | Resultado final de ERC, DRC y paquete de fabricación. |
 
-El paquete `Proyecto_PCB_TODO_con_referencias.zip` se usó como fuente documental, pero no se agregó completo al repositorio para evitar subir archivos pesados y duplicados. En el repositorio se conserva la síntesis técnica, los datos numéricos regenerables y los archivos finales de diseño.
+Los paquetes `Proyecto_PCB_TODO_con_referencias.zip` y `paquete_memoria_PCB0_VALORES_ACTUALES_v3_referencias.zip` se usaron como fuente documental, pero no se agregaron completos al repositorio para evitar subir archivos pesados y duplicados. En el repositorio se conserva la síntesis técnica, los datos numéricos regenerables, las referencias textuales y los archivos finales de diseño.
 
 ## Desarrollo por objetivos específicos
 
@@ -67,24 +70,86 @@ La memoria `memoria_calculo_PCB0.docx` fue importante para fijar el razonamiento
 
 La diferencia principal es el destino de la señal. En la memoria preliminar se pensó en aprovechar un ADC de 3.3 V directamente, mientras que el proyecto final se adaptó a la BoomBox/B-Box, que permite entradas analógicas diferenciales de hasta el orden de 10 V y entrega alimentación de sensores por el cable analógico. Por eso el canal SM-50 final usa una ganancia mayor que la memoria preliminar, para aprovechar mejor el rango de entrada de la B-Box sin exceder el límite de 10 V. En el PT100 se redujo la corriente de excitación a 0.5 mA para disminuir autocalentamiento y mantener una respuesta de voltaje compatible con el rango documentado en simulación.
 
-| Aspecto | Memoria preliminar | Revisión final en repo |
+| Aspecto | Memoria preliminar | Revisión final vigente |
 | --- | --- | --- |
 | PT100, corriente de excitación | 1 mA | 0.5 mA, definida por REF3012 de 1.25 V y RSET de 2.49 kohm |
-| PT100, salida objetivo | 0 a 3.3 V hacia ADC | Aproximadamente 2.33 a 3.22 V hacia B-Box en el barrido 0-100 degC |
-| PT100, amplificador | INA828 como opción inicial | INA826/OPA2188 según BOM y símbolos finales |
+| PT100, salida objetivo | 0 a 3.3 V hacia ADC | Span útil aproximado de 0 a 0.970 V después de compensar offset; en la simulación LTspice la salida absoluta queda alrededor de 2.33 a 3.22 V |
+| PT100, amplificador | INA828 como opción inicial | INA826 como cálculo principal; INA828 queda solo como equivalente si se monta |
 | SM-50, sensibilidad base | 3 mV/V con 10 V, es decir cerca de 30 mV FS | Igual: 3 mV/V, puente de 350 ohm y excitación de 10 V |
-| SM-50, ganancia calculada | Cerca de 100 V/V para salida de 3.3 V | Cerca de 306 V/V en LTspice con RG = 162 ohm, para salida real menor a 10 V |
-| Interfaz de adquisición | ADC genérico de 3.3 V | BoomBox/B-Box con entrada analógica diferencial, RJ45 y alimentación +/-15 V |
+| SM-50, ganancia calculada | Cerca de 100 V/V para salida de 3.3 V | `RG = 160 ohm`, `G = 309.75 V/V`, salida nominal de 9.293 V a escala completa |
+| Interfaz de adquisición | ADC genérico de 3.3 V | BoomBox/B-Box con entrada diferencial de alta impedancia, ADC de 16 bits, rango +/-10 V y alimentación +/-15 V limitada a 100 mA |
 
-Esta evolución no se considera una contradiccion, sino una decision de integracion: se conservaron los fundamentos de sensibilidad, filtrado y amplificación diferencial, pero se recalcularon rangos para la interfaz real de adquisición.
+Esta evolución no se considera una contradicción, sino una decisión de integración: se conservaron los fundamentos de sensibilidad, filtrado y amplificación diferencial, pero se recalcularon rangos para la interfaz real de adquisición.
+
+### Cálculos finales de diseño
+
+La memoria `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` es la referencia vigente para los cálculos finales. Esa memoria separa las referencias finales de las memorias antiguas: la BoomBox/B-Box se cita como base de interfaz [F1], el datasheet del SM S-Type como base del sensor SM-50 [F2], el diagrama de cableado de Interface como base de conexión [F3], el modelo PT100/IEC 60751 como base del RTD [F4], y los datasheets INA826/INA828 como base de la ecuación de ganancia [F5]. Las notas SLOA034, SBOA247A, AN-43 y AN-96 se usan como soporte teórico para puentes Wheatstone, medición diferencial, ruido y acondicionamiento de señales pequeñas [T3]-[T6].
+
+#### Interfaz BoomBox/B-Box
+
+| Parámetro | Cálculo o dato usado | Resultado | Base |
+| --- | --- | ---: | --- |
+| Rango de medición | Entrada analógica en rango +/-10 V | 20 V de span | Manual BoomBox/B-Box [F1] |
+| Resolución ADC | 16 bits | 65536 niveles | Manual BoomBox/B-Box [F1] |
+| LSB en +/-10 V | `20 V / 2^16` | 305.18 uV/LSB | Manual BoomBox/B-Box [F1] |
+| Alimentación disponible | Rieles por 8P8C | +/-15 V, 100 mA máx. | Manual BoomBox/B-Box [F1] |
+| Entrada usada | Alta impedancia diferencial | 3 kohm diferencial | Manual BoomBox/B-Box [F1] |
+
+#### Canal PT100
+
+| Parámetro | Cálculo | Resultado | Base |
+| --- | --- | ---: | --- |
+| Modelo resistivo | `R(T)=R0*(1+alpha*T)` | Aproximación 0-100 degC | PT100/IEC 60751 [F4] |
+| Resistencia a 0 degC | `R0` | 100.00 ohm | PT100/IEC 60751 [F4] |
+| Coeficiente medio | `alpha` | 0.00385 1/degC | PT100/IEC 60751 [F4] |
+| Resistencia a 100 degC | `100*(1+0.00385*100)` | 138.50 ohm | PT100/IEC 60751 [F4] |
+| Variación útil | `138.50 - 100.00` | 38.50 ohm | Cálculo propio |
+| Corriente de excitación | Valor final del diseño | 0.5 mA | Memoria v3 y criterio de autocalentamiento |
+| Voltaje a 0 degC | `0.5 mA * 100 ohm` | 50.00 mV | Cálculo propio |
+| Voltaje a 100 degC | `0.5 mA * 138.50 ohm` | 69.25 mV | Cálculo propio |
+| Span eléctrico útil | `0.5 mA * 38.50 ohm` | 19.25 mV | Cálculo propio |
+| Sensibilidad cruda | `0.5 mA * 0.385 ohm/degC` | 0.1925 mV/degC | Cálculo propio |
+| Resistencia de ganancia | `RG = 1 kohm` | 1 kohm | Memoria v3 |
+| Ganancia INA826 | `1 + 49.4 kohm / 1 kohm` | 50.40 V/V | Datasheet INA826 [F5] |
+| Span amplificado | `50.40 * 19.25 mV` | 0.970 V | Cálculo propio |
+| Sensibilidad de salida | `50.40 * 0.1925 mV/degC` | 9.702 mV/degC | Cálculo propio |
+| Resolución estimada | `305.18 uV / 9.702 mV/degC` | 0.0315 degC/LSB | B-Box [F1] + cálculo |
+| Potencia a 100 degC | `(0.5 mA)^2 * 138.50 ohm` | 34.62 uW | Cálculo propio |
+| Autocalentamiento estimado | `34.62 uW / 2 mW/degC` | 0.0173 degC | Criterio conservador de disipación |
+| Filtro pasabajo | `1/(2*pi*10 kohm*100 nF)` | 159.2 Hz | Cálculo RC |
+
+#### Canal SM-50
+
+| Parámetro | Cálculo | Resultado | Base |
+| --- | --- | ---: | --- |
+| Tipo de sensor | Puente Wheatstone | 350 ohm nominal | Datasheet SM S-Type [F2] |
+| Excitación | Valor final del diseño | 10 V | Datasheet permite hasta 15 V [F2] |
+| Corriente del puente | `10 V / 350 ohm` | 28.57 mA | Cálculo propio |
+| Potencia del puente | `10^2 / 350` | 285.71 mW | Cálculo propio |
+| Sensibilidad nominal | Rated output | 3.0 mV/V | Datasheet SM S-Type [F2] |
+| Salida diferencial FS | `3 mV/V * 10 V` | 30.00 mV | Datasheet + cálculo |
+| Rango usado | Valor de memoria v3 | 2.2 N*m | Memoria v3 |
+| Sensibilidad cruda | `30.00 mV / 2.2 N*m` | 13.636 mV/N*m | Cálculo propio |
+| Cambio para 0.01 N*m | `13.636 mV/N*m * 0.01` | 136.36 uV | Cálculo propio |
+| Resistencia de ganancia | `RG = 160 ohm` | 160 ohm | BOM/memoria v3 |
+| Ganancia INA826 | `1 + 49.4 kohm / 160 ohm` | 309.75 V/V | Datasheet INA826 [F5] |
+| Salida máxima nominal | `309.75 * 30.00 mV` | 9.293 V | Cálculo propio |
+| Sensibilidad de salida | `309.75 * 13.636 mV/N*m` | 4.224 V/N*m | Cálculo propio |
+| Resolución estimada | `305.18 uV / 4.224 V/N*m` | 72.25 uN*m/LSB | B-Box [F1] + cálculo |
+| Zero balance | `+/-1 %RO` | +/-0.300 mV crudo; +/-0.093 V a la salida | Datasheet [F2] + cálculo |
+| No linealidad | `+/-0.03 %FS` | +/-0.660 mN*m | Datasheet [F2] + cálculo |
+| Histéresis | `+/-0.02 %FS` | +/-0.440 mN*m | Datasheet [F2] + cálculo |
+| Filtro pasabajo | `1/(2*pi*10 kohm*33 nF)` | 482.3 Hz | Cálculo RC |
+
+La diferencia entre el cálculo nominal del SM-50 y la gráfica LTspice se debe a que la gráfica muestra la respuesta del modelo simulado completo, mientras que la memoria v3 presenta el dimensionamiento nominal con `RG = 160 ohm` y salida esperada de 0 a 9.293 V. En ambos casos la salida queda por debajo del límite práctico de 10 V de la entrada B-Box.
 
 ### 3. Diseño del esquemático en KiCad
 
-Después de validar rangos en LTspice, el circuito se traslado a KiCad. El esquemático final se organizó por bloques funcionales: alimentación, protección, canal PT100, canal SM-50, filtrado y salida hacia la B-Box.
+Después de validar rangos en LTspice, el circuito se trasladó a KiCad. El esquemático final se organizó por bloques funcionales: alimentación, protección, canal PT100, canal SM-50, filtrado y salida hacia la B-Box.
 
-En el bloque de alimentación se consideró la disponibilidad de rieles desde la B-Box y la necesidad de una excitación regulada para el SM-50. El regulador TPS7A4901 se selecciónó para generar la referencia de excitación positiva de 10 V del puente, manteniendo un margen adecuado frente al máximo permitido por el sensor. En el bloque PT100 se incorporó una referencia REF3012 de 1.25 V para establecer la corriente de excitación. El uso de OPA2188 se justificó por su baja deriva, mientras que el INA826 se usó como amplificador de instrumentación para señales diferenciales pequeñas.
+En el bloque de alimentación se consideró la disponibilidad de rieles desde la B-Box y la necesidad de una excitación regulada para el SM-50. El regulador TPS7A4901 se seleccionó para generar la referencia de excitación positiva de 10 V del puente, manteniendo un margen adecuado frente al máximo permitido por el sensor. En el bloque PT100 se incorporó una referencia REF3012 de 1.25 V para establecer la corriente de excitación. El uso de OPA2188 se justificó por su baja deriva, mientras que el INA826 se usó como amplificador de instrumentación para señales diferenciales pequeñas.
 
-El manual de la BoomBox/B-Box reforzo la decision de usar conectores RJ45 blindados y cable Cat5e para la interfaz analógica. La entrada analógica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentación para sensores. Para el diseño de esta PCB se tomaron como restricciónes prácticas los rieles +/-15 V disponibles por el cable y los límites de entrada de aproximadamente +/-10 V en modo diferencial, por lo que las salidas acondicionadas se mantuvieron por debajo de 10 V.
+El manual de la BoomBox/B-Box reforzó la decisión de usar conectores RJ45 blindados y cable Cat5e para la interfaz analógica. La entrada analógica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentación para sensores. Para el diseño de esta PCB se tomaron como restricciones prácticas los rieles +/-15 V disponibles por el cable y los límites de entrada de aproximadamente +/-10 V en modo diferencial, por lo que las salidas acondicionadas se mantuvieron por debajo de 10 V.
 
 | Pin RJ45 BoomBox analógica | Función reportada en manual |
 | ---: | --- |
@@ -94,7 +159,7 @@ El manual de la BoomBox/B-Box reforzo la decision de usar conectores RJ45 blinda
 | 5 | Entrada negativa / tierra |
 | 7, 8 | -15 V para sensores |
 
-El diagrama de cableado de Interface para celdas de carga también justifico mantener una entrada diferencial con líneas de excitación y señal separadas. En la PCB se llevó esa idea al conector SM-50 de 4 hilos: `+EXC_SM50`, `-EXC_SM50`, `SENP_SM50` y `SENN_SM50`.
+El diagrama de cableado de Interface para celdas de carga también justificó mantener una entrada diferencial con líneas de excitación y señal separadas. En la PCB se llevó esa idea al conector SM-50 de 4 hilos: `+EXC_SM50`, `-EXC_SM50`, `SENP_SM50` y `SENN_SM50`.
 
 | Bloque | Decisión tomada | Justificación |
 | --- | --- | --- |
@@ -104,7 +169,7 @@ El diagrama de cableado de Interface para celdas de carga también justifico man
 | PT100/SM-50 | INA826 como amplificador diferencial | Su ganancia se define con una sola resistencia: `G = 1 + 49.4 kohm/RG`. |
 | SM-50 | Excitación de 10 V | Compatible con la hoja del SM S-Type y produce cerca de 30 mV a escala completa. |
 | SM-50 | Rango de salida cercano a 0-10 V | Facilita la lectura por la B-Box sin exceder el límite esperado. |
-| Entradas/salidas | Filtros RC y protección | Reducen ruido y protegen ante transitorios o manipulacion del banco. |
+| Entradas/salidas | Filtros RC y protección | Reducen ruido y protegen ante transitorios o manipulación del banco. |
 
 Las notas de aplicación SLOA034 y SBOA247A respaldan la arquitectura usada para el SM-50: un puente Wheatstone genera una señal diferencial pequeña, el amplificador de instrumentación rechaza el modo común y la ganancia se elige para escalar la señal al rango de lectura. La nota AN96 se usó como advertencia de diseño: aumentar la ganancia solo para llenar todo el ADC no siempre mejora la resolución, porque también entran ruido, deriva y limitaciones del frente analógico. En este proyecto la ganancia se eligió con una restricción práctica: no saturar la entrada de la B-Box y dejar margen hasta 10 V.
 
@@ -173,7 +238,7 @@ Fuente: `docs/simulacion/sm50_sweep_positive_ng_20260625.csv`.
 | 40 | 24.110794 |
 | 50 | 30.174255 |
 
-La simulación reproduce el orden de magnitud esperado por la hoja del SM S-Type: una celda de 3.0 mV/V excitada con 10 V entrega cerca de 30 mV a escala completa. El resultado a 50 lb es 30.174255 mV, por lo que el modelo usado para el puente es coherente con la especificacion.
+La simulación reproduce el orden de magnitud esperado por la hoja del SM S-Type: una celda de 3.0 mV/V excitada con 10 V entrega cerca de 30 mV a escala completa. El resultado a 50 lb es 30.174255 mV, por lo que el modelo usado para el puente es coherente con la especificación.
 
 ### Gráfica: salida acondicionada del SM-50
 
@@ -207,7 +272,7 @@ Fuente: `Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf`.
 | 50 | 119.395 |
 | 100 | 138.500 |
 
-Estos valores fueron útiles como referencia porque coinciden con el comportamiento esperado del modelo PT100 usado en la simulación. Por lo tanto, aunque no reemplazan una calibración de la PCB final, sí justifican que el rango de resistencia elegido para la simulación es razónable.
+Estos valores fueron útiles como referencia porque coinciden con el comportamiento esperado del modelo PT100 usado en la simulación. Por lo tanto, aunque no reemplazan una calibración de la PCB final, sí justifican que el rango de resistencia elegido para la simulación es razonable.
 
 ### Datos previos de salida de instrumentación
 
@@ -241,7 +306,7 @@ Fuente: `Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf`.
 | 80 | 40 | 18.14368 | 30.40832 | 13.793 | -61.8 |
 | 100 | 50 | 22.67960 | 38.60290 | 17.510 | -55.7 |
 
-El reporte previo indica que la medición de carga presentó comportamiento oscilante y no completamente confiable. Por eso estos datos se usaron solo como referencia histórica del banco, no como calibración del canal SM-50 de la PCB. La decision técnica fue simular el SM-50 desde su sensibilidad nominal de mV/V y dejar la calibración experimental como una tarea posterior a la fabricación.
+El reporte previo indica que la medición de carga presentó comportamiento oscilante y no completamente confiable. Por eso estos datos se usaron solo como referencia histórica del banco, no como calibración del canal SM-50 de la PCB. La decisión técnica fue simular el SM-50 desde su sensibilidad nominal de mV/V y dejar la calibración experimental como una tarea posterior a la fabricación.
 
 ## Alcance experimental y trabajo pendiente
 
@@ -266,27 +331,34 @@ Después de fabricar la PCB, la validación recomendada es:
 
 ## Conclusiones
 
-El proyecto avanzó desde una necesidad experimental del banco de eficiencia del LabCES hasta una tarjeta PCB documentada y lista para fabricación. Las referencias previas sirvieron para entender el contexto del motor, el método IEEE 112, la instalación de sensores y los problemas reales encontrados durante ensayos anteriores. Las hojas de datos y documentós técnicos permitieron convertir ese contexto en decisiones concretas de diseño: excitación estable para PT100, acondicionamiento de señales diferenciales con INA826, excitación de 10 V para el SM-50, protección de entradas/salidas y selección de footprints compatibles con los componentes comprados.
+El proyecto avanzó desde una necesidad experimental del banco de eficiencia del LabCES hasta una tarjeta PCB documentada y lista para fabricación. Las referencias previas sirvieron para entender el contexto del motor, el método IEEE 112, la instalación de sensores y los problemas reales encontrados durante ensayos anteriores. Las hojas de datos y documentos técnicos permitieron convertir ese contexto en decisiones concretas de diseño: excitación estable para PT100, acondicionamiento de señales diferenciales con INA826, excitación de 10 V para el SM-50, protección de entradas/salidas y selección de footprints compatibles con los componentes comprados.
 
 La validación experimental final no se reporta como realizada. En su lugar, se deja una validación por simulación, verificación de diseño y referencia a la investigación previa. Esto mantiene la trazabilidad honesta del proyecto: la PCB está preparada para fabricarse y probarse, pero sus curvas definitivas de calibración deben obtenerse con el hardware real en laboratorio.
 
 ## Bibliografía y referencias
 
-- `Proyecto_PCB_TODO_con_referencias.zip`, paquete completo de referencias bibliográficas, memoria de cálculo, datasheets, capturas, notas de instrumentación y documentós de PCB/fabricación.
+- `Proyecto_PCB_TODO_con_referencias.zip`, paquete completo de referencias bibliográficas, memoria de cálculo, datasheets, capturas, notas de instrumentación y documentos de PCB/fabricación.
+- `paquete_memoria_PCB0_VALORES_ACTUALES_v3_referencias.zip`, paquete final con memoria de cálculo vigente, CSV de valores actuales, diagrama de bloques y referencias completas.
+- `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf`, memoria vigente de cálculo para PT100, SM-50 e interfaz BoomBox/B-Box.
+- `docs/simulacion/calculos_PT100_SM50_VALORES_ACTUALES_v2.csv`, tabla de cálculos finales usada para las tablas de este informe.
+- `docs/referencias/referencias_completas_proyecto_PCB.txt`, listado de referencias finales, teóricas, de PCB y de trazabilidad.
 - `memoria_calculo_PCB0.docx`, "Memoria de cálculo PCB de Acondicionamiento de Señal Sensores PT100 y SM-50", archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
 - `fuentes_pcb_sensores_motor.pdf`, "Fuentes para el desarrollo de una PCB de acondicionamiento de sensores de torque y temperatura en motores de inducción", archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
 - Ignacio Soto Montero, `Reporte_final_P.pdf`, "Pruebas de laboratorio para el cálculo de eficiencia en motores trifásicos de inducción", archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
 - `Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf`, archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
-- Interface, `Interface-Book-2022-Edition.pdf`, archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
-- Interface, `SM-S-Type.pdf`, hoja de datos del sensor SM S-Type, archivo local en `C:/Users/kenne/Downloads/`.
-- Interface, `Electrical_Wiring_Diagram.pdf`, diagrama eléctrico y cableado de celdas de carga, archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
-- imperix, `User-Manual-BoomBox.pdf`, manual de la plataforma BoomBox/B-Box, archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
-- Texas Instruments, "Signal Conditioning Wheatstone Resistive Bridge Sensors", SLOA034: https://www.ti.com/lit/an/sloa034/sloa034.pdf
-- Texas Instruments, "Single-Supply Strain Gauge Bridge Amplifier Circuit", SBOA247A: https://www.ti.com/lit/pdf/sboa247
-- Analog Devices, "AN-43: Bridge Circuits": https://www.analog.com/en/resources/app-notes/an-43f.html
-- Analog Devices, "AN-96: Delta Sigma ADC Bridge Measurement Techniques": https://www.analog.com/en/resources/app-notes/an-96fa.html
-- Texas Instruments, INA826 datasheet: https://www.ti.com/lit/ds/symlink/ina826.pdf
+- [T8] Interface, `Interface-Book-2022-Edition.pdf`, archivo incluido en `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip`.
+- [F2] Interface, `SM-S-Type.pdf`, hoja de datos del sensor SM S-Type, archivo local en `C:/Users/kenne/Downloads/`.
+- [F3] Interface, `Electrical_Wiring_Diagram.pdf`, diagrama eléctrico y cableado de celdas de carga, archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
+- [F1] imperix, `User-Manual-BoomBox.pdf`, manual de la plataforma BoomBox/B-Box, archivo incluido en `Proyecto_PCB_TODO_con_referencias.zip`.
+- [T3] Texas Instruments, "Signal Conditioning Wheatstone Resistive Bridge Sensors", SLOA034: https://www.ti.com/lit/an/sloa034/sloa034.pdf
+- [T4] Texas Instruments, "Single-Supply Strain Gauge Bridge Amplifier Circuit", SBOA247A: https://www.ti.com/lit/pdf/sboa247
+- [T5] Analog Devices, "AN-43: Bridge Circuits": https://www.analog.com/en/resources/app-notes/an-43f.html
+- [T6] Analog Devices, "AN-96: Delta Sigma ADC Bridge Measurement Techniques": https://www.analog.com/en/resources/app-notes/an-96fa.html
+- [F5] Texas Instruments, INA826 datasheet: https://www.ti.com/lit/ds/symlink/ina826.pdf
 - Texas Instruments, OPA2188 datasheet: https://www.ti.com/lit/ds/symlink/opa2188.pdf
 - Texas Instruments, TPS7A49/TPS7A4901 datasheet: https://www.ti.com/lit/ds/symlink/tps7a49.pdf
 - Texas Instruments, REF30/REF30E datasheet: https://www.ti.com/lit/ds/symlink/ref30e.pdf
+- [F4] PT100 Datasheet / ALLDATASHEET e IEC 60751, referencia del elemento RTD PT100 y modelo resistivo `R(T)`.
+- [T1] R. Pallas-Areny, O. Casas y R. Bragós, `Sensores y acondicionadores de señal: Problemas resueltos`, base teórica para sensibilidad, offset, linealidad, sensores resistivos y puentes.
+- [T2] Measurement Computing Corporation, `Signal Conditioning & PC-Based Data Acquisition Handbook`, base práctica para acondicionamiento, entradas diferenciales, RTD, strain gages, filtros, CMRR y ruido.
 - Documentación interna del repositorio: `docs/PROCESO_DISENO_TRAZABILIDAD.md`, `docs/REFERENCIAS_TECNICAS.md`, `docs/VALIDACION.md` y `ProyectoPCB_LTspice_PT100_SM50/03_KICAD_LIBS/AUDITORIA_FOOTPRINTS.md`.

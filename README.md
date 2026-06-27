@@ -30,6 +30,16 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 
 ![PCB 3D](docs/figuras/kicad_pcb_3d.png)
 
+### PCB 3D - vista frontal
+
+<p align="center">
+  <img src="docs/figuras/kicad_pcb_3d_frontal.png" alt="PCB 3D vista frontal" width="520">
+</p>
+
+## Diagrama de bloques
+
+![Diagrama de bloques](docs/figuras/diagrama_bloques_valores_actuales.png)
+
 ## Simulaciones
 
 ### Canal PT100
@@ -61,7 +71,7 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 | `PCB_PT100_SM50/` | Proyecto KiCad principal: esquemático, PCB, librerías locales, footprints y modelos 3D. |
 | `ProyectoPCB_LTspice_PT100_SM50/` | Simulaciones LTspice de los canales PT100 y SM-50. |
 | `docs/figuras/` | Imágenes/PDF del esquemático, PCB, vista 3D, LTspice y gráficas. |
-| `docs/simulacion/` | CSV y resumen numérico usados para generar las gráficas. |
+| `docs/simulacion/` | CSV, resumen numérico y cálculos finales usados para las gráficas y tablas. |
 | `docs/validacion/` | Reportes finales ERC/DRC. |
 | `docs/fabricacion/` | ZIP Gerber final con archivo de taladros. |
 | `docs/referencias/` | Resumen de verificación de footprints y documentos de entrega conservados. |

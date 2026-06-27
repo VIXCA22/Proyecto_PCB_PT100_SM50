@@ -1,0 +1,123 @@
+REFERENCIAS COMPLETAS GUARDADAS EN LA CARPETA DEL PROYECTO PCB
+Uso: separar valores finales de memorias viejas.
+
+REFERENCIAS FINALES USADAS EN LOS CALCULOS ACTUALES
+[F1] Imperix Ltd., BoomBox User Manual.
+    Uso: Referencia final de interfaz: entradas analogicas ModuLink/8P8C, configuracion diferencial de alta impedancia, ADC de 16 bits, rango configurable, alimentacion +/-15 V y limite de 100 mA.
+    Estado: Final - usar para interfaz B-Box
+[F2] Interface, SM S-Type Load Cell (SM-50), datasheet.
+    Uso: Referencia final del sensor SM-50: rated output 3.0 mV/V, bridge resistance 350 Ohm, excitation voltage max 15 V, zero balance, nonlinearity, hysteresis y cableado de celda.
+    Estado: Final - usar para SM-50
+[F3] Interface, Electrical Wiring Diagram.
+    Uso: Referencia de cableado de celdas de carga Interface: relacion de excitacion y senales de salida del puente.
+    Estado: Final - cableado sensor
+[F4] PT100 Datasheet / ALLDATASHEET.
+    Uso: Referencia del elemento RTD PT100 y curva/resistencia nominal. Se usa junto con IEC 60751 y el modelo R(T).
+    Estado: Final - PT100
+[F5] Texas Instruments, INA826 / INA828 precision instrumentation amplifier datasheets.
+    Uso: Referencia de ecuacion de ganancia, CMRR, rango de modo comun, offset, ruido y seleccion de Rg.
+    Estado: Final - amplificacion
+
+REFERENCIAS TEORICAS Y DE ACONDICIONAMIENTO
+[T1] R. Pallas-Areny, O. Casas y R. Bragos, Sensores y acondicionadores de senal: Problemas resueltos, Alfaomega / UPC.
+    Uso: Base teorica principal: sensibilidad, offset, linealidad, sensores resistivos, PT100, conexion de 3 hilos, puente Wheatstone, amplificadores e incertidumbre.
+    Estado: Teoria principal
+[T2] Measurement Computing Corporation, Signal Conditioning & PC-Based Data Acquisition Handbook, 3rd ed.
+    Uso: Base practica: acondicionamiento de senal, entradas diferenciales, RTD, strain gages, filtros, CMRR, cableado blindado, ruido y adquisicion de datos.
+    Estado: Teoria/practica
+[T3] Texas Instruments, SLOA034, Signal Conditioning Wheatstone Resistive Bridge Sensors.
+    Uso: Acondicionamiento de puentes resistivos y criterios para sensores tipo galga/puente.
+    Estado: Teoria puente
+[T4] Texas Instruments, SBOA247A, Single-Supply Strain Gauge Bridge Amplifier Circuit.
+    Uso: Aplicacion de amplificacion para puentes de galgas extensometricas.
+    Estado: Teoria puente/INA
+[T5] Analog Devices, AN-43: Bridge Circuits.
+    Uso: Referencia de circuitos de puente y medicion diferencial de baja senal.
+    Estado: Teoria puente
+[T6] Analog Devices, AN-96: Delta Sigma ADC Bridge Measurement Techniques.
+    Uso: Referencia de medicion de puentes, ruido y conversion ADC en senales pequenas.
+    Estado: Teoria ADC/puente
+[T7] F. Reverter, Interfacing sensors to microcontrollers: a direct approach.
+    Uso: Referencia general de arquitectura sensor - acondicionamiento - ADC - sistema digital.
+    Estado: Arquitectura de medicion
+[T8] Interface, Load Cell Field Guide / Interface Book 2022 Edition.
+    Uso: Referencia de campo para celdas de carga, montaje, terminologia y uso de sensores de fuerza.
+    Estado: Referencia de aplicacion
+
+REFERENCIAS DE RUIDO, PCB Y KICAD
+[P1] R. Cardenas Dobson, Atenuacion de ruidos en circuitos electronicos.
+    Uso: Apuntes usados para justificar ruido, EMI, acoplos, blindaje y filtrado.
+    Estado: PCB/ruido
+[P2] TR3BOL, 7 claves para un diseno de PCB profesional.
+    Uso: Guia de criterios de fabricacion, manufacturabilidad, layout, separacion y buenas practicas.
+    Estado: PCB/layout
+[P3] Guia para importar simbolos, huellas y modelos 3D en KiCad.
+    Uso: Referencia de flujo de trabajo para integrar componentes, footprints y modelos en KiCad.
+    Estado: KiCad/proceso
+[P4] Atenuacion Ruidos (3).pdf.
+    Uso: Archivo local de la carpeta con apuntes de atenuacion de ruido.
+    Estado: PCB/ruido
+
+DOCUMENTOS LOCALES DE FUENTES Y PROYECTO
+[S1] fuentes_pcb_sensores_motor.pdf.
+    Uso: Documento local de fuentes para el desarrollo de una PCB de acondicionamiento de sensores de torque y temperatura en motores de induccion.
+    Estado: Fuentes del proyecto
+[S2] pasted.txt.
+    Uso: Lista bibliografica original en formato bibitem: Imperix, TI SLOA034, SBOA247A, Analog Devices AN-43/AN-96, Omega RTD, NI RTD, Belden Cat5e, Interface SM y SM Installation.
+    Estado: Bibliografia original
+[S3] Caracterizacion_de_todo_los_sensores_y_lista_de_materiales.pdf.
+    Uso: Documento interno de caracterizacion de sensores y lista de materiales.
+    Estado: Documento interno
+[S4] Reporte_final_P.pdf.
+    Uso: Reporte de proyecto anterior sobre eficiencia en motores trifasicos de induccion; se usa como antecedente de contexto y metodologia del laboratorio.
+    Estado: Antecedente
+[S5] Recomendaciones para poster.txt.
+    Uso: Requisitos y recomendaciones de presentacion del poster del proyecto.
+    Estado: Entrega/presentacion
+[S6] Solid-State Circuits Magazine IEEE - Volume 14.
+    Uso: Referencia de apoyo electronico general conservada en carpeta.
+    Estado: Apoyo general
+
+MEMORIAS VIEJAS Y DOCUMENTOS DE TRAZABILIDAD
+[O1] Informe_Avanzado_Instrumentacion_PCB_8P8C (2).pdf.
+    Uso: Memoria antigua. Solo se conserva la parte de interconexion fisica 8P8C/RJ45/FTP, pinout y criterio de puertos separados. No usar sus calculos de REF200, LT3080, INA828 unico, ni BOM como finales.
+    Estado: Vieja - solo 8P8C
+[O2] circuitos_adaptacion_senal_corregido (1) (1).pdf.
+    Uso: Memoria antigua. Se conserva como proceso para R->V, fuente de corriente, PT100 de 3 hilos y puente Wheatstone. Reemplazar 1 mA, ADC 12 bits y ganancias viejas por valores actuales.
+    Estado: Vieja - teoria/proceso
+[O3] documento_corregido_SM50definitivo (1).pdf.
+    Uso: Memoria antigua. Se conserva por la correccion integrada del SM-50 y fundamentos de puente; sus valores de ADC 3.3 V/12 bits y opciones INA128/AD8221 no son finales.
+    Estado: Vieja - teoria/proceso
+[O4] Proyecto avance.pdf.
+    Uso: Documento preliminar con proceso del proyecto.
+    Estado: Vieja - trazabilidad
+[O5] Proyecto avance (3).pdf.
+    Uso: Apuntes de calculo preliminares. Se conserva como evidencia del proceso: modelo PT100, conexion de 3 hilos, SM-50 con 30 mV y cableado trenzado/blindado. Valores de 1 mA/12 bits quedan obsoletos.
+    Estado: Vieja - trazabilidad
+[O6] memoria_calculo_PCB0.docx y memorias PDF/DOCX previas.
+    Uso: Versiones anteriores de la memoria. Se conservan como historial; la version actual v3 es la vigente.
+    Estado: Vieja - historial
+
+BIBLIOGRAFIA ORIGINAL GUARDADA EN PASTED.TXT / PAQUETE DE REFERENCIAS
+[B1] imperix, +/-50 A DIN rail-mountable current sensors - Datasheet.
+    Uso: Referencia ModuLink conservada en la bibliografia original. No es el sensor final, pero muestra ecosistema ModuLink/Imperix.
+    Estado: Bibliografia previa
+[B2] DwyerOmega, Introduction to Pt100 RTD Temperature Sensors.
+    Uso: Apoyo externo para definicion y uso de RTD Pt100.
+    Estado: Bibliografia previa
+[B3] National Instruments, NI-9216 RTD Input Module.
+    Uso: Ejemplo industrial de modulo de entrada RTD.
+    Estado: Bibliografia previa
+[B4] National Instruments, Taking Temperature Measurements with RTDs: How-To Guide.
+    Uso: Guia de mediciones RTD y conexionado.
+    Estado: Bibliografia previa
+[B5] Belden, Category 5e Cable - 1224D.
+    Uso: Referencia de cable Cat5e.
+    Estado: Cableado
+[B6] Belden, Category 5e Cable - 1533P.
+    Uso: Referencia de cable Cat5e.
+    Estado: Cableado
+[B7] Interface, SM Installation Manual.
+    Uso: Manual de instalacion de la familia SM.
+    Estado: Sensor/instalacion
+
