@@ -1,18 +1,18 @@
 # Tarjeta de acondicionamiento de senales PT100 y SM-50
 
-Diseño implementacion de una tarjeta de acondicionamiento de senales para sensores de torque y temperatura en un motor de induccion del LabCES. La PCB adapta las senales de un sensor de temperatura PT100 y un sensor de torque SM-50 para facilitar su adquisicion y monitoreo dentro de un sistema de medicion.
+Diseño implementacion de una tarjeta de acondicionamiento de señales para sensores de torque y temperatura en un motor de induccion trifásico del LabCES. La PCB adapta las señales de un sensor de temperatura PT100 y un sensor de torque SM-50 para facilitar su adquisicion y monitoreo dentro de un sistema de mediciónn.
 
 ## Objetivo
 
-Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar y adaptar las senales provenientes de los sensores de torque y temperatura de un motor de induccion utilizado en el LabCES, con el proposito de facilitar su correcta adquisicion y monitoreo para analizar el desempeno del motor.
+Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar y adaptar las señales provenientes de los sensores de torque y temperatura de un motor de inducción utilizado en el LabCES, con el proposito de facilitar su correcta adquisición y monitoreo para analizar el desempeño del motor.
 
-## Objetivos especificos
+## Objetivos específicos
 
-1. Comprender los fundamentos basicos del diseno de tarjetas de circuito impreso y su aplicacion al acondicionamiento de senales usando KiCad.
+1. Comprender los fundamentos básicos del diseño de tarjetas de circuito impreso y su aplicacion al acondicionamiento de señales usando KiCad.
 2. Verificar el funcionamiento de los sensores de torque y temperatura mediante simulaciones y pruebas experimentales.
-3. Disenar una PCB que integre el circuito necesario para acondicionar las senales de los sensores.
-4. Implementar y probar el prototipo, evaluando su desempeno dentro del sistema de medicion del motor de induccion en el LabCES.
-5. Mantener un repositorio Git con archivos de diseno electronico, documentacion tecnica e historial de desarrollo.
+3. Diseñar una PCB que integre el circuito necesario para acondicionar las señales de los sensores.
+4. Implementar y probar el prototipo, evaluando su desempeño dentro del sistema de medición del motor de inducción en el LabCES.
+5. Mantener un repositorio Git con archivos de diseño electrónico, documentación técnica e historial de desarrollo.
 
 ## Vista del diseno
 
