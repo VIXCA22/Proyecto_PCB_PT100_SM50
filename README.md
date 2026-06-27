@@ -70,6 +70,7 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 | `docs/simulacion/` | CSV, resumen numérico y cálculos finales usados para las gráficas y tablas. |
 | `docs/validacion/` | Reportes finales ERC/DRC. |
 | `docs/fabricacion/` | ZIP Gerber final con archivo de taladros. |
+| `docs/poster/` | Póster final usado para la presentación del proyecto. |
 | `docs/bitacora/` | Bitácora actualizada del proceso, en PDF y fuente LaTeX. |
 | `docs/referencias/` | Resumen de verificación de footprints y documentos de entrega conservados. |
 | `scripts/` | Script para regenerar figuras de simulación y vistas documentales LTspice. |
@@ -95,6 +96,7 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 - [Informe de desarrollo del proyecto](docs/INFORME_DESARROLLO_PROYECTO.md)
 - [Proceso de diseño y trazabilidad](docs/PROCESO_DISENO_TRAZABILIDAD.md)
 - [Bitácora actualizada del proyecto](docs/bitacora/bitacora_PCB_actualizada_27_06_2026.pdf)
+- [Póster final](docs/poster/vizcaino-jimenez.pdf)
 - [Validación final](docs/VALIDACION.md)
 - [Referencias técnicas y footprints](docs/REFERENCIAS_TECNICAS.md)
 
