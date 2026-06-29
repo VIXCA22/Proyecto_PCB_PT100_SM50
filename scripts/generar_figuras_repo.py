@@ -181,7 +181,7 @@ def build_block_diagram() -> list[Path]:
     )
     add_svg_text(
         lines,
-        ["Valores actuales: PT100 Iexc = 0.5 mA, Rg = 1 kOhm; SM-50 Vexc = 10 V, Rg = 340 Ohm (160 + 180); FTP Cat5 / 8P8C"],
+        ["Valores actuales: PT100 Iexc = 0.5 mA, Rg = 1 kOhm; SM-50 Vexc = 10 V, Rg = 340 Ohm (160 + 180); ADC B-Box +/-5 V"],
         640,
         78,
         font_size=17,
@@ -203,7 +203,7 @@ def build_block_diagram() -> list[Path]:
                 ["Filtro LP", "fc=159 Hz"],
                 ["Ajuste nivel", "/salida"],
             ],
-            "note": "Salida util PT100: 0 a 0.97 V despues de compensar offset; resolucion estimada 0.031 degC/LSB.",
+            "note": "Salida util PT100: 0 a 0.97 V despues de compensar offset; resolucion estimada 0.016 degC/LSB.",
         },
         {
             "title": "Canal de fuerza / torque: SM-50",
@@ -232,7 +232,7 @@ def build_block_diagram() -> list[Path]:
                 ["TVS + PPTC", "desacoplo"],
                 ["Regulacion", "y referencias"],
                 ["Distribucion a", "canales"],
-                ["Entrada B-Box", "3 kOhm diff", "ADC 16 bits"],
+                ["Entrada B-Box", "ADC +/-5 V", "16 bits"],
             ],
             "note": "",
         },
@@ -270,7 +270,7 @@ def build_block_diagram() -> list[Path]:
     )
     add_svg_text(
         lines,
-        ["Nota: valores finales SM-50 con Rg=340 Ohm (160+180), salida 0-5 V aprox.; memorias viejas quedan como trazabilidad."],
+        ["Nota: ADC B-Box con lectura maxima +/-5 V; SM-50 queda en 0-5 V aprox. con Rg=340 Ohm (160+180)."],
         84,
         footer_y + 54,
         font_size=13,

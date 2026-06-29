@@ -1,5 +1,12 @@
 {
   "fuente": "Resultados del PT100 regenerados desde LTspice; resultados SM-50 actualizados para RG=340 ohm con la misma tension de puente y la ecuacion de ganancia del INA826.",
+  "adc_bbox": {
+    "rango_lectura_v": "+/-5",
+    "span_v": 10,
+    "bits": 16,
+    "lsb_v": 0.000152587890625,
+    "nota": "La lectura maxima del ADC de la B-Box se toma como +/-5 V."
+  },
   "pt100": {
     "temperatura_c": [0, 20, 50, 100],
     "resistencia_nominal_ohm": [100, 107.7935, 119.397125, 138.5055],
