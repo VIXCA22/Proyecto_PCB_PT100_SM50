@@ -72,6 +72,7 @@ Nota de adquisicion: la lectura maxima del ADC de la B-Box se toma como +/-5 V (
 | `docs/simulacion/` | CSV, resumen numérico y cálculos finales usados para las gráficas y tablas. |
 | `docs/validacion/` | Reportes finales ERC/DRC. |
 | `docs/fabricacion/` | ZIP Gerber final con archivo de taladros. |
+| `docs/resumen/` | Resumen ejecutivo final del proyecto. |
 | `docs/poster/` | Póster final usado para la presentación del proyecto. |
 | `docs/bitacora/` | Bitácora actualizada del proceso, en PDF y fuente LaTeX. |
 | `docs/referencias/` | Resumen de verificación de footprints y documentos de entrega conservados. |
@@ -96,6 +97,7 @@ Nota de adquisicion: la lectura maxima del ADC de la B-Box se toma como +/-5 V (
 ## Documentación
 
 - [Informe de desarrollo del proyecto](docs/INFORME_DESARROLLO_PROYECTO.md)
+- [Resumen ejecutivo](docs/resumen/ResumenEjecutivoKDVJC09331.pdf)
 - [Proceso de diseño y trazabilidad](docs/PROCESO_DISENO_TRAZABILIDAD.md)
 - [Bitácora actualizada del proyecto](docs/bitacora/bitacora_PCB_actualizada_27_06_2026.pdf)
 - [Póster final](docs/poster/vizcaino-jimenez.pdf)
