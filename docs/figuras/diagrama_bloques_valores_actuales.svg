@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#ffffff"/>
+<text x="640.0" y="48.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#102a43">Diagrama final - PCB de acondicionamiento de senal</text>
+<text x="640.0" y="78.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#334155">Valores actuales: PT100 Iexc = 0.5 mA, Rg = 1 kOhm; SM-50 Vexc = 10 V, Rg = 340 Ohm (160 + 180); FTP Cat5 / 8P8C</text>
+<text x="70.0" y="100.0" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2563eb">Canales de temperatura: 3x PT100, 3 hilos</text>
+<rect x="70.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="129.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">PT100</text>
+<text x="129.0" y="162.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">3 hilos</text>
+<line x1="188.0" y1="149.0" x2="198.0" y2="149.0" stroke="#2563eb" stroke-width="3"/>
+<polygon points="198.0,142.0 207.0,149.0 198.0,156.0" fill="#2563eb"/>
+<rect x="211.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="270.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Proteccion</text>
+<text x="270.0" y="162.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">EMI/ESD</text>
+<line x1="329.0" y1="149.0" x2="339.0" y2="149.0" stroke="#2563eb" stroke-width="3"/>
+<polygon points="339.0,142.0 348.0,149.0 339.0,156.0" fill="#2563eb"/>
+<rect x="352.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="411.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Fuente</text>
+<text x="411.0" y="162.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Iexc=0.5 mA</text>
+<line x1="470.0" y1="149.0" x2="480.0" y2="149.0" stroke="#2563eb" stroke-width="3"/>
+<polygon points="480.0,142.0 489.0,149.0 480.0,156.0" fill="#2563eb"/>
+<rect x="493.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="552.0" y="137.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Offset desde</text>
+<text x="552.0" y="154.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">B-Box / ref</text>
+<text x="552.0" y="171.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">50 mV</text>
+<line x1="611.0" y1="149.0" x2="621.0" y2="149.0" stroke="#2563eb" stroke-width="3"/>
+<polygon points="621.0,142.0 630.0,149.0 621.0,156.0" fill="#2563eb"/>
+<rect x="634.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="693.0" y="137.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">INA826/828</text>
+<text x="693.0" y="154.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Rg=1 kOhm</text>
+<text x="693.0" y="171.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">G~50.4</text>
+<line x1="752.0" y1="149.0" x2="762.0" y2="149.0" stroke="#2563eb" stroke-width="3"/>
+<polygon points="762.0,142.0 771.0,149.0 762.0,156.0" fill="#2563eb"/>
+<rect x="775.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="834.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Filtro LP</text>
+<text x="834.0" y="162.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">fc=159 Hz</text>
+<line x1="893.0" y1="149.0" x2="903.0" y2="149.0" stroke="#2563eb" stroke-width="3"/>
+<polygon points="903.0,142.0 912.0,149.0 903.0,156.0" fill="#2563eb"/>
+<rect x="916.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="975.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Ajuste nivel</text>
+<text x="975.0" y="162.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">/salida</text>
+<text x="70.0" y="208.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#475569">Salida util PT100: 0 a 0.97 V despues de compensar offset; resolucion estimada 0.031 degC/LSB.</text>
+<text x="70.0" y="270.0" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f97316">Canal de fuerza / torque: SM-50</text>
+<rect x="70.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="129.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">SM-50</text>
+<text x="129.0" y="332.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">puente 350 Ohm</text>
+<line x1="188.0" y1="319.0" x2="198.0" y2="319.0" stroke="#f97316" stroke-width="3"/>
+<polygon points="198.0,312.0 207.0,319.0 198.0,326.0" fill="#f97316"/>
+<rect x="211.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="270.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Excitacion</text>
+<text x="270.0" y="332.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">puente 10 V</text>
+<line x1="329.0" y1="319.0" x2="339.0" y2="319.0" stroke="#f97316" stroke-width="3"/>
+<polygon points="339.0,312.0 348.0,319.0 339.0,326.0" fill="#f97316"/>
+<rect x="352.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="411.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Proteccion</text>
+<text x="411.0" y="332.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">entrada + filtro</text>
+<line x1="470.0" y1="319.0" x2="480.0" y2="319.0" stroke="#f97316" stroke-width="3"/>
+<polygon points="480.0,312.0 489.0,319.0 480.0,326.0" fill="#f97316"/>
+<rect x="493.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="552.0" y="307.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">INA826/828</text>
+<text x="552.0" y="324.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Rg=340 Ohm</text>
+<text x="552.0" y="341.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">G~146.3</text>
+<line x1="611.0" y1="319.0" x2="621.0" y2="319.0" stroke="#f97316" stroke-width="3"/>
+<polygon points="621.0,312.0 630.0,319.0 621.0,326.0" fill="#f97316"/>
+<rect x="634.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="693.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Filtro LP</text>
+<text x="693.0" y="332.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">fc=482 Hz</text>
+<line x1="752.0" y1="319.0" x2="762.0" y2="319.0" stroke="#f97316" stroke-width="3"/>
+<polygon points="762.0,312.0 771.0,319.0 762.0,326.0" fill="#f97316"/>
+<rect x="775.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="834.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Ajuste nivel</text>
+<text x="834.0" y="332.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">/salida</text>
+<line x1="893.0" y1="319.0" x2="903.0" y2="319.0" stroke="#f97316" stroke-width="3"/>
+<polygon points="903.0,312.0 912.0,319.0 903.0,326.0" fill="#f97316"/>
+<rect x="916.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+<text x="975.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Salida</text>
+<text x="975.0" y="332.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">0-5 V aprox.</text>
+<text x="70.0" y="378.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#475569">SM-50: 3 mV/V x 10 V = 30 mV FS; salida INA826 FS = 4.39 V con Rg=340 Ohm (160+180).</text>
+<text x="70.0" y="442.0" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#16a34a">Alimentacion, enlace fisico y adquisicion</text>
+<rect x="70.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="129.0" y="479.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">BoomBox / B-Box</text>
+<text x="129.0" y="496.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">+/-15 V</text>
+<text x="129.0" y="513.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">100 mA max</text>
+<line x1="188.0" y1="491.0" x2="198.0" y2="491.0" stroke="#16a34a" stroke-width="3"/>
+<polygon points="198.0,484.0 207.0,491.0 198.0,498.0" fill="#16a34a"/>
+<rect x="211.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="270.0" y="487.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">FTP Cat5</text>
+<text x="270.0" y="504.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">8P8C blindado</text>
+<line x1="329.0" y1="491.0" x2="339.0" y2="491.0" stroke="#16a34a" stroke-width="3"/>
+<polygon points="339.0,484.0 348.0,491.0 339.0,498.0" fill="#16a34a"/>
+<rect x="352.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="411.0" y="487.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">TVS + PPTC</text>
+<text x="411.0" y="504.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">desacoplo</text>
+<line x1="470.0" y1="491.0" x2="480.0" y2="491.0" stroke="#16a34a" stroke-width="3"/>
+<polygon points="480.0,484.0 489.0,491.0 480.0,498.0" fill="#16a34a"/>
+<rect x="493.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="552.0" y="487.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Regulacion</text>
+<text x="552.0" y="504.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">y referencias</text>
+<line x1="611.0" y1="491.0" x2="621.0" y2="491.0" stroke="#16a34a" stroke-width="3"/>
+<polygon points="621.0,484.0 630.0,491.0 621.0,498.0" fill="#16a34a"/>
+<rect x="634.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="693.0" y="487.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Distribucion a</text>
+<text x="693.0" y="504.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">canales</text>
+<line x1="752.0" y1="491.0" x2="762.0" y2="491.0" stroke="#16a34a" stroke-width="3"/>
+<polygon points="762.0,484.0 771.0,491.0 762.0,498.0" fill="#16a34a"/>
+<rect x="775.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+<text x="834.0" y="479.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Entrada B-Box</text>
+<text x="834.0" y="496.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">3 kOhm diff</text>
+<text x="834.0" y="513.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">ADC 16 bits</text>
+<rect x="70" y="622" width="1140" height="78" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+<text x="84.0" y="648.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Pinout 8P8C por canal analogico: 1-2 = +15 V | 3 y 6 = 0 V/GND | 4 = OUT+/ADC+ | 5 = OUT-/ADC- | 7-8 = -15 V</text>
+<text x="84.0" y="676.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="#334155">Nota: valores finales SM-50 con Rg=340 Ohm (160+180), salida 0-5 V aprox.; memorias viejas quedan como trazabilidad.</text>
+</svg>
