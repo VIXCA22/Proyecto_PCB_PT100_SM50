@@ -212,7 +212,7 @@ def build_response_charts() -> list[Path]:
             "9 8",
         ),
         (
-            "Limite de 10 V",
+            "Referencia de 5 V",
             [(float(row["Load_lb"]), float(row["V_LIMIT_V"])) for row in sm50],
             "#92400e",
             "3 7",
@@ -227,7 +227,7 @@ def build_response_charts() -> list[Path]:
         x_min=0,
         x_max=50,
         y_min=0,
-        y_max=10,
+        y_max=5,
     )
     generated.append(sm50_out_path)
     return generated

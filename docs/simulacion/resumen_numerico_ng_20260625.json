@@ -1,5 +1,5 @@
 {
-  "fuente": "Resultados regenerados desde LTspice 26.0.2 usando Sensor_PT100.log y sensor_SM50.log; esquematicos PDF escPT100.pdf y escSM50.pdf.",
+  "fuente": "Resultados del PT100 regenerados desde LTspice; resultados SM-50 actualizados para RG=340 ohm con la misma tension de puente y la ecuacion de ganancia del INA826.",
   "pt100": {
     "temperatura_c": [0, 20, 50, 100],
     "resistencia_nominal_ohm": [100, 107.7935, 119.397125, 138.5055],
@@ -12,9 +12,9 @@
   "sm50": {
     "carga_lb": [0, 10, 20, 30, 40, 50],
     "tension_puente_mv": [0, 6.005764, 12.02631, 18.061161, 24.110794, 30.174255],
-    "salida_real_bbox_v": [0.016155, 1.815897, 3.619975, 5.428405, 7.241199, 9.058375],
-    "salida_ideal_v": [-0.000028, 1.83741, 3.679269, 5.525563, 7.376311, 9.231526],
-    "limite_v": [10, 10, 10, 10, 10, 10],
-    "resumen": "La senal diferencial alcanza aproximadamente 30.174255 mV y la salida real llega a 9.058375 V a 50 lb, por debajo del limite de 10 V."
+    "salida_real_bbox_v": [0.016155, 0.866168, 1.71823, 2.572347, 3.428524, 4.286772],
+    "salida_ideal_v": [0.0, 0.878608, 1.759378, 2.642242, 3.527267, 4.414316],
+    "limite_v": [5, 5, 5, 5, 5, 5],
+    "resumen": "La senal diferencial alcanza aproximadamente 30.174255 mV y la salida real queda cerca de 4.286772 V a 50 lb, por debajo de la referencia de 5 V."
   }
 }
