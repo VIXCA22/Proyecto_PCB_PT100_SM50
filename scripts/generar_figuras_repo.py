@@ -112,6 +112,177 @@ def svg_line_chart(
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def add_svg_text(
+    lines: list[str],
+    text_lines: list[str],
+    x: float,
+    y: float,
+    *,
+    font_size: int,
+    fill: str,
+    weight: str = "400",
+    anchor: str = "middle",
+    line_height: int | None = None,
+) -> None:
+    if not text_lines:
+        return
+    line_height = line_height or int(font_size * 1.25)
+    start_y = y - ((len(text_lines) - 1) * line_height) / 2
+    weight_attr = f' font-weight="{weight}"' if weight != "400" else ""
+    for idx, text in enumerate(text_lines):
+        lines.append(
+            f'<text x="{x:.1f}" y="{start_y + idx * line_height:.1f}" '
+            f'text-anchor="{anchor}" font-family="Arial, sans-serif" '
+            f'font-size="{font_size}"{weight_attr} fill="{fill}">{html.escape(text)}</text>'
+        )
+
+
+def add_block_box(
+    lines: list[str],
+    x: float,
+    y: float,
+    w: float,
+    h: float,
+    *,
+    stroke: str,
+    fill: str,
+    text_lines: list[str],
+) -> None:
+    lines.append(
+        f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" '
+        f'rx="10" fill="{fill}" stroke="{stroke}" stroke-width="2"/>'
+    )
+    add_svg_text(lines, text_lines, x + w / 2, y + h / 2 + 5, font_size=14, fill="#111827", weight="700")
+
+
+def add_arrow(lines: list[str], x1: float, y: float, x2: float, color: str) -> None:
+    lines.append(f'<line x1="{x1:.1f}" y1="{y:.1f}" x2="{x2 - 9:.1f}" y2="{y:.1f}" stroke="{color}" stroke-width="3"/>')
+    lines.append(
+        f'<polygon points="{x2 - 9:.1f},{y - 7:.1f} {x2:.1f},{y:.1f} {x2 - 9:.1f},{y + 7:.1f}" fill="{color}"/>'
+    )
+
+
+def build_block_diagram() -> list[Path]:
+    out_path = FIG_DIR / "diagrama_bloques_valores_actuales.svg"
+    width, height = 1280, 720
+    lines = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        f'<rect width="{width}" height="{height}" fill="#ffffff"/>',
+    ]
+
+    add_svg_text(
+        lines,
+        ["Diagrama final - PCB de acondicionamiento de senal"],
+        640,
+        48,
+        font_size=32,
+        fill="#102a43",
+        weight="700",
+    )
+    add_svg_text(
+        lines,
+        ["Valores actuales: PT100 Iexc = 0.5 mA, Rg = 1 kOhm; SM-50 Vexc = 10 V, Rg = 340 Ohm (160 + 180); FTP Cat5 / 8P8C"],
+        640,
+        78,
+        font_size=17,
+        fill="#334155",
+    )
+
+    rows = [
+        {
+            "title": "Canales de temperatura: 3x PT100, 3 hilos",
+            "color": "#2563eb",
+            "fill": "#eff6ff",
+            "y": 118,
+            "boxes": [
+                ["PT100", "3 hilos"],
+                ["Proteccion", "EMI/ESD"],
+                ["Fuente", "Iexc=0.5 mA"],
+                ["Offset desde", "B-Box / ref", "50 mV"],
+                ["INA826/828", "Rg=1 kOhm", "G~50.4"],
+                ["Filtro LP", "fc=159 Hz"],
+                ["Ajuste nivel", "/salida"],
+            ],
+            "note": "Salida util PT100: 0 a 0.97 V despues de compensar offset; resolucion estimada 0.031 degC/LSB.",
+        },
+        {
+            "title": "Canal de fuerza / torque: SM-50",
+            "color": "#f97316",
+            "fill": "#fff7ed",
+            "y": 288,
+            "boxes": [
+                ["SM-50", "puente 350 Ohm"],
+                ["Excitacion", "puente 10 V"],
+                ["Proteccion", "entrada + filtro"],
+                ["INA826/828", "Rg=340 Ohm", "G~146.3"],
+                ["Filtro LP", "fc=482 Hz"],
+                ["Ajuste nivel", "/salida"],
+                ["Salida", "0-5 V aprox."],
+            ],
+            "note": "SM-50: 3 mV/V x 10 V = 30 mV FS; salida INA826 FS = 4.39 V con Rg=340 Ohm (160+180).",
+        },
+        {
+            "title": "Alimentacion, enlace fisico y adquisicion",
+            "color": "#16a34a",
+            "fill": "#f0fdf4",
+            "y": 460,
+            "boxes": [
+                ["BoomBox / B-Box", "+/-15 V", "100 mA max"],
+                ["FTP Cat5", "8P8C blindado"],
+                ["TVS + PPTC", "desacoplo"],
+                ["Regulacion", "y referencias"],
+                ["Distribucion a", "canales"],
+                ["Entrada B-Box", "3 kOhm diff", "ADC 16 bits"],
+            ],
+            "note": "",
+        },
+    ]
+
+    start_x = 70
+    box_w = 118
+    box_h = 62
+    gap = 23
+    for row in rows:
+        y = float(row["y"])
+        color = str(row["color"])
+        add_svg_text(lines, [str(row["title"])], start_x, y - 18, font_size=18, fill=color, weight="700", anchor="start")
+        for idx, text_lines in enumerate(row["boxes"]):
+            x = start_x + idx * (box_w + gap)
+            add_block_box(lines, x, y, box_w, box_h, stroke=color, fill=str(row["fill"]), text_lines=list(text_lines))
+            if idx < len(row["boxes"]) - 1:
+                add_arrow(lines, x + box_w, y + box_h / 2, x + box_w + gap - 4, color)
+        if row["note"]:
+            add_svg_text(lines, [str(row["note"])], start_x, y + box_h + 28, font_size=12, fill="#475569", anchor="start")
+
+    footer_y = 622
+    lines.append(
+        f'<rect x="70" y="{footer_y}" width="1140" height="78" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>'
+    )
+    add_svg_text(
+        lines,
+        ["Pinout 8P8C por canal analogico: 1-2 = +15 V | 3 y 6 = 0 V/GND | 4 = OUT+/ADC+ | 5 = OUT-/ADC- | 7-8 = -15 V"],
+        84,
+        footer_y + 26,
+        font_size=13,
+        fill="#334155",
+        weight="700",
+        anchor="start",
+    )
+    add_svg_text(
+        lines,
+        ["Nota: valores finales SM-50 con Rg=340 Ohm (160+180), salida 0-5 V aprox.; memorias viejas quedan como trazabilidad."],
+        84,
+        footer_y + 54,
+        font_size=13,
+        fill="#334155",
+        anchor="start",
+    )
+
+    lines.append("</svg>")
+    out_path.write_text("\n".join(lines), encoding="utf-8")
+    return [out_path]
+
+
 def build_response_charts() -> list[Path]:
     pt100 = read_csv(SIM_DIR / "pt100_sweep_ng_20260625.csv")
     sm50 = read_csv(SIM_DIR / "sm50_sweep_positive_ng_20260625.csv")
@@ -393,6 +564,7 @@ def copy_ltspice_pdf_previews() -> None:
 def main() -> None:
     ensure_dirs()
     generated = []
+    generated.extend(build_block_diagram())
     generated.extend(build_response_charts())
     generated.extend(build_ltspice_previews())
     export_pngs(generated)
