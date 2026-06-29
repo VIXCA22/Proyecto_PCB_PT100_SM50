@@ -1,7 +1,7 @@
 Bloque,Parametro,Valor,Unidad
-Sistema,ADC BoomBox rango +/-10 V,20.0,V span
+Sistema,ADC BoomBox rango +/-5 V,10.0,V span
 Sistema,ADC bits,16,bits
-Sistema,LSB BoomBox +/-10 V,0.00030517578125,V/LSB
+Sistema,LSB BoomBox +/-5 V,0.000152587890625,V/LSB
 PT100,R0,100.0,ohm
 PT100,alpha,0.00385,1/degC
 PT100,R(100C),138.5,ohm
@@ -17,7 +17,7 @@ PT100,Ganancia INA828,51.0,V/V
 PT100,Span amplificado con INA826,0.9702,V
 PT100,Sensibilidad salida INA826,0.009702,V/degC
 PT100,N mínimo requerido,10,bits
-PT100,Resolucion estimada con ADC 16 bits +/-10 V,0.03145493519377448,degC/LSB
+PT100,Resolucion estimada con ADC 16 bits +/-5 V,0.01572746759688724,degC/LSB
 PT100,P sensor a 100C,3.4625e-05,W
 PT100,Autocalentamiento con disipacion 2mW/degC,0.0173125,degC
 PT100,Filtro LP,159.15494309189535,Hz
@@ -35,7 +35,7 @@ SM-50,Ganancia INA828,148.05882352941177,V/V
 SM-50,Salida max con INA826,4.388823529411764,V
 SM-50,Sensibilidad salida INA826,1.994919786096256,V/Nm
 SM-50,N mínimo requerido,8,bits
-SM-50,Resolucion estimada con ADC 16 bits +/-10 V,0.00015297646721284,Nm/LSB
+SM-50,Resolucion estimada con ADC 16 bits +/-5 V,0.00007648823360642,Nm/LSB
 SM-50,Zero balance raw,0.0003,V
 SM-50,Zero balance salida,0.04388823529411764,V
 SM-50,No linealidad,0.00066,Nm

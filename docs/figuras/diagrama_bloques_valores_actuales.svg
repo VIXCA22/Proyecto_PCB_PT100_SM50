@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
 <rect width="1280" height="720" fill="#ffffff"/>
 <text x="640.0" y="48.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#102a43">Diagrama final - PCB de acondicionamiento de senal</text>
-<text x="640.0" y="78.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#334155">Valores actuales: PT100 Iexc = 0.5 mA, Rg = 1 kOhm; SM-50 Vexc = 10 V, Rg = 340 Ohm (160 + 180); FTP Cat5 / 8P8C</text>
+<text x="640.0" y="78.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#334155">Valores actuales: PT100 Iexc = 0.5 mA, Rg = 1 kOhm; SM-50 Vexc = 10 V, Rg = 340 Ohm (160 + 180); ADC B-Box +/-5 V</text>
 <text x="70.0" y="100.0" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2563eb">Canales de temperatura: 3x PT100, 3 hilos</text>
 <rect x="70.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
 <text x="129.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">PT100</text>
@@ -38,7 +38,7 @@
 <rect x="916.0" y="118.0" width="118.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
 <text x="975.0" y="145.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Ajuste nivel</text>
 <text x="975.0" y="162.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">/salida</text>
-<text x="70.0" y="208.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#475569">Salida util PT100: 0 a 0.97 V despues de compensar offset; resolucion estimada 0.031 degC/LSB.</text>
+<text x="70.0" y="208.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" fill="#475569">Salida util PT100: 0 a 0.97 V despues de compensar offset; resolucion estimada 0.016 degC/LSB.</text>
 <text x="70.0" y="270.0" text-anchor="start" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f97316">Canal de fuerza / torque: SM-50</text>
 <rect x="70.0" y="288.0" width="118.0" height="62.0" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
 <text x="129.0" y="315.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">SM-50</text>
@@ -104,9 +104,9 @@
 <polygon points="762.0,484.0 771.0,491.0 762.0,498.0" fill="#16a34a"/>
 <rect x="775.0" y="460.0" width="118.0" height="62.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
 <text x="834.0" y="479.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">Entrada B-Box</text>
-<text x="834.0" y="496.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">3 kOhm diff</text>
-<text x="834.0" y="513.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">ADC 16 bits</text>
+<text x="834.0" y="496.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">ADC +/-5 V</text>
+<text x="834.0" y="513.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111827">16 bits</text>
 <rect x="70" y="622" width="1140" height="78" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
 <text x="84.0" y="648.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#334155">Pinout 8P8C por canal analogico: 1-2 = +15 V | 3 y 6 = 0 V/GND | 4 = OUT+/ADC+ | 5 = OUT-/ADC- | 7-8 = -15 V</text>
-<text x="84.0" y="676.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="#334155">Nota: valores finales SM-50 con Rg=340 Ohm (160+180), salida 0-5 V aprox.; memorias viejas quedan como trazabilidad.</text>
+<text x="84.0" y="676.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="#334155">Nota: ADC B-Box con lectura maxima +/-5 V; SM-50 queda en 0-5 V aprox. con Rg=340 Ohm (160+180).</text>
 </svg>

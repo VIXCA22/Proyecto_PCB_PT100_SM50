@@ -69,7 +69,7 @@ Las gráficas del repositorio se generaron desde los CSV en `docs/simulacion/`, 
 
 La memoria `memoria_calculo_PCB0.docx` fue importante para fijar el razonamiento inicial: calcular la sensibilidad del PT100, estimar autocalentamiento, separar offset de variación útil, calcular ganancia del amplificador de instrumentación, y dimensionar el canal SM-50 desde una señal de puente de aproximadamente 30 mV a escala completa. Sin embargo, esa memoria corresponde a una etapa previa del proyecto y no todos sus valores quedaron iguales en la revisión final.
 
-La diferencia principal es el destino de la señal. En la memoria preliminar se pensó en aprovechar un ADC de 3.3 V directamente, mientras que el proyecto final se adaptó a la BoomBox/B-Box, que permite entradas analógicas diferenciales de hasta el orden de 10 V y entrega alimentación de sensores por el cable analógico. Por eso el canal SM-50 final usa una ganancia intermedia, suficiente para llevar la señal a un rango cercano a 0-5 V y dejar margen frente al límite de la B-Box. En el PT100 se redujo la corriente de excitación a 0.5 mA para disminuir autocalentamiento y mantener una respuesta de voltaje compatible con el rango documentado en simulación.
+La diferencia principal es el destino de la señal. En la memoria preliminar se pensó en aprovechar un ADC de 3.3 V directamente, mientras que el proyecto final se adaptó a la BoomBox/B-Box, cuya lectura máxima de ADC se toma como +/-5 V, equivalente a 10 V de span diferencial, y que entrega alimentación de sensores por el cable analógico. Por eso el canal SM-50 final usa una ganancia intermedia, suficiente para llevar la señal a un rango cercano a 0-5 V y dejar margen frente al límite de la B-Box. En el PT100 se redujo la corriente de excitación a 0.5 mA para disminuir autocalentamiento y mantener una respuesta de voltaje compatible con el rango documentado en simulación.
 
 | Aspecto | Memoria preliminar | Revisión final vigente |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ La diferencia principal es el destino de la señal. En la memoria preliminar se 
 | PT100, amplificador | INA828 como opción inicial | INA826 como cálculo principal; INA828 queda solo como equivalente si se monta |
 | SM-50, sensibilidad base | 3 mV/V con 10 V, es decir cerca de 30 mV FS | Igual: 3 mV/V, puente de 350 ohm y excitación de 10 V |
 | SM-50, ganancia calculada | Cerca de 100 V/V para salida de 3.3 V | `RG = 340 ohm` (`160 + 180 ohm`), `G = 146.29 V/V`, salida nominal de 4.389 V a escala completa |
-| Interfaz de adquisición | ADC genérico de 3.3 V | BoomBox/B-Box con entrada diferencial de alta impedancia, ADC de 16 bits, rango +/-10 V y alimentación +/-15 V limitada a 100 mA |
+| Interfaz de adquisición | ADC genérico de 3.3 V | BoomBox/B-Box con entrada diferencial de alta impedancia, ADC de 16 bits, lectura máxima +/-5 V y alimentación +/-15 V limitada a 100 mA |
 
 Esta evolución no se considera una contradicción, sino una decisión de integración: se conservaron los fundamentos de sensibilidad, filtrado y amplificación diferencial, pero se recalcularon rangos para la interfaz real de adquisición.
 
@@ -90,9 +90,9 @@ La memoria `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` 
 
 | Parámetro | Cálculo o dato usado | Resultado | Base |
 | --- | --- | ---: | --- |
-| Rango de medición | Entrada analógica en rango +/-10 V | 20 V de span | Manual BoomBox/B-Box [F1] |
+| Rango de medición | Entrada analógica en rango +/-5 V | 10 V de span | Manual BoomBox/B-Box [F1] |
 | Resolución ADC | 16 bits | 65536 niveles | Manual BoomBox/B-Box [F1] |
-| LSB en +/-10 V | `20 V / 2^16` | 305.18 uV/LSB | Manual BoomBox/B-Box [F1] |
+| LSB en +/-5 V | `10 V / 2^16` | 152.59 uV/LSB | Manual BoomBox/B-Box [F1] |
 | Alimentación disponible | Rieles por 8P8C | +/-15 V, 100 mA máx. | Manual BoomBox/B-Box [F1] |
 | Entrada usada | Alta impedancia diferencial | 3 kohm diferencial | Manual BoomBox/B-Box [F1] |
 
@@ -114,7 +114,7 @@ La memoria `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` 
 | Ganancia INA826 | `1 + 49.4 kohm / 1 kohm` | 50.40 V/V | Datasheet INA826 [F5] |
 | Span amplificado | `50.40 * 19.25 mV` | 0.970 V | Cálculo propio |
 | Sensibilidad de salida | `50.40 * 0.1925 mV/degC` | 9.702 mV/degC | Cálculo propio |
-| Resolución estimada | `305.18 uV / 9.702 mV/degC` | 0.0315 degC/LSB | B-Box [F1] + cálculo |
+| Resolución estimada | `152.59 uV / 9.702 mV/degC` | 0.0157 degC/LSB | B-Box [F1] + cálculo |
 | Potencia a 100 degC | `(0.5 mA)^2 * 138.50 ohm` | 34.62 uW | Cálculo propio |
 | Autocalentamiento estimado | `34.62 uW / 2 mW/degC` | 0.0173 degC | Criterio conservador de disipación |
 | Filtro pasabajo | `1/(2*pi*10 kohm*100 nF)` | 159.2 Hz | Cálculo RC |
@@ -136,13 +136,13 @@ La memoria `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` 
 | Ganancia INA826 | `1 + 49.4 kohm / 340 ohm` | 146.29 V/V | Datasheet INA826 [F5] |
 | Salida máxima nominal | `146.29 * 30.00 mV` | 4.389 V | Cálculo propio |
 | Sensibilidad de salida | `146.29 * 13.636 mV/N*m` | 1.995 V/N*m | Cálculo propio |
-| Resolución estimada | `305.18 uV / 1.995 V/N*m` | 153.0 uN*m/LSB | B-Box [F1] + cálculo |
+| Resolución estimada | `152.59 uV / 1.995 V/N*m` | 76.5 uN*m/LSB | B-Box [F1] + cálculo |
 | Zero balance | `+/-1 %RO` | +/-0.300 mV crudo; +/-0.044 V a la salida | Datasheet [F2] + cálculo |
 | No linealidad | `+/-0.03 %FS` | +/-0.660 mN*m | Datasheet [F2] + cálculo |
 | Histéresis | `+/-0.02 %FS` | +/-0.440 mN*m | Datasheet [F2] + cálculo |
 | Filtro pasabajo | `1/(2*pi*10 kohm*33 nF)` | 482.3 Hz | Cálculo RC |
 
-La diferencia entre el cálculo nominal del SM-50 y la gráfica LTspice se debe a que la gráfica muestra la respuesta del modelo simulado completo, mientras que la memoria v3 presenta el dimensionamiento nominal con `RG = 340 ohm` y salida esperada cercana a 0-5 V. En ambos casos la salida queda por debajo del límite práctico de 10 V de la entrada B-Box.
+La diferencia entre el cálculo nominal del SM-50 y la gráfica LTspice se debe a que la gráfica muestra la respuesta del modelo simulado completo, mientras que la memoria v3 presenta el dimensionamiento nominal con `RG = 340 ohm` y salida esperada cercana a 0-5 V. En ambos casos la salida queda dentro del límite práctico de lectura +/-5 V de la entrada B-Box.
 
 ### 3. Diseño del esquemático en KiCad
 
@@ -150,7 +150,7 @@ Después de validar rangos en LTspice, el circuito se trasladó a KiCad. El esqu
 
 En el bloque de alimentación se consideró la disponibilidad de rieles desde la B-Box y la necesidad de una excitación regulada para el SM-50. El regulador TPS7A4901 se seleccionó para generar la referencia de excitación positiva de 10 V del puente, manteniendo un margen adecuado frente al máximo permitido por el sensor. En el bloque PT100 se incorporó una referencia REF3012 de 1.25 V para establecer la corriente de excitación. El uso de OPA2188 se justificó por su baja deriva, mientras que el INA826 se usó como amplificador de instrumentación para señales diferenciales pequeñas.
 
-El manual de la BoomBox/B-Box reforzó la decisión de usar conectores RJ45 blindados y cable Cat5e para la interfaz analógica. La entrada analógica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentación para sensores. Para el diseño de esta PCB se tomaron como restricciones prácticas los rieles +/-15 V disponibles por el cable y los límites de entrada de aproximadamente +/-10 V en modo diferencial, por lo que las salidas acondicionadas se mantuvieron por debajo de 10 V.
+El manual de la BoomBox/B-Box reforzó la decisión de usar conectores RJ45 blindados y cable Cat5e para la interfaz analógica. La entrada analógica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentación para sensores. Para el diseño de esta PCB se tomaron como restricciones prácticas los rieles +/-15 V disponibles por el cable y la lectura máxima de ADC de aproximadamente +/-5 V, por lo que las salidas acondicionadas se mantuvieron en el rango útil de 0-5 V.
 
 | Pin RJ45 BoomBox analógica | Función reportada en manual |
 | ---: | --- |
