@@ -31,7 +31,7 @@ El punto de partida fue una investigación previa de LabCES orientada al cálcul
 | `Proyecto_eficiencia_LabCES-20260627T040051Z-3-001.zip/Interface-Book-2022-Edition.pdf` | Fundamento general de celdas de carga, galgas extensiométricas, excitación, sensibilidad y errores de montaje. |
 | `C:/Users/kenne/Downloads/SM-S-Type.pdf` | Datos del sensor SM S-Type: salida nominal 3.0 mV/V, puente de 350 ohm y excitación máxima de 15 VDC. |
 | `docs/simulacion/pt100_sweep_ng_20260625.csv` | Valores usados para las gráficas del canal PT100. |
-| `docs/simulacion/sm50_sweep_positive_ng_20260625.csv` | Valores usados para las gráficas del canal SM-50. |
+| `docs/simulacion/sm50_sweep_bipolar_ng_20260629.csv` | Valores usados para las gráficas bipolares del canal SM-50. |
 | `PCB_PT100_SM50/COMPONENTES_A_USAR_KICAD.csv` | Lista base de componentes, bloques funcionales y MPN seleccionados. |
 | `ProyectoPCB_LTspice_PT100_SM50/03_KICAD_LIBS/AUDITORIA_FOOTPRINTS.md` | Trazabilidad de símbolos, footprints, modelos 3D y fuentes primarias revisadas. |
 | `docs/VALIDACION.md` | Resultado final de ERC, DRC y paquete de fabricación. |
@@ -46,7 +46,7 @@ Primero se delimitó el problema de medición. El banco del LabCES requiere vari
 
 Para el PT100 se partió del comportamiento resistivo de un RTD. La resistencia aumenta con la temperatura, pero para convertir esa variación en voltaje hace falta excitar el sensor con una corriente estable. En el diseño final se usó una referencia de 1.25 V y una resistencia de ajuste de 2.49 kohm, lo que produce una corriente cercana a 0.5 mA. Esta corriente genera una caída de tensión sobre el PT100 que luego se amplifica y filtra.
 
-Para el SM-50 se tomó como base el comportamiento de una celda de carga tipo puente de galgas extensiométricas. La hoja del sensor SM S-Type indica una salida nominal de 3.0 mV/V, resistencia de puente de 350 ohm y excitación máxima de 15 VDC. Con una excitación de 10 V, la señal diferencial esperada a escala completa queda alrededor de 30 mV. Por eso fue necesario usar un amplificador de instrumentación con ganancia ajustada, de forma que la salida llegue a un rango cercano a 0-5 V sin saturar.
+Para el SM-50 se tomó como base el comportamiento de una celda de carga tipo puente de galgas extensiométricas. La hoja del sensor SM S-Type indica una salida nominal de 3.0 mV/V, resistencia de puente de 350 ohm y excitación máxima de 15 VDC. Con una excitación de 10 V, la señal diferencial esperada a escala completa queda alrededor de +/-30 mV. Por eso fue necesario usar un amplificador de instrumentación con ganancia ajustada, de forma que la salida bipolar nominal llegue a +/-4.39 V sin saturar.
 
 ### 2. Verificación mediante simulación
 
@@ -61,7 +61,7 @@ En el canal PT100 se usó el modelo cuadrático de resistencia para temperaturas
 
 `R(T) = 100 * (1 + 3.9083e-3*T - 5.775e-7*T^2)`
 
-La simulación barre temperaturas representativas y calcula tanto la resistencia nominal como las condiciones baja y alta usadas para visualizar variación. En el canal SM-50 se barrió la carga desde 0 lb hasta 50 lb y se comparó la salida real hacia B-Box contra una salida ideal y contra la referencia de 5 V.
+La simulación barre temperaturas representativas y calcula tanto la resistencia nominal como las condiciones baja y alta usadas para visualizar variación. En el canal SM-50 se barrió la carga de -50 lb a +50 lb y se comparó la salida hacia B-Box contra las referencias de +/-5 V.
 
 Las gráficas del repositorio se generaron desde los CSV en `docs/simulacion/`, no desde valores escritos a mano. Esto permite que las figuras sean repetibles.
 
@@ -69,7 +69,7 @@ Las gráficas del repositorio se generaron desde los CSV en `docs/simulacion/`, 
 
 La memoria `memoria_calculo_PCB0.docx` fue importante para fijar el razonamiento inicial: calcular la sensibilidad del PT100, estimar autocalentamiento, separar offset de variación útil, calcular ganancia del amplificador de instrumentación, y dimensionar el canal SM-50 desde una señal de puente de aproximadamente 30 mV a escala completa. Sin embargo, esa memoria corresponde a una etapa previa del proyecto y no todos sus valores quedaron iguales en la revisión final.
 
-La diferencia principal es el destino de la señal. En la memoria preliminar se pensó en aprovechar un ADC de 3.3 V directamente, mientras que el proyecto final se adaptó a la BoomBox/B-Box, cuya lectura máxima de ADC se toma como +/-5 V, equivalente a 10 V de span diferencial, y que entrega alimentación de sensores por el cable analógico. Por eso el canal SM-50 final usa una ganancia intermedia, suficiente para llevar la señal a un rango cercano a 0-5 V y dejar margen frente al límite de la B-Box. En el PT100 se redujo la corriente de excitación a 0.5 mA para disminuir autocalentamiento y mantener una respuesta de voltaje compatible con el rango documentado en simulación.
+La diferencia principal es el destino de la señal. En la memoria preliminar se pensó en aprovechar un ADC de 3.3 V directamente, mientras que el proyecto final se adaptó a la BoomBox/B-Box, cuya lectura máxima de ADC se toma como +/-5 V, equivalente a 10 V de span diferencial, y que entrega alimentación de sensores por el cable analógico. Por eso el canal SM-50 final usa una ganancia intermedia, suficiente para llevar la señal a un rango bipolar nominal de +/-4.39 V y dejar margen frente al límite de la B-Box. En el PT100 se redujo la corriente de excitación a 0.5 mA para disminuir autocalentamiento y mantener una respuesta de voltaje compatible con el rango documentado en simulación.
 
 | Aspecto | Memoria preliminar | Revisión final vigente |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ La diferencia principal es el destino de la señal. En la memoria preliminar se 
 | PT100, salida objetivo | 0 a 3.3 V hacia ADC | Span útil aproximado de 0 a 0.970 V después de compensar offset; en la simulación LTspice la salida absoluta queda alrededor de 2.33 a 3.22 V |
 | PT100, amplificador | INA828 como opción inicial | INA826 como cálculo principal; INA828 queda solo como equivalente si se monta |
 | SM-50, sensibilidad base | 3 mV/V con 10 V, es decir cerca de 30 mV FS | Igual: 3 mV/V, puente de 350 ohm y excitación de 10 V |
-| SM-50, ganancia calculada | Cerca de 100 V/V para salida de 3.3 V | `RG = 340 ohm` (`160 + 180 ohm`), `G = 146.29 V/V`, salida nominal de 4.389 V a escala completa |
+| SM-50, ganancia calculada | Cerca de 100 V/V para salida de 3.3 V | `RG = 340 ohm` (`160 + 180 ohm`), `G = 146.29 V/V`, salida nominal de +/-4.39 V a escala completa |
 | Interfaz de adquisición | ADC genérico de 3.3 V | BoomBox/B-Box con entrada diferencial de alta impedancia, ADC de 16 bits, lectura máxima +/-5 V y alimentación +/-15 V limitada a 100 mA |
 
 Esta evolución no se considera una contradicción, sino una decisión de integración: se conservaron los fundamentos de sensibilidad, filtrado y amplificación diferencial, pero se recalcularon rangos para la interfaz real de adquisición.
@@ -134,7 +134,7 @@ La memoria `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` 
 | Cambio para 0.01 N*m | `13.636 mV/N*m * 0.01` | 136.36 uV | Cálculo propio |
 | Resistencia de ganancia | `RG = 160 ohm + 180 ohm` | 340 ohm | BOM/memoria v3 |
 | Ganancia INA826 | `1 + 49.4 kohm / 340 ohm` | 146.29 V/V | Datasheet INA826 [F5] |
-| Salida máxima nominal | `146.29 * 30.00 mV` | 4.389 V | Cálculo propio |
+| Salida máxima nominal | `146.29 * 30.00 mV` | +/-4.39 V | Cálculo propio |
 | Sensibilidad de salida | `146.29 * 13.636 mV/N*m` | 1.995 V/N*m | Cálculo propio |
 | Resolución estimada | `152.59 uV / 1.995 V/N*m` | 76.5 uN*m/LSB | B-Box [F1] + cálculo |
 | Zero balance | `+/-1 %RO` | +/-0.300 mV crudo; +/-0.044 V a la salida | Datasheet [F2] + cálculo |
@@ -142,7 +142,7 @@ La memoria `memoria_calculo_PCB0_VALORES_ACTUALES_v3_referencias_completas.pdf` 
 | Histéresis | `+/-0.02 %FS` | +/-0.440 mN*m | Datasheet [F2] + cálculo |
 | Filtro pasabajo | `1/(2*pi*10 kohm*33 nF)` | 482.3 Hz | Cálculo RC |
 
-La diferencia entre el cálculo nominal del SM-50 y la gráfica LTspice se debe a que la gráfica muestra la respuesta del modelo simulado completo, mientras que la memoria v3 presenta el dimensionamiento nominal con `RG = 340 ohm` y salida esperada cercana a 0-5 V. En ambos casos la salida queda dentro del límite práctico de lectura +/-5 V de la entrada B-Box.
+El cálculo nominal y las gráficas del SM-50 usan el mismo criterio vigente: `RG = 340 ohm`, ganancia `G = 146.29 V/V`, puente de +/-30 mV a escala completa y salida acondicionada de +/-4.39 V. La salida queda dentro del límite práctico de lectura +/-5 V de la entrada B-Box.
 
 ### 3. Diseño del esquemático en KiCad
 
@@ -150,7 +150,7 @@ Después de validar rangos en LTspice, el circuito se trasladó a KiCad. El esqu
 
 En el bloque de alimentación se consideró la disponibilidad de rieles desde la B-Box y la necesidad de una excitación regulada para el SM-50. El regulador TPS7A4901 se seleccionó para generar la referencia de excitación positiva de 10 V del puente, manteniendo un margen adecuado frente al máximo permitido por el sensor. En el bloque PT100 se incorporó una referencia REF3012 de 1.25 V para establecer la corriente de excitación. El uso de OPA2188 se justificó por su baja deriva, mientras que el INA826 se usó como amplificador de instrumentación para señales diferenciales pequeñas.
 
-El manual de la BoomBox/B-Box reforzó la decisión de usar conectores RJ45 blindados y cable Cat5e para la interfaz analógica. La entrada analógica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentación para sensores. Para el diseño de esta PCB se tomaron como restricciones prácticas los rieles +/-15 V disponibles por el cable y la lectura máxima de ADC de aproximadamente +/-5 V, por lo que las salidas acondicionadas se mantuvieron en el rango útil de 0-5 V.
+El manual de la BoomBox/B-Box reforzó la decisión de usar conectores RJ45 blindados y cable Cat5e para la interfaz analógica. La entrada analógica puede configurarse como diferencial de alta impedancia o como entrada de baja impedancia, incluye ganancia y filtro programable, y el conector entrega rieles de alimentación para sensores. Para el diseño de esta PCB se tomaron como restricciones prácticas los rieles +/-15 V disponibles por el cable y la lectura máxima de ADC de aproximadamente +/-5 V; por eso el SM-50 se dimensionó con salida bipolar nominal de +/-4.39 V.
 
 | Pin RJ45 BoomBox analógica | Función reportada en manual |
 | ---: | --- |
@@ -169,7 +169,7 @@ El diagrama de cableado de Interface para celdas de carga también justificó ma
 | PT100 | OPA2188 como operacional de precisión | Baja deriva, adecuado para señales lentas de temperatura. |
 | PT100/SM-50 | INA826 como amplificador diferencial | Su ganancia se define con una sola resistencia: `G = 1 + 49.4 kohm/RG`. |
 | SM-50 | Excitación de 10 V | Compatible con la hoja del SM S-Type y produce cerca de 30 mV a escala completa. |
-| SM-50 | Rango de salida cercano a 0-5 V | Facilita la lectura por la B-Box y deja margen frente al límite esperado. |
+| SM-50 | Rango de salida bipolar nominal de +/-4.39 V | Facilita la lectura por la B-Box y deja margen frente al límite esperado de +/-5 V. |
 | Entradas/salidas | Filtros RC y protección | Reducen ruido y protegen ante transitorios o manipulación del banco. |
 
 Las notas de aplicación SLOA034 y SBOA247A respaldan la arquitectura usada para el SM-50: un puente Wheatstone genera una señal diferencial pequeña, el amplificador de instrumentación rechaza el modo común y la ganancia se elige para escalar la señal al rango de lectura. La nota AN96 se usó como advertencia de diseño: aumentar la ganancia solo para llenar todo el ADC no siempre mejora la resolución, porque también entran ruido, deriva y limitaciones del frente analógico. En este proyecto la ganancia se eligió con una restricción práctica: obtener una salida cercana a 5 V a escala completa y dejar margen frente al límite de la B-Box.
@@ -228,33 +228,43 @@ La salida aumenta con la temperatura y queda dentro de un rango de adquisición 
 
 ### Gráfica: tensión diferencial del puente SM-50
 
-Fuente: `docs/simulacion/sm50_sweep_positive_ng_20260625.csv`.
+Fuente: `docs/simulacion/sm50_sweep_bipolar_ng_20260629.csv`.
 
 | Carga (lb) | Tensión diferencial del puente (mV) |
 | ---: | ---: |
+| -50 | -30.000000 |
+| -40 | -24.000000 |
+| -30 | -18.000000 |
+| -20 | -12.000000 |
+| -10 | -6.000000 |
 | 0 | 0.000000 |
-| 10 | 6.005764 |
-| 20 | 12.026310 |
-| 30 | 18.061161 |
-| 40 | 24.110794 |
-| 50 | 30.174255 |
+| 10 | 6.000000 |
+| 20 | 12.000000 |
+| 30 | 18.000000 |
+| 40 | 24.000000 |
+| 50 | 30.000000 |
 
-La simulación reproduce el orden de magnitud esperado por la hoja del SM S-Type: una celda de 3.0 mV/V excitada con 10 V entrega cerca de 30 mV a escala completa. El resultado a 50 lb es 30.174255 mV, por lo que el modelo usado para el puente es coherente con la especificación.
+La simulación reproduce el orden de magnitud esperado por la hoja del SM S-Type: una celda de 3.0 mV/V excitada con 10 V entrega +/-30 mV a escala completa.
 
 ### Gráfica: salida acondicionada del SM-50
 
-Fuente: `docs/simulacion/sm50_sweep_positive_ng_20260625.csv`.
+Fuente: `docs/simulacion/sm50_sweep_bipolar_ng_20260629.csv`.
 
-| Carga (lb) | Salida real hacia B-Box (V) | Salida ideal (V) | Límite (V) |
+| Carga (lb) | Salida hacia B-Box (V) | Límite + (V) | Límite - (V) |
 | ---: | ---: | ---: | ---: |
-| 0 | 0.016155 | 0.000000 | 5.000000 |
-| 10 | 0.866168 | 0.878608 | 5.000000 |
-| 20 | 1.718230 | 1.759378 | 5.000000 |
-| 30 | 2.572347 | 2.642242 | 5.000000 |
-| 40 | 3.428524 | 3.527267 | 5.000000 |
-| 50 | 4.286772 | 4.414316 | 5.000000 |
+| -50 | -4.388824 | 5.000000 | -5.000000 |
+| -40 | -3.511059 | 5.000000 | -5.000000 |
+| -30 | -2.633294 | 5.000000 | -5.000000 |
+| -20 | -1.755529 | 5.000000 | -5.000000 |
+| -10 | -0.877765 | 5.000000 | -5.000000 |
+| 0 | 0.000000 | 5.000000 | -5.000000 |
+| 10 | 0.877765 | 5.000000 | -5.000000 |
+| 20 | 1.755529 | 5.000000 | -5.000000 |
+| 30 | 2.633294 | 5.000000 | -5.000000 |
+| 40 | 3.511059 | 5.000000 | -5.000000 |
+| 50 | 4.388824 | 5.000000 | -5.000000 |
 
-La salida acondicionada crece casi linealmente y permanece cerca del rango 0-5 V. Esto permite usar un rango cómodo de adquisición sin saturar la etapa de entrada.
+La salida acondicionada es bipolar y alcanza aproximadamente +/-4.39 V a escala completa. Esto permite usar un rango cómodo de adquisición sin saturar la etapa de entrada de +/-5 V.
 
 ## Antecedente experimental usado como referencia
 

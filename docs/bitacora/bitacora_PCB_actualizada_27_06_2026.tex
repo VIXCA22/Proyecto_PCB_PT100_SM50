@@ -757,7 +757,7 @@ Construir una memoria de cálculo para justificar la ganancia, sensibilidad y re
 \item Se identificó que los \SI{100}{mV} iniciales corresponden a offset y que la información útil del rango de \SI{0}{\celsius} a \SI{100}{\celsius} está en la variación de \SI{38.5}{mV}.
 \item Se calculó una ganancia corregida cercana a \(G\approx 86\) para usar el rango útil después de restar el offset.
 \item Para torque se calculó que la sensibilidad del puente, con \SI{10}{V} de excitación y \SI{3}{mV/V}, produce una salida máxima cercana a \SI{30}{mV}.
-\item Se verificó que una ganancia cercana a \(G\approx 100\) permite llevar la señal del SM-50 a un rango cómodo de adquisición sin saturar.
+\item Se verificó que la ganancia final del canal SM-50, \(G\approx 146.29\) con \(R_G=\SI{340}{\ohm}\), permite llevar la señal del puente a una salida bipolar nominal de \(\pm\SI{4.39}{V}\) sin saturar la entrada de la BoomBox.
 \end{itemize}
 
 \textbf{Resultados:}
@@ -1328,17 +1328,17 @@ Actualizar los cálculos del proyecto con los valores finales realmente usados e
 
 \textbf{Desarrollo:}
 \begin{itemize}
-\item Se revisaron los cálculos finales del canal de torque SM-50, manteniendo la excitación del puente en \(\SI{10}{V}\) y usando la sensibilidad nominal de \(\SI{3}{mV/V}\), por lo que la señal diferencial máxima esperada del puente es aproximadamente \(\SI{30}{mV}\).
+\item Se revisaron los cálculos finales del canal de torque SM-50, manteniendo la excitación del puente en \(\SI{10}{V}\) y usando la sensibilidad nominal de \(\SI{3}{mV/V}\), por lo que la señal diferencial máxima esperada del puente es aproximadamente \(\pm\SI{30}{mV}\).
 \item Se mantuvo la resistencia de ganancia del amplificador de instrumentación del canal SM-50 como dos resistencias en serie, \(\SI{160}{\ohm}+\SI{180}{\ohm}\), para obtener \(R_G=\SI{340}{\ohm}\).
-\item Se conservó la resistencia en serie de \(\SI{180}{\ohm}\), ya que corresponde a la versión del acondicionamiento con salida aproximada de \(\SIrange{0}{5}{V}\) para el SM-50.
+\item Se conservó la resistencia en serie de \(\SI{180}{\ohm}\), ya que corresponde a la versión del acondicionamiento con salida bipolar nominal de \(\pm\SI{4.39}{V}\) para el SM-50.
 \item Se corrigió el canal de temperatura indicando que la excitación final del PT100 se toma como \(I_{exc}=\SI{0.5}{mA}\), no \(\SI{1}{mA}\), con el propósito de reducir autocalentamiento y mantener bajo el consumo.
 \item Se mantuvo el criterio del PT100 de tres hilos, usando medición diferencial, compensación de cableado, referencia de offset y ajuste de nivel antes de entregar la señal a la BoomBox.
 \item Se dejó como valor vigente para el canal PT100 una resistencia de ganancia del INA de \(R_G=\SI{1}{k\ohm}\), separando este dato de valores preliminares usados en cálculos anteriores.
-\item Se verificó que ambos canales requieren ajuste de nivel/salida: el canal SM-50 para desplazar y escalar la salida hacia el rango útil de la BoomBox, y el canal PT100 para tratar el offset propio de la resistencia base de \(\SI{100}{\ohm}\).
+\item Se verificó que ambos canales requieren ajuste de nivel/salida: el canal SM-50 para escalar la salida hacia el rango útil bipolar de la BoomBox, y el canal PT100 para tratar el offset propio de la resistencia base de \(\SI{100}{\ohm}\).
 \end{itemize}
 
 \textbf{Resultados:}
-Se actualizaron los valores finales del diseño: SM-50 con \(R_G=\SI{340}{\ohm}\), formado por \(\SI{160}{\ohm}+\SI{180}{\ohm}\), salida aproximada de \(\SIrange{0}{5}{V}\); y PT100 con \(I_{exc}=\SI{0.5}{mA}\) y \(R_G=\SI{1}{k\ohm}\).
+Se actualizaron los valores finales del diseño: SM-50 con \(R_G=\SI{340}{\ohm}\), formado por \(\SI{160}{\ohm}+\SI{180}{\ohm}\), salida bipolar nominal de \(\pm\SI{4.39}{V}\); y PT100 con \(I_{exc}=\SI{0.5}{mA}\) y \(R_G=\SI{1}{k\ohm}\).
 
 \textbf{Dificultades:}
 La principal dificultad fue no mezclar valores de memorias antiguas con los datos finales del circuito, especialmente en la corriente de excitación del PT100 y en la ganancia del SM-50.
@@ -1399,7 +1399,7 @@ Actualizar la memoria de cálculo del proyecto con los valores actuales, referen
 \begin{itemize}
 \item Se actualizó la memoria de cálculo del proyecto separando los cálculos finales de la trazabilidad de documentos previos.
 \item Se incorporaron los valores actuales del canal PT100: \(I_{exc}=\SI{0.5}{mA}\), \(R_G=\SI{1}{k\ohm}\), conexión de tres hilos, referencia de offset proveniente de la B-Box o derivada de ella, filtro y ajuste de nivel/salida.
-\item Se incorporaron los valores actuales del canal SM-50: excitación de puente de \(\SI{10}{V}\), sensibilidad nominal de \(\SI{3}{mV/V}\), salida diferencial cruda de \(\SI{30}{mV}\), \(R_G=\SI{340}{\ohm}\) mediante \(\SI{160}{\ohm}+\SI{180}{\ohm}\), y salida aproximada \(\SIrange{0}{5}{V}\).
+\item Se incorporaron los valores actuales del canal SM-50: excitación de puente de \(\SI{10}{V}\), sensibilidad nominal de \(\SI{3}{mV/V}\), salida diferencial cruda de \(\pm\SI{30}{mV}\), \(R_G=\SI{340}{\ohm}\) mediante \(\SI{160}{\ohm}+\SI{180}{\ohm}\), y salida bipolar nominal de \(\pm\SI{4.39}{V}\).
 \item Se actualizó el diagrama de bloques final para mostrar los dos canales con protección, amplificación instrumental, filtro pasabajo, ajuste de nivel/salida y conexión hacia BoomBox mediante FTP Cat5/8P8C.
 \item Se incorporaron referencias completas guardadas en la carpeta del proyecto, incluyendo el manual de BoomBox, hoja de datos del SM-50, notas de aplicación de puentes Wheatstone, documentación de ruido, guías de KiCad y el texto de Pallás-Areny como referencia teórica principal.
 \item Se generó una versión actualizada de la memoria en PDF y DOCX, junto con archivos auxiliares de cálculos y referencias.

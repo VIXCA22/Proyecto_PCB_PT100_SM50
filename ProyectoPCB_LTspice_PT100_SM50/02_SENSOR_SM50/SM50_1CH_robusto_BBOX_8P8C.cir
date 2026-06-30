@@ -24,8 +24,8 @@
 .param Sens=3m
 .param LoadFrac=1
 .param delta={Sens*LoadFrac}
-.param RG_SM=332
-.param G_SM={1+50000/RG_SM}
+.param RG_SM=340
+.param G_SM={1+49400/RG_SM}
 
 * Alimentacion desde B-Box
 VPLUS15  Vp15 0 DC 15
@@ -49,7 +49,7 @@ RINP SIGP SM_INP 49.9
 RINM SIGN SM_INM 49.9
 CDIFF_IN SM_INP SM_INM 10n
 
-* INA828 ideal:
+* INA826 ideal:
 * REF = AGND
 BINA_SM50 SM_RAW 0 V={limit(G_SM*(V(SM_INP)-V(SM_INM)),-5,5)}
 
@@ -69,7 +69,6 @@ CDEC_M5 Vm5 0 100n
 CBULK_P5 Vp5 0 10u
 CBULK_M5 Vm5 0 10u
 
-.step param RG_SM list 332 499
 .step param LoadFrac list -1 -0.5 0 0.5 1
 .op
 

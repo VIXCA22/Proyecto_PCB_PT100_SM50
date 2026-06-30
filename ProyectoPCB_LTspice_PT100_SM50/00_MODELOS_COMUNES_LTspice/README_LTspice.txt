@@ -15,9 +15,8 @@ Archivos incluidos
    - Excitacion: +5 V y -5 V, total 10 V.
    - Sensibilidad: 3 mV/V.
    - Fondo de escala: aprox. 30 mV diferencial.
-   - Barre dos ganancias:
-       RG=499 ohm -> G≈101.2 -> salida FS≈3.04 V
-       RG=332 ohm -> G≈151.6 -> salida FS≈4.55 V
+   - Usa la ganancia final:
+       RG=340 ohm -> G≈146.3 -> salida FS≈+/-4.39 V
 
 3) Sistema_4sensores_3PT100_1SM50_ideal.cir
    - Valida la version final con 3 PT100 y 1 SM-50.

@@ -66,13 +66,13 @@ Las corridas se hicieron con el motor `ngspice.dll` incluido en KiCad 9.0, no co
 Resultados principales:
 
 - PT100, 130 C: `VOUT_PT100_BBOX = 4.369544 V`.
-- SM50, 100% carga positiva, RG=332 ohm: `VOUT_SM50_BBOX = 4.543506 V`.
-- Simulación conjunta idealizada, PT100=130 C y SM50=100% positivo: ambas salidas quedan positivas.
+- SM50, escala completa bipolar, RG=340 ohm: `VOUT_SM50_BBOX = +/-4.39 V`.
+- Simulación conjunta idealizada: el SM-50 se documenta con salida bipolar nominal dentro del rango +/-5 V.
 
 Archivos:
 
 - `simulacion/sim_kicad_ngspice_pt100_sweep_ng_20260625.csv`
-- `simulacion/sim_kicad_ngspice_sm50_sweep_positive_ng_20260625.csv`
+- `docs/simulacion/sm50_sweep_bipolar_ng_20260629.csv`
 - `simulacion/sim_kicad_ngspice_numeric_summary_ng_20260625.json`
 - `simulacion/sim_kicad_ngspice_conjunto_ideal_pos_ng_20260625.log`
 

@@ -3,9 +3,8 @@
 * Sensor nominal: 3 mV/V. Con 10 V de excitacion => 30 mV a fondo de escala.
 *
 * Ejecutar: Simulate > Run. Ver V(sp), V(sn), V(sp,sn), V(out), V(out_filt)
-* RG se barre en dos versiones:
-*   RG=499 ohm => G ~= 101.2, version segura
-*   RG=332 ohm => G ~= 151.6, version mayor resolucion
+* RG final:
+*   RG=340 ohm => G ~= 146.3, salida FS ~= +/-4.39 V
 
 .param Rarm=350
 .param VEXC=10
@@ -26,9 +25,9 @@ R2 sp vn {Rarm*(1+delta)}
 R3 vp sn {Rarm*(1+delta)}
 R4 sn vn {Rarm*(1-delta)}
 
-* INA828 ideal: G=1+50k/RG
-.param RG=499
-.param G={1+50000/RG}
+* INA826 ideal: G=1+49.4k/RG
+.param RG=340
+.param G={1+49400/RG}
 .param VREFINA=0
 
 BINA out 0 V={limit(G*(V(sp)-V(sn))+VREFINA,-5,5)}
@@ -37,7 +36,6 @@ BINA out 0 V={limit(G*(V(sp)-V(sn))+VREFINA,-5,5)}
 RFILT out out_filt 10k
 CFILT out_filt 0 33n
 
-.step param RG list 499 332
 .step param LoadFrac list -1 -0.5 0 0.5 1
 .op
 

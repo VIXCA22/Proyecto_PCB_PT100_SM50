@@ -1,5 +1,5 @@
 {
-  "fuente": "Resultados del PT100 regenerados desde LTspice; resultados SM-50 actualizados para RG=340 ohm con la misma tension de puente y la ecuacion de ganancia del INA826.",
+  "fuente": "Resultados del PT100 regenerados desde LTspice; resultados SM-50 actualizados para barrido bipolar nominal con RG=340 ohm y ecuacion de ganancia del INA826.",
   "adc_bbox": {
     "rango_lectura_v": "+/-5",
     "span_v": 10,
@@ -17,11 +17,11 @@
     "resumen": "La salida hacia la B-Box aumenta aproximadamente de 2.328272 V a 3.223866 V entre 0 C y 100 C."
   },
   "sm50": {
-    "carga_lb": [0, 10, 20, 30, 40, 50],
-    "tension_puente_mv": [0, 6.005764, 12.02631, 18.061161, 24.110794, 30.174255],
-    "salida_real_bbox_v": [0.016155, 0.866168, 1.71823, 2.572347, 3.428524, 4.286772],
-    "salida_ideal_v": [0.0, 0.878608, 1.759378, 2.642242, 3.527267, 4.414316],
-    "limite_v": [5, 5, 5, 5, 5, 5],
-    "resumen": "La senal diferencial alcanza aproximadamente 30.174255 mV y la salida real queda cerca de 4.286772 V a 50 lb, por debajo de la referencia de 5 V."
+    "carga_lb": [-50, -40, -30, -20, -10, 0, 10, 20, 30, 40, 50],
+    "tension_puente_mv": [-30.0, -24.0, -18.0, -12.0, -6.0, 0.0, 6.0, 12.0, 18.0, 24.0, 30.0],
+    "salida_bbox_v": [-4.388824, -3.511059, -2.633294, -1.755529, -0.877765, 0.0, 0.877765, 1.755529, 2.633294, 3.511059, 4.388824],
+    "limite_pos_v": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+    "limite_neg_v": [-5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5],
+    "resumen": "La senal diferencial nominal alcanza +/-30 mV y la salida acondicionada del SM-50 queda en +/-4.39 V a escala completa, dentro del rango +/-5 V de la B-Box."
   }
 }
