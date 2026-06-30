@@ -26,9 +26,9 @@ RINP SIGP INA_INP 49.9
 RINN SIGN INA_INN 49.9
 CDIFF INA_INP INA_INN 10n
 
-* INA828 idealizado
-.param RG_SM=332
-.param G_SM={1+50k/RG_SM}
+* INA826 idealizado
+.param RG_SM=340
+.param G_SM={1+49.4k/RG_SM}
 .param VREFINA=0
 BINA OUT_INA 0 V={limit(G_SM*V(INA_INP,INA_INN)+VREFINA,-14,14)}
 

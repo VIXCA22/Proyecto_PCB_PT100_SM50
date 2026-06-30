@@ -217,9 +217,9 @@ def build_block_diagram() -> list[Path]:
                 ["INA826/828", "Rg=340 Ohm", "G~146.3"],
                 ["Filtro LP", "fc=482 Hz"],
                 ["Ajuste nivel", "/salida"],
-                ["Salida", "0-5 V aprox."],
+                ["Salida", "+/-4.39 V"],
             ],
-            "note": "SM-50: 3 mV/V x 10 V = 30 mV FS; salida INA826 FS = 4.39 V con Rg=340 Ohm (160+180).",
+            "note": "SM-50: 3 mV/V x 10 V = +/-30 mV FS; salida INA826 FS = +/-4.39 V con Rg=340 Ohm (160+180).",
         },
         {
             "title": "Alimentacion, enlace fisico y adquisicion",
@@ -270,7 +270,7 @@ def build_block_diagram() -> list[Path]:
     )
     add_svg_text(
         lines,
-        ["Nota: ADC B-Box con lectura maxima +/-5 V; SM-50 queda en 0-5 V aprox. con Rg=340 Ohm (160+180)."],
+        ["Nota: ADC B-Box con lectura maxima +/-5 V; SM-50 queda en +/-4.39 V nominal con Rg=340 Ohm (160+180)."],
         84,
         footer_y + 54,
         font_size=13,
@@ -285,7 +285,7 @@ def build_block_diagram() -> list[Path]:
 
 def build_response_charts() -> list[Path]:
     pt100 = read_csv(SIM_DIR / "pt100_sweep_ng_20260625.csv")
-    sm50 = read_csv(SIM_DIR / "sm50_sweep_positive_ng_20260625.csv")
+    sm50 = read_csv(SIM_DIR / "sm50_sweep_bipolar_ng_20260629.csv")
     generated: list[Path] = []
 
     pt100_res_path = FIG_DIR / "pt100_resistencia.svg"
@@ -348,7 +348,8 @@ def build_response_charts() -> list[Path]:
     )
     generated.append(pt100_out_path)
 
-    sm50_bridge_path = FIG_DIR / "sm50_puente.svg"
+    sm50_bridge_path = FIG_DIR / "sm50_puente_bipolar.svg"
+    sm50_bridge_alias_path = FIG_DIR / "sm50_puente.svg"
     sm50_bridge_series = [
         (
             "VSEN+ - VSEN-",
@@ -358,49 +359,54 @@ def build_response_charts() -> list[Path]:
     ]
     svg_line_chart(
         sm50_bridge_path,
-        "Senal diferencial del puente SM-50",
-        "Carga aplicada (lb)",
+        "Senal diferencial bipolar del puente SM-50",
+        "Carga / torque aplicado (lb)",
         "Tension diferencial del puente (mV)",
         sm50_bridge_series,
-        x_min=0,
+        x_min=-50,
         x_max=50,
-        y_min=0,
+        y_min=-32,
         y_max=32,
     )
+    shutil.copy2(sm50_bridge_path, sm50_bridge_alias_path)
     generated.append(sm50_bridge_path)
+    generated.append(sm50_bridge_alias_path)
 
-    sm50_out_path = FIG_DIR / "respuesta_sm50.svg"
+    sm50_out_path = FIG_DIR / "respuesta_sm50_bipolar.svg"
+    sm50_out_alias_path = FIG_DIR / "respuesta_sm50.svg"
     sm50_series = [
         (
-            "Salida real hacia B-Box",
+            "Salida hacia B-Box (+/-4.39 V FS)",
             [(float(row["Load_lb"]), float(row["VOUT_SM50_BBOX_V"])) for row in sm50],
             "#2563eb",
         ),
         (
-            "Salida ideal",
-            [(float(row["Load_lb"]), float(row["VOUT_SM50_IDEAL_V"])) for row in sm50],
-            "#dc2626",
-            "9 8",
+            "Referencia +5 V",
+            [(float(row["Load_lb"]), float(row["V_LIMIT_POS_V"])) for row in sm50],
+            "#92400e",
+            "3 7",
         ),
         (
-            "Referencia de 5 V",
-            [(float(row["Load_lb"]), float(row["V_LIMIT_V"])) for row in sm50],
+            "Referencia -5 V",
+            [(float(row["Load_lb"]), float(row["V_LIMIT_NEG_V"])) for row in sm50],
             "#92400e",
             "3 7",
         ),
     ]
     svg_line_chart(
         sm50_out_path,
-        "Respuesta acondicionada del canal SM-50",
-        "Carga aplicada (lb)",
+        "Respuesta acondicionada del canal SM-50 (+/-4.39 V FS)",
+        "Carga / torque aplicado (lb)",
         "Tension electrica de salida (V)",
         sm50_series,
-        x_min=0,
+        x_min=-50,
         x_max=50,
-        y_min=0,
+        y_min=-5,
         y_max=5,
     )
+    shutil.copy2(sm50_out_path, sm50_out_alias_path)
     generated.append(sm50_out_path)
+    generated.append(sm50_out_alias_path)
     return generated
 
 

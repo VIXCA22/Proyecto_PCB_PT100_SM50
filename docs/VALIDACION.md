@@ -39,7 +39,7 @@ Se mantuvieron las referencias visibles. Las advertencias finales estaban relaci
 Los datos finales usados para las gráficas corregidas están en `docs/simulacion/`:
 
 - `pt100_sweep_ng_20260625.csv`
-- `sm50_sweep_positive_ng_20260625.csv`
+- `sm50_sweep_bipolar_ng_20260629.csv`
 - `resumen_numerico_ng_20260625.json`
 
-Las gráficas generadas están en `docs/figuras/` y coinciden con los logs nuevos de LTspice y los PDF exportados `escPT100.pdf` / `escSM50.pdf`.
+Las gráficas generadas están en `docs/figuras/` y documentan el SM-50 con salida bipolar nominal de +/-4.39 V, dentro del rango +/-5 V de la B-Box.

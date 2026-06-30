@@ -36,7 +36,7 @@ Diseñar e implementar una tarjeta de circuito impreso que permita acondicionar 
 
 ![Diagrama de bloques](docs/figuras/diagrama_bloques_valores_actuales.png)
 
-Nota de adquisicion: la lectura maxima del ADC de la B-Box se toma como +/-5 V (10 V de span), por lo que la salida del SM-50 se mantiene cerca de 0-5 V para conservar margen de medicion.
+Nota de adquisicion: la lectura maxima del ADC de la B-Box se toma como +/-5 V (10 V de span), por lo que la salida bipolar nominal del SM-50 se mantiene en +/-4.39 V para conservar margen de medicion.
 
 ## Simulaciones
 
@@ -48,9 +48,9 @@ Nota de adquisicion: la lectura maxima del ADC de la B-Box se toma como +/-5 V (
 
 ### Canal SM-50
 
-![Puente SM-50](docs/figuras/sm50_puente.png)
+![Puente SM-50 bipolar](docs/figuras/sm50_puente_bipolar.png)
 
-![Respuesta SM-50](docs/figuras/respuesta_sm50.png)
+![Respuesta SM-50 bipolar](docs/figuras/respuesta_sm50_bipolar.png)
 
 ### Esquemáticos LTspice
 

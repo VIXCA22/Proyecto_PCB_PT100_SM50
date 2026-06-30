@@ -1,227 +1,227 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="332 -3068 4904 2240">
-<rect x="332" y="-3068" width="4904" height="2240" fill="#ffffff"/>
-<text x="356" y="-2998" font-family="Arial, sans-serif" font-size="64" font-weight="700" fill="#1f2933">LTspice - canal PT100</text>
-<text x="356" y="-2948" font-family="Arial, sans-serif" font-size="34" fill="#52606d">ProyectoPCB_LTspice_PT100_SM50\01_SENSOR_PT100\Sensor_PT100.asc</text>
-<line x1="2208" y1="-2816" x2="2112" y2="-2816" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2432" y1="-2816" x2="2288" y2="-2816" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3536" y1="-2800" x2="3536" y2="-2848" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3536" y1="-2768" x2="3536" y2="-2800" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3680" y1="-2768" x2="3568" y2="-2768" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3744" y1="-2768" x2="3680" y2="-2768" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3744" y1="-2752" x2="3744" y2="-2768" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="528" y1="-2704" x2="512" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="640" y1="-2704" x2="528" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="720" y1="-2704" x2="640" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="736" y1="-2704" x2="720" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2432" y1="-2704" x2="2432" y2="-2816" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3200" y1="-2704" x2="3024" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3344" y1="-2704" x2="3280" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3440" y1="-2704" x2="3344" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="928" y1="-2688" x2="832" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1024" y1="-2688" x2="928" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1344" y1="-2688" x2="1024" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1472" y1="-2688" x2="1344" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1776" y1="-2688" x2="1632" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3344" y1="-2688" x2="3344" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="720" y1="-2672" x2="720" y2="-2704" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="736" y1="-2672" x2="720" y2="-2672" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3344" y1="-2624" x2="3328" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3440" y1="-2624" x2="3344" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3680" y1="-2624" x2="3616" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3744" y1="-2624" x2="3744" y2="-2672" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3744" y1="-2624" x2="3680" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="928" y1="-2608" x2="928" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1344" y1="-2608" x2="1344" y2="-2688" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3440" y1="-2576" x2="3408" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4320" y1="-2576" x2="3632" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4512" y1="-2576" x2="4400" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4704" y1="-2576" x2="4512" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4976" y1="-2576" x2="4784" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3408" y1="-2480" x2="3408" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3536" y1="-2480" x2="3536" y2="-2512" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="528" y1="-2464" x2="528" y2="-2640" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="640" y1="-2464" x2="640" y2="-2640" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="800" y1="-2464" x2="800" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="928" y1="-2464" x2="928" y2="-2544" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1024" y1="-2464" x2="1024" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1344" y1="-2464" x2="1344" y2="-2544" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1552" y1="-2464" x2="1552" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3184" y1="-2432" x2="3056" y2="-2432" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3328" y1="-2432" x2="3328" y2="-2624" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3328" y1="-2432" x2="3264" y2="-2432" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3536" y1="-2432" x2="3536" y2="-2480" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4512" y1="-2400" x2="4512" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4976" y1="-2384" x2="4976" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2432" y1="-2368" x2="2432" y2="-2576" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2432" y1="-2368" x2="2144" y2="-2368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2720" y1="-2368" x2="2432" y2="-2368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1392" y1="-2032" x2="1392" y2="-2080" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2144" y1="-2016" x2="2144" y2="-2368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2720" y1="-2016" x2="2720" y2="-2368" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1296" y1="-1952" x2="1184" y2="-1952" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4512" y1="-1936" x2="4512" y2="-2336" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="4976" y1="-1936" x2="4976" y2="-2304" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1776" y1="-1920" x2="1520" y2="-1920" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1216" y1="-1888" x2="1184" y2="-1888" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1296" y1="-1888" x2="1216" y2="-1888" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1392" y1="-1744" x2="1392" y2="-1808" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1216" y1="-1648" x2="1216" y2="-1888" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2032" y1="-1648" x2="1216" y2="-1648" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2144" y1="-1648" x2="2144" y2="-1936" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2144" y1="-1648" x2="2032" y2="-1648" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2144" y1="-1584" x2="2144" y2="-1648" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2720" y1="-1584" x2="2720" y2="-1936" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3056" y1="-1584" x2="3056" y2="-2432" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="3056" y1="-1584" x2="2720" y2="-1584" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="2144" y1="-1456" x2="2144" y2="-1504" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1232" y1="-1120" x2="1232" y2="-1232" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1632" y1="-1120" x2="1632" y2="-1232" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1232" y1="-1008" x2="1232" y2="-1040" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<line x1="1632" y1="-1008" x2="1632" y2="-1040" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
-<circle cx="1267" cy="-1101" r="42" fill="#fef3c7" stroke="#111827" stroke-width="7"/>
-<text x="1267" y="-1089" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#111827">V</text>
-<text x="1232" y="-1158" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">+15V_BBOX  15</text>
-<circle cx="1667" cy="-989" r="42" fill="#fef3c7" stroke="#111827" stroke-width="7"/>
-<text x="1667" y="-977" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#111827">V</text>
-<text x="1632" y="-1046" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">-15V_BBOX  15</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="2128,-1570 2148,-1595 2173,-1545 2198,-1595 2223,-1545 2243,-1570"/>
-<text x="2128" y="-1622" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RSET  {RSET_VAL}</text>
-<line x1="1328" y1="-2608" x2="1423" y2="-2608" stroke="#111827" stroke-width="8"/>
-<line x1="1363" y1="-2653" x2="1363" y2="-2563" stroke="#111827" stroke-width="8"/>
-<line x1="1388" y1="-2653" x2="1388" y2="-2563" stroke="#111827" stroke-width="8"/>
-<text x="1328" y="-2630" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C1  100nF</text>
-<rect x="1544" y="-2696" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
-<text x="1619" y="-2661" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U4</text>
-<text x="1619" y="-2630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">REF30E1_IDEAL</text>
-<text x="1552" y="-2710" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U4</text>
-<line x1="912" y1="-2608" x2="1007" y2="-2608" stroke="#111827" stroke-width="8"/>
-<line x1="947" y1="-2653" x2="947" y2="-2563" stroke="#111827" stroke-width="8"/>
-<line x1="972" y1="-2653" x2="972" y2="-2563" stroke="#111827" stroke-width="8"/>
-<text x="912" y="-2630" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C2  10�F</text>
-<rect x="792" y="-2696" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
-<text x="867" y="-2661" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U5</text>
-<text x="867" y="-2630" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">LDO_5V_GENERIC</text>
-<text x="800" y="-2710" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U5</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="2304,-2802 2324,-2827 2349,-2777 2374,-2827 2399,-2777 2419,-2802"/>
-<text x="2304" y="-2854" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RLEAD1  {RLEAD}</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="2128,-2002 2148,-2027 2173,-1977 2198,-2027 2223,-1977 2243,-2002"/>
-<text x="2128" y="-2054" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RLEAD2  {RLEAD}</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="2704,-2002 2724,-2027 2749,-1977 2774,-2027 2799,-1977 2819,-2002"/>
-<text x="2704" y="-2054" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RLEAD3  {RLEAD}</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="3296,-2690 3316,-2715 3341,-2665 3366,-2715 3391,-2665 3411,-2690"/>
-<text x="3296" y="-2742" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RIN+  50</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="3728,-2738 3748,-2763 3773,-2713 3798,-2763 3823,-2713 3843,-2738"/>
-<text x="3728" y="-2790" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RG  1k</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="3280,-2418 3300,-2443 3325,-2393 3350,-2443 3375,-2393 3395,-2418"/>
-<text x="3280" y="-2470" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RIN-  50</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="4416,-2562 4436,-2587 4461,-2537 4486,-2587 4511,-2537 4531,-2562"/>
-<text x="4416" y="-2614" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">ROUT  200</text>
-<line x1="4496" y1="-2400" x2="4591" y2="-2400" stroke="#111827" stroke-width="8"/>
-<line x1="4531" y1="-2445" x2="4531" y2="-2355" stroke="#111827" stroke-width="8"/>
-<line x1="4556" y1="-2445" x2="4556" y2="-2355" stroke="#111827" stroke-width="8"/>
-<text x="4496" y="-2422" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C4  100nF</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="4800,-2562 4820,-2587 4845,-2537 4870,-2587 4895,-2537 4915,-2562"/>
-<text x="4800" y="-2614" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R_BBOX  50</text>
-<rect x="2424" y="-2648" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
-<text x="2499" y="-2613" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U3</text>
-<text x="2499" y="-2582" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">PT100_CLEAN</text>
-<text x="2432" y="-2662" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U3</text>
-<line x1="3328" y1="-2688" x2="3423" y2="-2688" stroke="#111827" stroke-width="8"/>
-<line x1="3363" y1="-2733" x2="3363" y2="-2643" stroke="#111827" stroke-width="8"/>
-<line x1="3388" y1="-2733" x2="3388" y2="-2643" stroke="#111827" stroke-width="8"/>
-<text x="3328" y="-2710" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C3  100nF</text>
-<rect x="1384" y="-1928" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
-<text x="1459" y="-1893" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U2</text>
-<text x="1459" y="-1862" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">OPAx188</text>
-<text x="1392" y="-1942" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U2</text>
-<polyline fill="none" stroke="#111827" stroke-width="8" points="4960,-2370 4980,-2395 5005,-2345 5030,-2395 5055,-2345 5075,-2370"/>
-<text x="4960" y="-2422" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R1  3k</text>
-<rect x="3528" y="-2648" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
-<text x="3603" y="-2613" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U1</text>
-<text x="3603" y="-2582" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">INA826</text>
-<text x="3536" y="-2662" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U1</text>
-<line x1="624" y1="-2704" x2="719" y2="-2704" stroke="#111827" stroke-width="8"/>
-<line x1="659" y1="-2749" x2="659" y2="-2659" stroke="#111827" stroke-width="8"/>
-<line x1="684" y1="-2749" x2="684" y2="-2659" stroke="#111827" stroke-width="8"/>
-<text x="624" y="-2726" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C5  100nF</text>
-<line x1="1008" y1="-2688" x2="1103" y2="-2688" stroke="#111827" stroke-width="8"/>
-<line x1="1043" y1="-2733" x2="1043" y2="-2643" stroke="#111827" stroke-width="8"/>
-<line x1="1068" y1="-2733" x2="1068" y2="-2643" stroke="#111827" stroke-width="8"/>
-<text x="1008" y="-2710" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C6  100nF</text>
-<line x1="512" y1="-2704" x2="607" y2="-2704" stroke="#111827" stroke-width="8"/>
-<line x1="547" y1="-2749" x2="547" y2="-2659" stroke="#111827" stroke-width="8"/>
-<line x1="572" y1="-2749" x2="572" y2="-2659" stroke="#111827" stroke-width="8"/>
-<text x="512" y="-2726" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C7  10�F</text>
-<circle cx="1632" cy="-1008" r="14" fill="#475569"/>
-<text x="1656" y="-998" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="1232" cy="-1008" r="14" fill="#475569"/>
-<text x="1256" y="-998" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="1232" cy="-1232" r="14" fill="#166534"/>
-<text x="1256" y="-1222" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
-<circle cx="1632" cy="-1232" r="14" fill="#166534"/>
-<text x="1656" y="-1222" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
-<circle cx="1184" cy="-1952" r="14" fill="#166534"/>
-<text x="1208" y="-1942" font-family="Arial, sans-serif" font-size="30" fill="#166534">VREF_1V25</text>
-<circle cx="1392" cy="-2080" r="14" fill="#166534"/>
-<text x="1416" y="-2070" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
-<circle cx="1392" cy="-1744" r="14" fill="#166534"/>
-<text x="1416" y="-1734" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
-<circle cx="2144" cy="-1456" r="14" fill="#475569"/>
-<text x="2168" y="-1446" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="1184" cy="-1888" r="14" fill="#166534"/>
-<text x="1208" y="-1878" font-family="Arial, sans-serif" font-size="30" fill="#166534">NODO_SENSOR</text>
-<circle cx="1776" cy="-1920" r="14" fill="#166534"/>
-<text x="1800" y="-1910" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_Iexc</text>
-<circle cx="1344" cy="-2464" r="14" fill="#475569"/>
-<text x="1368" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="512" cy="-2704" r="14" fill="#166534"/>
-<text x="536" y="-2694" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
-<circle cx="800" cy="-2464" r="14" fill="#475569"/>
-<text x="824" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="1552" cy="-2464" r="14" fill="#475569"/>
-<text x="1576" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="928" cy="-2464" r="14" fill="#475569"/>
-<text x="952" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="1776" cy="-2688" r="14" fill="#166534"/>
-<text x="1800" y="-2678" font-family="Arial, sans-serif" font-size="30" fill="#166534">VREF_1V25</text>
-<circle cx="2112" cy="-2816" r="14" fill="#166534"/>
-<text x="2136" y="-2806" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_Iexc</text>
-<circle cx="3536" cy="-2848" r="14" fill="#166534"/>
-<text x="3560" y="-2838" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
-<circle cx="3536" cy="-2800" r="14" fill="#166534"/>
-<text x="3560" y="-2790" font-family="Arial, sans-serif" font-size="30" fill="#166534">7</text>
-<circle cx="3024" cy="-2704" r="14" fill="#166534"/>
-<text x="3048" y="-2694" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_A</text>
-<circle cx="2432" cy="-2816" r="14" fill="#166534"/>
-<text x="2456" y="-2806" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_A</text>
-<circle cx="2432" cy="-2368" r="14" fill="#166534"/>
-<text x="2456" y="-2358" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_B</text>
-<circle cx="3536" cy="-2432" r="14" fill="#166534"/>
-<text x="3560" y="-2422" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
-<circle cx="3536" cy="-2480" r="14" fill="#166534"/>
-<text x="3560" y="-2470" font-family="Arial, sans-serif" font-size="30" fill="#166534">6</text>
-<circle cx="3680" cy="-2768" r="14" fill="#166534"/>
-<text x="3704" y="-2758" font-family="Arial, sans-serif" font-size="30" fill="#166534">RG+</text>
-<circle cx="3680" cy="-2624" r="14" fill="#166534"/>
-<text x="3704" y="-2614" font-family="Arial, sans-serif" font-size="30" fill="#166534">RG-</text>
-<circle cx="4512" cy="-2576" r="14" fill="#166534"/>
-<text x="4536" y="-2566" font-family="Arial, sans-serif" font-size="30" fill="#166534">VOUT_FILT</text>
-<circle cx="4512" cy="-1936" r="14" fill="#475569"/>
-<text x="4536" y="-1926" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="4976" cy="-2576" r="14" fill="#166534"/>
-<text x="5000" y="-2566" font-family="Arial, sans-serif" font-size="30" fill="#166534">OUT_PT100_BBOX</text>
-<circle cx="2032" cy="-1648" r="14" fill="#166534"/>
-<text x="2056" y="-1638" font-family="Arial, sans-serif" font-size="30" fill="#166534">NODO_SENSOR</text>
-<circle cx="4976" cy="-1936" r="14" fill="#475569"/>
-<text x="5000" y="-1926" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="3408" cy="-2480" r="14" fill="#475569"/>
-<text x="3432" y="-2470" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="2720" cy="-1584" r="14" fill="#166534"/>
-<text x="2744" y="-1574" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_SENSOR</text>
-<circle cx="640" cy="-2464" r="14" fill="#475569"/>
-<text x="664" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="1024" cy="-2464" r="14" fill="#475569"/>
-<text x="1048" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
-<circle cx="528" cy="-2464" r="14" fill="#475569"/>
-<text x="552" y="-2454" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="6748 -5900 4904 2240">
+<rect x="6748" y="-5900" width="4904" height="2240" fill="#ffffff"/>
+<text x="6772" y="-5830" font-family="Arial, sans-serif" font-size="64" font-weight="700" fill="#1f2933">LTspice - canal PT100</text>
+<text x="6772" y="-5780" font-family="Arial, sans-serif" font-size="34" fill="#52606d">ProyectoPCB_LTspice_PT100_SM50\01_SENSOR_PT100\Sensor_PT100.asc</text>
+<line x1="8624" y1="-5648" x2="8528" y2="-5648" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8848" y1="-5648" x2="8704" y2="-5648" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9952" y1="-5632" x2="9952" y2="-5680" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9952" y1="-5600" x2="9952" y2="-5632" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10096" y1="-5600" x2="9984" y2="-5600" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10160" y1="-5600" x2="10096" y2="-5600" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10160" y1="-5584" x2="10160" y2="-5600" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="6944" y1="-5536" x2="6928" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7056" y1="-5536" x2="6944" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7136" y1="-5536" x2="7056" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7152" y1="-5536" x2="7136" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8848" y1="-5536" x2="8848" y2="-5648" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9616" y1="-5536" x2="9440" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9760" y1="-5536" x2="9696" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9856" y1="-5536" x2="9760" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7344" y1="-5520" x2="7248" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7440" y1="-5520" x2="7344" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7760" y1="-5520" x2="7440" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7888" y1="-5520" x2="7760" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8192" y1="-5520" x2="8048" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9760" y1="-5520" x2="9760" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7136" y1="-5504" x2="7136" y2="-5536" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7152" y1="-5504" x2="7136" y2="-5504" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9760" y1="-5456" x2="9744" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9856" y1="-5456" x2="9760" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10096" y1="-5456" x2="10032" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10160" y1="-5456" x2="10160" y2="-5504" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10160" y1="-5456" x2="10096" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7344" y1="-5440" x2="7344" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7760" y1="-5440" x2="7760" y2="-5520" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9856" y1="-5408" x2="9824" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10736" y1="-5408" x2="10048" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10928" y1="-5408" x2="10816" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="11120" y1="-5408" x2="10928" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="11392" y1="-5408" x2="11200" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9824" y1="-5312" x2="9824" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9952" y1="-5312" x2="9952" y2="-5344" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="6944" y1="-5296" x2="6944" y2="-5472" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7056" y1="-5296" x2="7056" y2="-5472" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7216" y1="-5296" x2="7216" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7344" y1="-5296" x2="7344" y2="-5376" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7440" y1="-5296" x2="7440" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7760" y1="-5296" x2="7760" y2="-5376" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7968" y1="-5296" x2="7968" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9600" y1="-5264" x2="9472" y2="-5264" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9744" y1="-5264" x2="9744" y2="-5456" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9744" y1="-5264" x2="9680" y2="-5264" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9952" y1="-5264" x2="9952" y2="-5312" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10928" y1="-5232" x2="10928" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="11392" y1="-5216" x2="11392" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8848" y1="-5200" x2="8848" y2="-5408" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8848" y1="-5200" x2="8560" y2="-5200" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9136" y1="-5200" x2="8848" y2="-5200" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7808" y1="-4864" x2="7808" y2="-4912" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8560" y1="-4848" x2="8560" y2="-5200" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9136" y1="-4848" x2="9136" y2="-5200" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7712" y1="-4784" x2="7600" y2="-4784" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="10928" y1="-4768" x2="10928" y2="-5168" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="11392" y1="-4768" x2="11392" y2="-5136" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8192" y1="-4752" x2="7936" y2="-4752" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7632" y1="-4720" x2="7600" y2="-4720" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7712" y1="-4720" x2="7632" y2="-4720" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7808" y1="-4576" x2="7808" y2="-4640" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7632" y1="-4480" x2="7632" y2="-4720" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8448" y1="-4480" x2="7632" y2="-4480" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8560" y1="-4480" x2="8560" y2="-4768" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8560" y1="-4480" x2="8448" y2="-4480" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8560" y1="-4416" x2="8560" y2="-4480" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9136" y1="-4416" x2="9136" y2="-4768" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9472" y1="-4416" x2="9472" y2="-5264" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="9472" y1="-4416" x2="9136" y2="-4416" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8560" y1="-4288" x2="8560" y2="-4336" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7648" y1="-3952" x2="7648" y2="-4064" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8048" y1="-3952" x2="8048" y2="-4064" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="7648" y1="-3840" x2="7648" y2="-3872" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<line x1="8048" y1="-3840" x2="8048" y2="-3872" stroke="#2f4f4f" stroke-width="10" stroke-linecap="round"/>
+<circle cx="7683" cy="-3933" r="42" fill="#fef3c7" stroke="#111827" stroke-width="7"/>
+<text x="7683" y="-3921" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#111827">V</text>
+<text x="7648" y="-3990" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">+15V_BBOX  15</text>
+<circle cx="8083" cy="-3821" r="42" fill="#fef3c7" stroke="#111827" stroke-width="7"/>
+<text x="8083" y="-3809" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#111827">V</text>
+<text x="8048" y="-3878" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">-15V_BBOX  15</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="8544,-4402 8564,-4427 8589,-4377 8614,-4427 8639,-4377 8659,-4402"/>
+<text x="8544" y="-4454" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RSET  {RSET_VAL}</text>
+<line x1="7744" y1="-5440" x2="7839" y2="-5440" stroke="#111827" stroke-width="8"/>
+<line x1="7779" y1="-5485" x2="7779" y2="-5395" stroke="#111827" stroke-width="8"/>
+<line x1="7804" y1="-5485" x2="7804" y2="-5395" stroke="#111827" stroke-width="8"/>
+<text x="7744" y="-5462" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C1  100nF</text>
+<rect x="7960" y="-5528" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="8035" y="-5493" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U4</text>
+<text x="8035" y="-5462" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">REF30E1_IDEAL</text>
+<text x="7968" y="-5542" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U4</text>
+<line x1="7328" y1="-5440" x2="7423" y2="-5440" stroke="#111827" stroke-width="8"/>
+<line x1="7363" y1="-5485" x2="7363" y2="-5395" stroke="#111827" stroke-width="8"/>
+<line x1="7388" y1="-5485" x2="7388" y2="-5395" stroke="#111827" stroke-width="8"/>
+<text x="7328" y="-5462" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C2  10�F</text>
+<rect x="7208" y="-5528" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="7283" y="-5493" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U5</text>
+<text x="7283" y="-5462" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">LDO_5V_GENERIC</text>
+<text x="7216" y="-5542" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U5</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="8720,-5634 8740,-5659 8765,-5609 8790,-5659 8815,-5609 8835,-5634"/>
+<text x="8720" y="-5686" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RLEAD1  {RLEAD}</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="8544,-4834 8564,-4859 8589,-4809 8614,-4859 8639,-4809 8659,-4834"/>
+<text x="8544" y="-4886" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RLEAD2  {RLEAD}</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="9120,-4834 9140,-4859 9165,-4809 9190,-4859 9215,-4809 9235,-4834"/>
+<text x="9120" y="-4886" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RLEAD3  {RLEAD}</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="9712,-5522 9732,-5547 9757,-5497 9782,-5547 9807,-5497 9827,-5522"/>
+<text x="9712" y="-5574" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RIN+  50</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="10144,-5570 10164,-5595 10189,-5545 10214,-5595 10239,-5545 10259,-5570"/>
+<text x="10144" y="-5622" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RG  1k</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="9696,-5250 9716,-5275 9741,-5225 9766,-5275 9791,-5225 9811,-5250"/>
+<text x="9696" y="-5302" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">RIN-  50</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="10832,-5394 10852,-5419 10877,-5369 10902,-5419 10927,-5369 10947,-5394"/>
+<text x="10832" y="-5446" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">ROUT  200</text>
+<line x1="10912" y1="-5232" x2="11007" y2="-5232" stroke="#111827" stroke-width="8"/>
+<line x1="10947" y1="-5277" x2="10947" y2="-5187" stroke="#111827" stroke-width="8"/>
+<line x1="10972" y1="-5277" x2="10972" y2="-5187" stroke="#111827" stroke-width="8"/>
+<text x="10912" y="-5254" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C4  100nF</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="11216,-5394 11236,-5419 11261,-5369 11286,-5419 11311,-5369 11331,-5394"/>
+<text x="11216" y="-5446" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R_BBOX  50</text>
+<rect x="8840" y="-5480" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="8915" y="-5445" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U3</text>
+<text x="8915" y="-5414" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">PT100_CLEAN</text>
+<text x="8848" y="-5494" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U3</text>
+<line x1="9744" y1="-5520" x2="9839" y2="-5520" stroke="#111827" stroke-width="8"/>
+<line x1="9779" y1="-5565" x2="9779" y2="-5475" stroke="#111827" stroke-width="8"/>
+<line x1="9804" y1="-5565" x2="9804" y2="-5475" stroke="#111827" stroke-width="8"/>
+<text x="9744" y="-5542" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C3  100nF</text>
+<rect x="7800" y="-4760" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="7875" y="-4725" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U2</text>
+<text x="7875" y="-4694" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">OPAx188</text>
+<text x="7808" y="-4774" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U2</text>
+<polyline fill="none" stroke="#111827" stroke-width="8" points="11376,-5202 11396,-5227 11421,-5177 11446,-5227 11471,-5177 11491,-5202"/>
+<text x="11376" y="-5254" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">R1  3k</text>
+<rect x="9944" y="-5480" width="150" height="82" rx="0" fill="#e0f2fe" stroke="#0f172a" stroke-width="6"/>
+<text x="10019" y="-5445" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">U1</text>
+<text x="10019" y="-5414" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">INA826</text>
+<text x="9952" y="-5494" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">U1</text>
+<line x1="7040" y1="-5536" x2="7135" y2="-5536" stroke="#111827" stroke-width="8"/>
+<line x1="7075" y1="-5581" x2="7075" y2="-5491" stroke="#111827" stroke-width="8"/>
+<line x1="7100" y1="-5581" x2="7100" y2="-5491" stroke="#111827" stroke-width="8"/>
+<text x="7040" y="-5558" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C5  100nF</text>
+<line x1="7424" y1="-5520" x2="7519" y2="-5520" stroke="#111827" stroke-width="8"/>
+<line x1="7459" y1="-5565" x2="7459" y2="-5475" stroke="#111827" stroke-width="8"/>
+<line x1="7484" y1="-5565" x2="7484" y2="-5475" stroke="#111827" stroke-width="8"/>
+<text x="7424" y="-5542" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C6  100nF</text>
+<line x1="6928" y1="-5536" x2="7023" y2="-5536" stroke="#111827" stroke-width="8"/>
+<line x1="6963" y1="-5581" x2="6963" y2="-5491" stroke="#111827" stroke-width="8"/>
+<line x1="6988" y1="-5581" x2="6988" y2="-5491" stroke="#111827" stroke-width="8"/>
+<text x="6928" y="-5558" font-family="Arial, sans-serif" font-size="30" fill="#1f2933">C7  10�F</text>
+<circle cx="8048" cy="-3840" r="14" fill="#475569"/>
+<text x="8072" y="-3830" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="7648" cy="-3840" r="14" fill="#475569"/>
+<text x="7672" y="-3830" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="7648" cy="-4064" r="14" fill="#166534"/>
+<text x="7672" y="-4054" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="8048" cy="-4064" r="14" fill="#166534"/>
+<text x="8072" y="-4054" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
+<circle cx="7600" cy="-4784" r="14" fill="#166534"/>
+<text x="7624" y="-4774" font-family="Arial, sans-serif" font-size="30" fill="#166534">VREF_1V25</text>
+<circle cx="7808" cy="-4912" r="14" fill="#166534"/>
+<text x="7832" y="-4902" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="7808" cy="-4576" r="14" fill="#166534"/>
+<text x="7832" y="-4566" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
+<circle cx="8560" cy="-4288" r="14" fill="#475569"/>
+<text x="8584" y="-4278" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="7600" cy="-4720" r="14" fill="#166534"/>
+<text x="7624" y="-4710" font-family="Arial, sans-serif" font-size="30" fill="#166534">NODO_SENSOR</text>
+<circle cx="8192" cy="-4752" r="14" fill="#166534"/>
+<text x="8216" y="-4742" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_Iexc</text>
+<circle cx="7760" cy="-5296" r="14" fill="#475569"/>
+<text x="7784" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="6928" cy="-5536" r="14" fill="#166534"/>
+<text x="6952" y="-5526" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="7216" cy="-5296" r="14" fill="#475569"/>
+<text x="7240" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="7968" cy="-5296" r="14" fill="#475569"/>
+<text x="7992" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="7344" cy="-5296" r="14" fill="#475569"/>
+<text x="7368" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="8192" cy="-5520" r="14" fill="#166534"/>
+<text x="8216" y="-5510" font-family="Arial, sans-serif" font-size="30" fill="#166534">VREF_1V25</text>
+<circle cx="8528" cy="-5648" r="14" fill="#166534"/>
+<text x="8552" y="-5638" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_Iexc</text>
+<circle cx="9952" cy="-5680" r="14" fill="#166534"/>
+<text x="9976" y="-5670" font-family="Arial, sans-serif" font-size="30" fill="#166534">+15V</text>
+<circle cx="9952" cy="-5632" r="14" fill="#166534"/>
+<text x="9976" y="-5622" font-family="Arial, sans-serif" font-size="30" fill="#166534">7</text>
+<circle cx="9440" cy="-5536" r="14" fill="#166534"/>
+<text x="9464" y="-5526" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_A</text>
+<circle cx="8848" cy="-5648" r="14" fill="#166534"/>
+<text x="8872" y="-5638" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_A</text>
+<circle cx="8848" cy="-5200" r="14" fill="#166534"/>
+<text x="8872" y="-5190" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_B</text>
+<circle cx="9952" cy="-5264" r="14" fill="#166534"/>
+<text x="9976" y="-5254" font-family="Arial, sans-serif" font-size="30" fill="#166534">-15V</text>
+<circle cx="9952" cy="-5312" r="14" fill="#166534"/>
+<text x="9976" y="-5302" font-family="Arial, sans-serif" font-size="30" fill="#166534">6</text>
+<circle cx="10096" cy="-5600" r="14" fill="#166534"/>
+<text x="10120" y="-5590" font-family="Arial, sans-serif" font-size="30" fill="#166534">RG+</text>
+<circle cx="10096" cy="-5456" r="14" fill="#166534"/>
+<text x="10120" y="-5446" font-family="Arial, sans-serif" font-size="30" fill="#166534">RG-</text>
+<circle cx="10928" cy="-5408" r="14" fill="#166534"/>
+<text x="10952" y="-5398" font-family="Arial, sans-serif" font-size="30" fill="#166534">VOUT_FILT</text>
+<circle cx="10928" cy="-4768" r="14" fill="#475569"/>
+<text x="10952" y="-4758" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="11392" cy="-5408" r="14" fill="#166534"/>
+<text x="11416" y="-5398" font-family="Arial, sans-serif" font-size="30" fill="#166534">OUT_PT100_BBOX</text>
+<circle cx="8448" cy="-4480" r="14" fill="#166534"/>
+<text x="8472" y="-4470" font-family="Arial, sans-serif" font-size="30" fill="#166534">NODO_SENSOR</text>
+<circle cx="11392" cy="-4768" r="14" fill="#475569"/>
+<text x="11416" y="-4758" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="9824" cy="-5312" r="14" fill="#475569"/>
+<text x="9848" y="-5302" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="9136" cy="-4416" r="14" fill="#166534"/>
+<text x="9160" y="-4406" font-family="Arial, sans-serif" font-size="30" fill="#166534">RTD_SENSOR</text>
+<circle cx="7056" cy="-5296" r="14" fill="#475569"/>
+<text x="7080" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="7440" cy="-5296" r="14" fill="#475569"/>
+<text x="7464" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
+<circle cx="6944" cy="-5296" r="14" fill="#475569"/>
+<text x="6968" y="-5286" font-family="Arial, sans-serif" font-size="30" fill="#475569">0</text>
 </svg>
