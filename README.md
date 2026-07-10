@@ -96,6 +96,7 @@ Nota de adquisicion: la lectura maxima del ADC de la B-Box se toma como +/-5 V (
 
 ## Documentación
 
+- [Reporte formal IEEE PCB PT100/SM-50](docs/reporte_ieee/ReporteFormalPCB_PT100_SM50.pdf)
 - [Informe de desarrollo del proyecto](docs/INFORME_DESARROLLO_PROYECTO.md)
 - [Resumen ejecutivo](docs/resumen/ResumenEjecutivoKDVJC09331.pdf)
 - [Proceso de diseño y trazabilidad](docs/PROCESO_DISENO_TRAZABILIDAD.md)
