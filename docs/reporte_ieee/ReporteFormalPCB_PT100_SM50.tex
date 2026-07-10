@@ -13,7 +13,7 @@
 \usepackage{url}
 \usepackage{xcolor}
 \usepackage{float}
-\usepackage{balance}
+\usepackage{multicol}
 
 \graphicspath{{../figuras/}}
 \setlength{\textfloatsep}{7pt}
@@ -277,7 +277,8 @@ Ancho & Uso en la PCB & $I_{\max}$ est. & Caída, 100 mA/50 mm \\
 \end{figure*}
 
 \clearpage
-\balance
+\onecolumn
+\begin{multicols*}{2}
 \begin{thebibliography}{00}
 \setlength{\itemsep}{0pt}
 \setlength{\parsep}{0pt}
@@ -306,5 +307,6 @@ Ancho & Uso en la PCB & $I_{\max}$ est. & Caída, 100 mA/50 mm \\
 \bibitem{digikey_trace} DigiKey, ``PCB Trace Width Conversion Calculator,'' herramienta técnica basada en IPC-2221. [En línea]. Disponible: \url{https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-pcb-trace-width}
 \bibitem{cirexx_trace} Cirexx International, ``Trace Width Calculator,'' herramienta técnica basada en IPC-2221. [En línea]. Disponible: \url{https://www.cirexx.com/trace-width-calculator/}
 \end{thebibliography}
+\end{multicols*}
 
 \end{document}
