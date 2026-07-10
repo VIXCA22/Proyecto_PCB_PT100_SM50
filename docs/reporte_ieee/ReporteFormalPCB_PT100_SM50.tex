@@ -69,7 +69,7 @@ Los filtros también se escogieron con una idea de ruta de señal, no solo por c
 
 \subsection{Diseño por etapas o ciudades}
 
-El diseño no se hizo como un esquemático grande de una sola vez. Se trabajó por etapas, llamadas durante el desarrollo ``ciudades'', para separar las señales de milivoltios de las zonas de alimentación, protección y conectores. Esta decisión reduce el riesgo de acoplar ruido en rutas sensibles como el SM-50, que entrega hasta 30 mV antes de amplificar.
+El diseño no se hizo como un esquemático grande de una sola vez. Se trabajó por etapas, llamadas durante el desarrollo ``ciudades'', para separar las señales de milivoltios de las zonas de alimentación, protección y conectores. Esta decisión sigue el criterio de atenuación de ruido de separar fuentes de interferencia, retornos y señales sensibles para reducir acoplos capacitivos, inductivos y por impedancia común \cite{cardenas_ruido}; por eso ayuda a proteger rutas como la del SM-50, que entrega hasta 30 mV antes de amplificar.
 
 Las ciudades usadas fueron: entrada y excitación del SM-50; acondicionamiento de torque con INA, ganancia y filtrado; entrada PT100 con fuente de corriente y líneas de sense; acondicionamiento de temperatura con offset, ganancia y filtrado; alimentación/protección desde B-Box; y salidas RJ45 hacia la B-Box. Esta forma de diseño permitió que cada ciudad tuviera una función clara: primero proteger y excitar el sensor, luego amplificar una señal pequeña, después filtrar, ajustar y finalmente entregar una señal robusta al sistema de adquisición.
 
@@ -292,6 +292,7 @@ Ancho & Uso en la PCB & $I_{\max}$ est. & Caída, 100 mA/50 mm \\
 \bibitem{an96} Analog Devices, ``AN-96: Delta Sigma ADC Bridge Measurement Techniques.'' [En línea]. Disponible: \url{https://www.analog.com/en/resources/app-notes/an-96fa.html}
 \bibitem{adi_rtd} Analog Devices, ``How to Select and Design the Best RTD Temperature Sensing System,'' Analog Dialogue. [En línea]. Disponible: \url{https://www.analog.com/en/resources/analog-dialogue/articles/how-to-select-and-design-the-best-rtd-temperature-sensing-system.html}
 \bibitem{ti_rtd} Texas Instruments, ``A Basic Guide to RTD Measurements,'' SBAA275A, application note, 2023. [En línea]. Disponible: \url{https://www.ti.com/lit/pdf/sbaa275}
+\bibitem{cardenas_ruido} R. Cárdenas Dobson, ``Atenuación de ruidos en circuitos electrónicos,'' apuntes del curso de proyecto, Universidad de Magallanes.
 \bibitem{bourns3296} Bourns, ``3296 -- 3/8 Inch Square Trimpot Trimming Potentiometer,'' hoja de datos. [En línea]. Disponible: \url{https://www.bourns.com/docs/product-datasheets/3296.pdf}
 \bibitem{labces_prev} LabCES, ``Caracterización de sensores y datos experimentales previos del banco de motor de inducción,'' documentación interna usada como antecedente experimental previo, 2026.
 \bibitem{opa2188} Texas Instruments, ``OPA2188 Low-Noise, 36-V, Zero-Drift Operational Amplifiers,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/gpn/OPA2188}

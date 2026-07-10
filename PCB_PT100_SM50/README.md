@@ -16,15 +16,16 @@ Esta carpeta contiene el diseno KiCad principal de la tarjeta de acondicionamien
 | `docs/` | Imagenes y soporte visual del diseno. |
 | `outputs/` | Reportes de validacion generados por KiCad. |
 
-## Estado ERC
+## Estado de validacion
 
-El ultimo chequeo electrico fue generado con KiCad 9 y no reporta violaciones:
+El cierre de validacion documentado fue generado con KiCad 9 y no reporta violaciones:
 
 ```text
-PCB_PT100_SM50/outputs/erc_after_cleanup.rpt
+../docs/validacion/erc_final_20260626.rpt
+../docs/validacion/drc_final_20260626.rpt
 ```
 
-Los warnings previos eran de sincronizacion de librerias, no de conexion electrica. Se registro la libreria faltante `ProyectoPCB` y se dejo la regla `lib_symbol_mismatch` en `ignore` porque varios simbolos fueron ajustados localmente para el esquematico.
+La carpeta `outputs/` conserva reportes locales intermedios del PCB. Los reportes anteriores con warnings eran de sincronizacion de librerias, no de conexion electrica. Se registro la libreria faltante `ProyectoPCB` y se dejo la regla `lib_symbol_mismatch` en `ignore` porque varios simbolos fueron ajustados localmente para el esquematico.
 
 ## Uso rapido
 
