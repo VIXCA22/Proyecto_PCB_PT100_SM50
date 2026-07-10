@@ -1,6 +1,6 @@
 (footprint "Fuse_1812_4532Metric_Littelfuse_1812L050-30PR"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Littelfuse 1812L050/30PR resettable PPTC, 1812 / 4532 metric")
   (tags "fuse pptc resettable Littelfuse 1812L050/30PR 1812 4532")

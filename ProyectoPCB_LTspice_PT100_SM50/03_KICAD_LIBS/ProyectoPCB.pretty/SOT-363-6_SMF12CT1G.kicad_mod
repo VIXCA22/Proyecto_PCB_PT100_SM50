@@ -1,6 +1,6 @@
 (footprint "SOT-363-6_SMF12CT1G"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "SOT-363 / SC-88 6-pin package for SMF12CT1G 3D model")
   (tags "SOT-363 SC-88 SMF12CT1G")

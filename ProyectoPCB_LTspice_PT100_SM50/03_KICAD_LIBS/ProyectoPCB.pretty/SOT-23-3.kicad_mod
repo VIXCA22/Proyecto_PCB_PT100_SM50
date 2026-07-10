@@ -1,6 +1,6 @@
 (footprint "SOT-23-3"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "SOT-23-3 / DBZ")
   (tags "SOT-23-3 DBZ")

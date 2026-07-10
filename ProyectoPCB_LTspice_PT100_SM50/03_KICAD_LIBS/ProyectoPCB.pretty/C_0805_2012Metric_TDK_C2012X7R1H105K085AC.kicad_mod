@@ -1,6 +1,6 @@
 (footprint "C_0805_2012Metric_TDK_C2012X7R1H105K085AC"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "TDK C2012X7R1H105K085AC capacitor, C2012 / EIA 0805")
   (tags "capacitor 0805 2012 C2012X7R1H105K085AC")

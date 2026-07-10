@@ -1,6 +1,6 @@
 (footprint "Bourns_3296W_1_102LF"
   (version 20240108)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Bourns 3296W-1-102LF 1k multiturn trimmer, THT, physical pin order 1-3-2")
   (tags "Bourns 3296W trimmer potentiometer 1k 25turn pin-order-1-3-2")

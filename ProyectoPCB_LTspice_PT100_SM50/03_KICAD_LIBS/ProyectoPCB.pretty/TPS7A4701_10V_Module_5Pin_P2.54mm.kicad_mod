@@ -1,6 +1,6 @@
 (footprint "TPS7A4701_10V_Module_5Pin_P2.54mm"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Generic 5-pin module/header for simplified TPS7A4701_10V LTspice block")
   (tags "TPS7A4701 module 5 pin 2.54")

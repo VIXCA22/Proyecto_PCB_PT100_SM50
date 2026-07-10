@@ -1,6 +1,6 @@
 (footprint "HVSSOP-8-1EP_DGN0008G_TPS7A4901DGNT"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "TI DGN0008G PowerPAD HVSSOP-8, 3 x 3 mm body, 0.65 mm pitch, exposed pad")
   (tags "HVSSOP-8 DGN0008G TPS7A4901 PowerPAD")

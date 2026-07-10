@@ -1,6 +1,6 @@
 (footprint "C_0805_2012Metric_AVX_08055C104K4T2A"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "AVX/Kyocera 08055C104K4T2A capacitor, 0805 / 2012 metric")
   (tags "capacitor 0805 2012 08055C104K4T2A")

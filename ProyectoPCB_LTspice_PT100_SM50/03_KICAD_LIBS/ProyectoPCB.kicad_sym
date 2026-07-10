@@ -1,6 +1,6 @@
 (kicad_symbol_lib
   (version 20211014)
-  (generator "codex")
+  (generator "kicad")
   (symbol "R_0805"
     (pin_numbers hide)
     (pin_names (offset 0.254))

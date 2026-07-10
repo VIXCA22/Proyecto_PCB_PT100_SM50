@@ -1,6 +1,6 @@
 (footprint "2250066-1"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Bel Fuse / TRP 2250066-1 MagJack, suggested PCB layout from drawing C-2250066")
   (tags "RJ45 MagJack Bel Fuse TRP 2250066-1 10/100 through-hole shielded")

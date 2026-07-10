@@ -1,6 +1,6 @@
 (footprint "R_0805_2012Metric_Yageo_RT0805BRD"
   (version 20221018)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "Yageo RT0805BRD series resistor, 0805 / 2012 metric")
   (tags "resistor 0805 2012 RT0805BRD Yageo")

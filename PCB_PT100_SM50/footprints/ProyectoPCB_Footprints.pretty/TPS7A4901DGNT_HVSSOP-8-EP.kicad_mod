@@ -1,6 +1,6 @@
 (footprint "TPS7A4901DGNT_HVSSOP-8-EP"
   (version 20240108)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "TPS7A4901DGNT HVSSOP-8 PowerPAD custom footprint")
   (tags "TPS7A4901 DGN HVSSOP-8 PowerPAD")

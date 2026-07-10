@@ -1,6 +1,6 @@
 (footprint "PPTC_1812L050_30PR_1812"
   (version 20240108)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "PPTC resettable fuse 1812L050/30PR, SMD 1812")
   (tags "PPTC resettable fuse 1812 4532 1812L050 30PR")

@@ -1,6 +1,6 @@
 (footprint "REF3012AIDBZR_SOT-23-3"
   (version 20240108)
-  (generator "codex")
+  (generator "kicad")
   (layer "F.Cu")
   (descr "SOT-23-3 footprint for REF3012AIDBZR")
   (tags "SOT-23-3 REF3012 REF30")
