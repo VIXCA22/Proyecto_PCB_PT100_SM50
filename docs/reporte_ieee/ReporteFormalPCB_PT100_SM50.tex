@@ -69,7 +69,7 @@ Los filtros también se escogieron con una idea de ruta de señal, no solo por c
 
 \subsection{Diseño por etapas o ciudades}
 
-El diseño no se hizo como un esquemático grande de una sola vez. Se trabajó por etapas, llamadas en la bitácora ``ciudades'', para separar las señales de milivoltios de las zonas de alimentación, protección y conectores \cite{bitacora}. Esta decisión reduce el riesgo de acoplar ruido en rutas sensibles como el SM-50, que entrega hasta 30 mV antes de amplificar.
+El diseño no se hizo como un esquemático grande de una sola vez. Se trabajó por etapas, llamadas durante el desarrollo ``ciudades'', para separar las señales de milivoltios de las zonas de alimentación, protección y conectores. Esta decisión reduce el riesgo de acoplar ruido en rutas sensibles como el SM-50, que entrega hasta 30 mV antes de amplificar.
 
 Las ciudades usadas fueron: entrada y excitación del SM-50; acondicionamiento de torque con INA, ganancia y filtrado; entrada PT100 con fuente de corriente y líneas de sense; acondicionamiento de temperatura con offset, ganancia y filtrado; alimentación/protección desde B-Box; y salidas RJ45 hacia la B-Box. Esta forma de diseño permitió que cada ciudad tuviera una función clara: primero proteger y excitar el sensor, luego amplificar una señal pequeña, después filtrar, ajustar y finalmente entregar una señal robusta al sistema de adquisición.
 
@@ -281,30 +281,28 @@ Ancho & Uso en la PCB & $I_{\max}$ est. & Caída, 100 mA/50 mm \\
 \setlength{\itemsep}{0pt}
 \setlength{\parsep}{0pt}
 \bibitem{adi_paths} Analog Devices, ``Overview of Sensor Signal Paths,'' technical article, May 2010. [En línea]. Disponible: \url{https://www.analog.com/en/resources/technical-articles/overview-of-sensor-signal-paths.html}
+\bibitem{imperix} imperix, ``User Manual BoomBox,'' entradas analógicas y alimentación de sensores. [En línea]. Disponible: \url{https://imperix.com/wp-content/uploads/2018/06/User-Manual-BoomBox.pdf}
+\bibitem{bipm} BIPM, ``Guide on Secondary Thermometry: Industrial Platinum Resistance Thermometers,'' Consultative Committee for Thermometry, 2021. [En línea]. Disponible: \url{https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf}
+\bibitem{ref30} Texas Instruments, ``REF30E and REF30 Low Current Voltage Reference in SOT-23-3,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/gpn/REF30E}
+\bibitem{interface} Interface Force Measurement Solutions, ``Model SM S-Type Load Cell,'' hoja de datos. [En línea]. Disponible: \url{https://www.scienspec.com.tw/userfiles/files/SM.pdf}
+\bibitem{ina826} Texas Instruments, ``INA826 Precision, 200-uA Supply Current, 3-V to 36-V Instrumentation Amplifier,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/ds/symlink/ina826.pdf}
+\bibitem{sloa034} Texas Instruments, ``Signal Conditioning Wheatstone Resistive Bridge Sensors,'' SLOA034. [En línea]. Disponible: \url{https://www.ti.com/lit/pdf/sloa034}
+\bibitem{sboa247} Texas Instruments, ``Single-Supply Strain Gauge Bridge Amplifier Circuit,'' SBOA247A. [En línea]. Disponible: \url{https://www.ti.com/lit/pdf/sboa247}
+\bibitem{an43} Analog Devices, ``AN-43: Bridge Circuits.'' [En línea]. Disponible: \url{https://www.analog.com/en/resources/app-notes/an-43f.html}
+\bibitem{an96} Analog Devices, ``AN-96: Delta Sigma ADC Bridge Measurement Techniques.'' [En línea]. Disponible: \url{https://www.analog.com/en/resources/app-notes/an-96fa.html}
 \bibitem{adi_rtd} Analog Devices, ``How to Select and Design the Best RTD Temperature Sensing System,'' Analog Dialogue. [En línea]. Disponible: \url{https://www.analog.com/en/resources/analog-dialogue/articles/how-to-select-and-design-the-best-rtd-temperature-sensing-system.html}
 \bibitem{ti_rtd} Texas Instruments, ``A Basic Guide to RTD Measurements,'' SBAA275A, application note, 2023. [En línea]. Disponible: \url{https://www.ti.com/lit/pdf/sbaa275}
-\bibitem{bipm} BIPM, ``Guide on Secondary Thermometry: Industrial Platinum Resistance Thermometers,'' Consultative Committee for Thermometry, 2021. [En línea]. Disponible: \url{https://www.bipm.org/documents/20126/41773843/BIPM_CCT_Guide_to_IPRTs.pdf}
-\bibitem{ina826} Texas Instruments, ``INA826 Precision, 200-uA Supply Current, 3-V to 36-V Instrumentation Amplifier,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/ds/symlink/ina826.pdf}
-\bibitem{ref30} Texas Instruments, ``REF30E and REF30 Low Current Voltage Reference in SOT-23-3,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/gpn/REF30E}
+\bibitem{bourns3296} Bourns, ``3296 -- 3/8 Inch Square Trimpot Trimming Potentiometer,'' hoja de datos. [En línea]. Disponible: \url{https://www.bourns.com/docs/product-datasheets/3296.pdf}
+\bibitem{labces_prev} LabCES, ``Caracterización de sensores y datos experimentales previos del banco de motor de inducción,'' documentación interna usada como antecedente experimental previo, 2026.
 \bibitem{opa2188} Texas Instruments, ``OPA2188 Low-Noise, 36-V, Zero-Drift Operational Amplifiers,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/gpn/OPA2188}
 \bibitem{tps7a49} Texas Instruments, ``TPS7A49 36-V, 150-mA, Ultralow-Noise Positive Linear Regulator,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/gpn/TPS7A49}
 \bibitem{lm78l} Texas Instruments, ``LM78L 100-mA Fixed Output Linear Regulator,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/ds/symlink/lm78l.pdf}
 \bibitem{littelfuse1812} Littelfuse, ``1812L Series Surface Mount Resettable PPTC,'' hoja de datos. [En línea]. Disponible: \url{https://www.littelfuse.com/assetdocs/resettable-ptcs-1812l-datasheet?assetguid=ca5c80cb-504e-4a8a-8e74-0107520a1717}
 \bibitem{tpd4e1u06} Texas Instruments, ``TPD4E1U06 Quad-Channel High-Speed ESD Protection Device,'' hoja de datos. [En línea]. Disponible: \url{https://www.ti.com/lit/gpn/TPD4E1U06}
 \bibitem{smf12} onsemi, ``SMF05CT1G, SMF12CT1G, SMF15CT1G, SMF24CT1G ESD Protection Diode Array,'' hoja de datos. [En línea]. Disponible: \url{https://www.onsemi.com/download/data-sheet/pdf/smf05c-d.pdf}
-\bibitem{interface} Interface Force Measurement Solutions, ``Model SM S-Type Load Cell,'' hoja de datos. [En línea]. Disponible: \url{https://www.scienspec.com.tw/userfiles/files/SM.pdf}
-\bibitem{imperix} imperix, ``User Manual BoomBox,'' entradas analógicas y alimentación de sensores. [En línea]. Disponible: \url{https://imperix.com/wp-content/uploads/2018/06/User-Manual-BoomBox.pdf}
-\bibitem{sloa034} Texas Instruments, ``Signal Conditioning Wheatstone Resistive Bridge Sensors,'' SLOA034. [En línea]. Disponible: \url{https://www.ti.com/lit/pdf/sloa034}
-\bibitem{sboa247} Texas Instruments, ``Single-Supply Strain Gauge Bridge Amplifier Circuit,'' SBOA247A. [En línea]. Disponible: \url{https://www.ti.com/lit/pdf/sboa247}
-\bibitem{an43} Analog Devices, ``AN-43: Bridge Circuits.'' [En línea]. Disponible: \url{https://www.analog.com/en/resources/app-notes/an-43f.html}
-\bibitem{an96} Analog Devices, ``AN-96: Delta Sigma ADC Bridge Measurement Techniques.'' [En línea]. Disponible: \url{https://www.analog.com/en/resources/app-notes/an-96fa.html}
-\bibitem{bourns3296} Bourns, ``3296 -- 3/8 Inch Square Trimpot Trimming Potentiometer,'' hoja de datos. [En línea]. Disponible: \url{https://www.bourns.com/docs/product-datasheets/3296.pdf}
-\bibitem{bitacora} K. D. Vizcaíno Jiménez, ``Bitácora PCB PT100/SM-50 actualizada al 27 de junio de 2026,'' documentación interna del proceso de diseño, organización por ciudades, filtros, EMI y ruteo, 2026.
 \bibitem{kicad_pcbnew} KiCad, ``PCB Editor Documentation: Board Setup, Design Rules, Net Classes and Track Width,'' documentación oficial, versión 8.0. [En línea]. Disponible: \url{https://docs.kicad.org/8.0/en/pcbnew/pcbnew.html}
 \bibitem{digikey_trace} DigiKey, ``PCB Trace Width Conversion Calculator,'' herramienta técnica basada en IPC-2221. [En línea]. Disponible: \url{https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-pcb-trace-width}
 \bibitem{cirexx_trace} Cirexx International, ``Trace Width Calculator,'' herramienta técnica basada en IPC-2221. [En línea]. Disponible: \url{https://www.cirexx.com/trace-width-calculator/}
-\bibitem{labces_prev} LabCES, ``Caracterización de sensores y datos experimentales previos del banco de motor de inducción,'' documentación interna usada como antecedente experimental del proyecto, 2026.
-\bibitem{repo} K. D. Vizcaíno Jiménez, ``Documentación interna del proyecto PCB PT100/SM50,'' cálculos, simulaciones, validación de diseño y paquete de fabricación, 2026.
 \end{thebibliography}
 
 \end{document}
