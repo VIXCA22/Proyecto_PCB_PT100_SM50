@@ -110,9 +110,9 @@ La parte mecánica también se justificó. Se usaron librerías locales de símb
 
 \subsection{Grosores y anchos de pista}
 
-El stackup del proyecto se dejó como tarjeta de 1.6 mm con cobre externo de 35 $\mu$m, equivalente al cobre comercial típico de 1 oz. En la revisión del layout y del paquete Gerber se confirmaron pistas rutadas de 0.20, 0.25, 0.30, 0.40, 0.50, 0.60 y 0.80 mm. Los anchos principales del diseño sí están entre 0.25 y 0.60 mm; el valor de 0.20 mm aparece solo en dos segmentos puntuales y el de 0.80 mm en diez segmentos robustos de alimentación y retorno. La documentación oficial de KiCad indica que estas reglas de diseño gobiernan el ruteo, la verificación DRC y los anchos disponibles durante el trazado \cite{kicad_pcbnew}.
+El stackup del proyecto se dejó como tarjeta de 1.6 mm con cobre externo de 35 $\mu$m, equivalente al cobre comercial típico de 1 oz. En la revisión del layout y del paquete Gerber actualizado se confirmaron pistas rutadas de 0.20, 0.25, 0.30, 0.40, 0.50 y 0.60 mm. Los anchos principales del diseño están entre 0.25 y 0.60 mm; el valor de 0.20 mm aparece solo en dos segmentos puntuales y el mayor ancho utilizado en fabricación es 0.60 mm. La documentación oficial de KiCad indica que estas reglas de diseño gobiernan el ruteo, la verificación DRC y los anchos disponibles durante el trazado \cite{kicad_pcbnew}.
 
-La decisión no fue solo por espacio. El criterio eléctrico se revisó con el modelo IPC-2221 para pistas externas, usando 1 oz de cobre y 10 $^\circ$C de aumento térmico como caso conservador \cite{digikey_trace}. Aun una pista de 0.25 mm soporta del orden de 0.88 A bajo ese criterio, muy por encima de las corrientes reales del diseño: 0.5 mA en el PT100, 28.6 mA en el puente SM-50 y 100 mA como límite de alimentación de sensores de la B-Box. Por eso las pistas de 0.50, 0.60 y 0.80 mm no se eligieron porque la corriente lo exigiera al límite, sino para reducir caída de tensión, mejorar robustez en conectores y separar físicamente potencia/retorno de las señales de milivoltios. La tabla completa de anchos y márgenes queda en el Anexo A.
+La decisión no fue solo por espacio. El criterio eléctrico se revisó con el modelo IPC-2221 para pistas externas, usando 1 oz de cobre y 10 $^\circ$C de aumento térmico como caso conservador \cite{digikey_trace}. Esa corriente calculada no representa la corriente recibida por el circuito, sino un margen térmico de referencia frente al peor caso real: 0.5 mA en el PT100, 28.6 mA en el puente SM-50 y 100 mA como límite de alimentación de sensores de la B-Box. Por eso las pistas de 0.50 y 0.60 mm no se eligieron porque la corriente lo exigiera al límite, sino para reducir caída de tensión, mejorar robustez en conectores y separar físicamente potencia/retorno de las señales de milivoltios. La tabla completa de anchos y márgenes queda en el Anexo A.
 
 Las vistas del diagrama funcional y de la PCB final se movieron al Anexo B para dejar el desarrollo principal más limpio.
 
@@ -204,22 +204,21 @@ I=k(\Delta T)^bA^c,
 donde para capas externas $k=0.048$, $b=0.44$ y $c=0.725$ \cite{digikey_trace}, \cite{cirexx_trace}. El cálculo se hizo con cobre de 1 oz, $\Delta T=10^\circ$C y pistas externas. Estos resultados son estimados, pero sirven para demostrar que el diseño no está cerca de un límite térmico.
 
 \begin{table}[H]
-\caption{Anchos de pista confirmados en el diseño y margen estimado de corriente}
+\caption{Anchos de pista confirmados en fabricación y margen frente a 100 mA}
 \label{tab:pistas}
 \centering
 \tiny
 \setlength{\tabcolsep}{2pt}
-\begin{tabular}{@{}p{0.14\linewidth} p{0.30\linewidth} p{0.17\linewidth} p{0.22\linewidth}@{}}
+\begin{tabular}{@{}p{0.14\linewidth} p{0.34\linewidth} p{0.18\linewidth} p{0.20\linewidth}@{}}
 \toprule
-Ancho & Uso en la PCB & $I_{\max}$ est. & Caída, 100 mA/50 mm \\
+Ancho & Uso en la PCB & Margen vs. 100 mA & Caída, 100 mA/50 mm \\
 \midrule
-0.20 mm & Segmentos puntuales confirmados & 0.74 A & 12.31 mV \\
-0.25 mm & Señales analógicas; ancho dominante & 0.88 A & 9.85 mV \\
-0.30 mm & Ajustes y salidas locales & 1.00 A & 8.21 mV \\
-0.40 mm & Referencias y tramos intermedios & 1.23 A & 6.16 mV \\
-0.50 mm & Rieles protegidos y conectores & 1.45 A & 4.93 mV \\
-0.60 mm & Alimentación con margen extra & 1.65 A & 4.10 mV \\
-0.80 mm & Retorno/alimentación puntual & 2.03 A & 3.08 mV \\
+0.20 mm & Segmentos puntuales confirmados & 7.4$\times$ & 12.31 mV \\
+0.25 mm & Señales analógicas; ancho dominante & 8.8$\times$ & 9.85 mV \\
+0.30 mm & Ajustes y salidas locales & 10.0$\times$ & 8.21 mV \\
+0.40 mm & Referencias y tramos intermedios & 12.3$\times$ & 6.16 mV \\
+0.50 mm & Rieles protegidos y conectores & 14.5$\times$ & 4.93 mV \\
+0.60 mm & Alimentación, retorno y pantallas con margen extra & 16.5$\times$ & 4.10 mV \\
 \bottomrule
 \end{tabular}
 \end{table}
